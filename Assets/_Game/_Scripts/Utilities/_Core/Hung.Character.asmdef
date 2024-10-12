@@ -1,0 +1,17 @@
+{
+    "name": "Hung.Character",
+    "rootNamespace": "",
+    "references": [
+        "Hung.Utilities.STimer",
+        "Hung.DesignPattern"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
