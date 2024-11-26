@@ -116,79 +116,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9209557543700348698}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &8641980553946240072
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 791787670598242874}
-    m_Modifications:
-    - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.157
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.139
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7385304551645689648, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_Name
-      value: PlayerWeapon
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
---- !u!114 &1013972686395923116 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8789937199821836004, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-  m_PrefabInstance: {fileID: 8641980553946240072}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1ff9914db4bef649852c7747677a32c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &6513788923426118733 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-  m_PrefabInstance: {fileID: 8641980553946240072}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9146199181574798613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,9 +179,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 8363515472119934767, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6513788923426118733}
     - targetCorrespondingSourceObject: {fileID: 6382159180378581910, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9209557543700348698}
@@ -320,7 +244,7 @@ MonoBehaviour:
   NavigationModule: {fileID: 7121994988495848043}
   LogicModule: {fileID: 3623865738152697113}
   PhysicModule: {fileID: 832596083715213516}
-  weapon: {fileID: 1013972686395923116}
+  weapon: {fileID: 0}
   displayModule: {fileID: 5360080018579477838}
   takeDamageModule: {fileID: 6917664777779139693}
 --- !u!114 &832596083715213516

@@ -15,17 +15,17 @@ namespace _Game.Character
         LogicData, LogicParameter, LogicEvent,
         NavigationData, NavigationParameter>
     {
-        [SerializeField]
-        PlayerWeapon weapon;
+        //[SerializeField]
+        //PlayerWeapon weapon;
         [SerializeField]
         BaseDisplayModule displayModule;
         [SerializeField]
         TakeDamageModule takeDamageModule;
-        public PlayerWeapon Weapon => weapon;
+        //public PlayerWeapon Weapon => weapon;
         protected override void Awake()
         {
             base.Awake();
-            weapon.Equip(WorldInterfaceModule, WorldInterfaceSystem.Data, this);
+            //weapon.Equip(WorldInterfaceModule, WorldInterfaceSystem.Data, this);
             takeDamageModule.OnInit(typeof(Player));
         }
         protected override void OnEnable()
@@ -43,7 +43,7 @@ namespace _Game.Character
             LogicSystem.Event._SetVelocityY += PhysicModule.SetVelocityY;
             LogicSystem.Event._SetVelocityYTime += PhysicModule.SetVelocityY;
             LogicSystem.Event._SetVelocityYFrame += PhysicModule.SetVelocityY;
-            LogicSystem.Event._OnFire += Weapon.Fire;
+            //LogicSystem.Event._OnFire += Weapon.Fire;
 
             LogicSystem.Event._SetSkinRotation += displayModule.SetSkinRotation;
             #endregion
@@ -66,7 +66,7 @@ namespace _Game.Character
             LogicSystem.Event._SetVelocityYFrame -= PhysicModule.SetVelocityY;
 
             LogicSystem.Event._SetSkinRotation -= displayModule.SetSkinRotation;
-            LogicSystem.Event._OnFire -= Weapon.Fire;
+            //LogicSystem.Event._OnFire -= Weapon.Fire;
             #endregion
         }
         public void Teleport(Vector2 position)
