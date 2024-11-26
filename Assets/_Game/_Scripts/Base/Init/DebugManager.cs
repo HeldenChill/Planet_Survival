@@ -5,6 +5,7 @@ namespace Base.Init
 {
     using DesignPattern;
     using Base.UI;
+
     public class DebugManager : SimpleSingleton<DebugManager>
     {
         [SerializeField]
@@ -44,9 +45,9 @@ namespace Base.Init
             this.isShowAds = isShowAds;
             this.level = level;
             // Save the level to database
-            GameData gameData = Database.LoadData();
+            GameData gameData = Database.Load<GameData>();
             gameData.user.normalLevelIndex = level;
-            Database.SaveData(gameData);
+            Database.Save(gameData);
         }
     }
 }

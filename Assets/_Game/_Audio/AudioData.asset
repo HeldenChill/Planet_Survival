@@ -16,41 +16,52 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 8300000, guid: fbe2e97ad31d71f43b6894f08190875b, type: 3}
-    - {fileID: 8300000, guid: 8c45a64fb454f0b4e8bb37f43ebe8ea8, type: 3}
-    - {fileID: 8300000, guid: cb6ec756052fb824fbd3960abf890b52, type: 3}
-    - {fileID: 8300000, guid: e08565dcb5c7adc498ca3f70dc67ca93, type: 3}
-    - {fileID: 8300000, guid: c586ea2a1afd5844699aab0a930d1fed, type: 3}
-    - {fileID: 8300000, guid: b46a7c78a3786814d859835e58b17ffd, type: 3}
-    - {fileID: 8300000, guid: 27bf9b5e85fbd1e4d99d7cf139574186, type: 3}
-    - {fileID: 8300000, guid: 8d2c62710fcfce740842f334b791e248, type: 3}
-    - {fileID: 8300000, guid: d26610a005c2cad4bac24ba057de5f76, type: 3}
-    - {fileID: 8300000, guid: 39d7e255eee4a9b4bb61d77fb6d2dadc, type: 3}
-    - {fileID: 8300000, guid: eb433de68800c7e4aa82b92a1a4a134a, type: 3}
-    - {fileID: 8300000, guid: be48545c9c31cad408cb8d65ef216347, type: 3}
-    - {fileID: 8300000, guid: 8e9a371aac8d3df439e9ed22d83a264e, type: 3}
-    - {fileID: 8300000, guid: 966f885dffd736346be07f6535fa3c6a, type: 3}
-    - {fileID: 8300000, guid: a95c2dac16be8a042a814d5f9d4b502b, type: 3}
-    - {fileID: 8300000, guid: dac973372d56eb945ba42eb7a6082506, type: 3}
-    - {fileID: 8300000, guid: 7844254083212ee4ab63c0c41842b50e, type: 3}
-    - {fileID: 8300000, guid: 22075de499275b5479beb1cfa59a32f0, type: 3}
-    - {fileID: 8300000, guid: 20839dc389a801341b11308dd717ae74, type: 3}
+    - {fileID: 8300000, guid: 613b00a87a6ba394ea3802cd7adc9c68, type: 3}
+    - {fileID: 8300000, guid: a037daa88b3474944aaf312c1bd27986, type: 3}
+    - {fileID: 8300000, guid: f95c19a77ff5acd44b12282a07f60e0b, type: 3}
+    - {fileID: 8300000, guid: 92a240b72f89d3b49803b96936d2d0bc, type: 3}
+    - {fileID: 8300000, guid: 0144e0fb02b932246a9a95703f3a084e, type: 3}
+    - {fileID: 8300000, guid: 691b9a090c19f934884dcf9a99dafe58, type: 3}
+    - {fileID: 8300000, guid: 19ace71985ad77141a3ebb1e704358ab, type: 3}
+    - {fileID: 8300000, guid: 5e371771f5ebe6545926c645c986c4b7, type: 3}
+    - {fileID: 8300000, guid: c555d5add680e7d48bdf4d9fd33b0174, type: 3}
+    - {fileID: 8300000, guid: 26a4cf7403a037940a802aec7bf5b6e1, type: 3}
+    - {fileID: 8300000, guid: cd169e62398c7954e8a53727c9eeb9fb, type: 3}
+    - {fileID: 8300000, guid: b4d23b937740ee54598bffb5df64b3d8, type: 3}
+    - {fileID: 8300000, guid: eb82dda28511f964399a9f186000b6fb, type: 3}
+    - {fileID: 8300000, guid: ad1d129fdd2b0dd4fbca925486042dde, type: 3}
+    - {fileID: 8300000, guid: 9b4be90c992758346b5bd4861fba8b1e, type: 3}
+    - {fileID: 8300000, guid: 43ddd51ce05715049aa48858b32c7290, type: 3}
+    - {fileID: 8300000, guid: 88e27bce90f3cfa4f83dc7db4b5d044b, type: 3}
+    - {fileID: 8300000, guid: ac6600d3e0da8e84aae5fa9990e29ef5, type: 3}
+    - {fileID: 8300000, guid: 5deeb5b2ec35b6b48a06f1cbd03e6496, type: 3}
+    - {fileID: 8300000, guid: 680ee5b69baca7743929a2f4f02d28f2, type: 3}
+    - {fileID: 8300000, guid: da4f493b2b6059d4ea7465bf9b37854e, type: 3}
+    - {fileID: 8300000, guid: 7309e72cec6969a42819b7cfc5bac514, type: 3}
+    - {fileID: 8300000, guid: 0a1fa0ea9f5ac2a469205e73cb51037a, type: 3}
+    - {fileID: 8300000, guid: 21ece6bc384b37b4d837e593fa3c3770, type: 3}
+    - {fileID: 8300000, guid: 46958ae9c4f7e814f8dd2f7d7cb2501e, type: 3}
+    - {fileID: 8300000, guid: af4f2d2e31b6ea74b950938f1186fc72, type: 3}
+    - {fileID: 8300000, guid: 1c998642ae3ffa8429de7d9473ebe936, type: 3}
+    - {fileID: 8300000, guid: 2f25f4205adbf7a49ad91b425ac2df52, type: 3}
+    - {fileID: 8300000, guid: eb1f632652bdb5c40ad4b0c60f8034d8, type: 3}
+    - {fileID: 8300000, guid: 6055e97ebd093894a9229d07b84759f4, type: 3}
+    - {fileID: 8300000, guid: 742dd4ac0f0121849bb000f34c95acc8, type: 3}
+    - {fileID: 8300000, guid: 01544f270969aec4d985a84c80986821, type: 3}
+    - {fileID: 8300000, guid: 1b6e548df88be7941a72f67f493f78b7, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
     - Name: _bgmAudioDict
-      Entry: 6
-      Data: 
-    - Name: _sfxAudioDict
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Audio.SFX_TYPE, Assembly-CSharp],[Audio.Audio,
-        Assembly-CSharp]], mscorlib
+      Data: 0|System.Collections.Generic.Dictionary`2[[Common.BGM_TYPE, Hung.Common],[Audio.Audio,
+        Hung.Audio]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Audio.SFX_TYPE,
-        Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Common.BGM_TYPE,
+        Hung.Common]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -62,21 +73,89 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 19
+      Data: 2
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: $v
       Entry: 7
-      Data: 2|Audio.Audio, Assembly-CSharp
+      Data: 2|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 0
     - Name: multiplier
       Entry: 4
+      Data: 0.8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 3|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 1
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _sfxAudioDict
+      Entry: 7
+      Data: 4|System.Collections.Generic.Dictionary`2[[Common.SFX_TYPE, Hung.Common],[Audio.Audio,
+        Hung.Audio]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 5|System.Collections.Generic.EnumEqualityComparer`1[[Common.SFX_TYPE,
+        Hung.Common]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 35
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 7
+      Data: 6|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 2
+    - Name: multiplier
+      Entry: 4
       Data: 1
     - Name: 
       Entry: 8
@@ -92,49 +171,7 @@ MonoBehaviour:
       Data: 2
     - Name: $v
       Entry: 7
-      Data: 3|Audio.Audio, Assembly-CSharp
-    - Name: clip
-      Entry: 10
-      Data: 1
-    - Name: multiplier
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 7
-      Data: 4|Audio.Audio, Assembly-CSharp
-    - Name: clip
-      Entry: 10
-      Data: 2
-    - Name: multiplier
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4
-    - Name: $v
-      Entry: 7
-      Data: 5|Audio.Audio, Assembly-CSharp
+      Data: 7|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 3
@@ -152,16 +189,16 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 6
+      Data: 1
     - Name: $v
       Entry: 7
-      Data: 6|Audio.Audio, Assembly-CSharp
+      Data: 8|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 4
     - Name: multiplier
       Entry: 4
-      Data: 1
+      Data: 0.7
     - Name: 
       Entry: 8
       Data: 
@@ -173,10 +210,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 8
+      Data: 7
     - Name: $v
       Entry: 7
-      Data: 7|Audio.Audio, Assembly-CSharp
+      Data: 9|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 5
@@ -194,10 +231,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 9
+      Data: 6
     - Name: $v
       Entry: 7
-      Data: 8|Audio.Audio, Assembly-CSharp
+      Data: 10|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 6
@@ -215,10 +252,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 10
+      Data: 8
     - Name: $v
       Entry: 7
-      Data: 9|Audio.Audio, Assembly-CSharp
+      Data: 11|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 7
@@ -236,10 +273,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 14
+      Data: 9
     - Name: $v
       Entry: 7
-      Data: 10|Audio.Audio, Assembly-CSharp
+      Data: 12|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 8
@@ -257,10 +294,31 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 11
+      Data: 100
     - Name: $v
       Entry: 7
-      Data: 11|Audio.Audio, Assembly-CSharp
+      Data: 13|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 6
+      Data: 
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 7
+      Data: 14|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 9
@@ -278,10 +336,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 15
+      Data: 5
     - Name: $v
       Entry: 7
-      Data: 12|Audio.Audio, Assembly-CSharp
+      Data: 15|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 10
@@ -299,10 +357,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 16
+      Data: 10
     - Name: $v
       Entry: 7
-      Data: 13|Audio.Audio, Assembly-CSharp
+      Data: 16|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 11
@@ -320,10 +378,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 18
+      Data: 11
     - Name: $v
       Entry: 7
-      Data: 14|Audio.Audio, Assembly-CSharp
+      Data: 17|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 12
@@ -344,13 +402,13 @@ MonoBehaviour:
       Data: 12
     - Name: $v
       Entry: 7
-      Data: 15|Audio.Audio, Assembly-CSharp
+      Data: 18|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 13
     - Name: multiplier
       Entry: 4
-      Data: 1
+      Data: 0.6
     - Name: 
       Entry: 8
       Data: 
@@ -365,7 +423,7 @@ MonoBehaviour:
       Data: 13
     - Name: $v
       Entry: 7
-      Data: 16|Audio.Audio, Assembly-CSharp
+      Data: 19|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 14
@@ -383,10 +441,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 19
+      Data: 14
     - Name: $v
       Entry: 7
-      Data: 17|Audio.Audio, Assembly-CSharp
+      Data: 20|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 15
@@ -404,10 +462,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 20
+      Data: 15
     - Name: $v
       Entry: 7
-      Data: 18|Audio.Audio, Assembly-CSharp
+      Data: 21|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 16
@@ -425,16 +483,16 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 21
+      Data: 16
     - Name: $v
       Entry: 7
-      Data: 19|Audio.Audio, Assembly-CSharp
+      Data: 22|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 17
     - Name: multiplier
       Entry: 4
-      Data: 0.5
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -449,10 +507,367 @@ MonoBehaviour:
       Data: 17
     - Name: $v
       Entry: 7
-      Data: 20|Audio.Audio, Assembly-CSharp
+      Data: 23|Audio.Audio, Hung.Audio
     - Name: clip
       Entry: 10
       Data: 18
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 18
+    - Name: $v
+      Entry: 7
+      Data: 24|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 3
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 19
+    - Name: $v
+      Entry: 7
+      Data: 25|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 19
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 20
+    - Name: $v
+      Entry: 7
+      Data: 26|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 20
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 21
+    - Name: $v
+      Entry: 7
+      Data: 27|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 21
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 22
+    - Name: $v
+      Entry: 7
+      Data: 28|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 22
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 23
+    - Name: $v
+      Entry: 7
+      Data: 29|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 6
+      Data: 
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 24
+    - Name: $v
+      Entry: 7
+      Data: 30|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 23
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 25
+    - Name: $v
+      Entry: 7
+      Data: 31|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 24
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 26
+    - Name: $v
+      Entry: 7
+      Data: 32|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 25
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: 33|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 26
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 28
+    - Name: $v
+      Entry: 7
+      Data: 34|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 27
+    - Name: multiplier
+      Entry: 4
+      Data: 0.6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 29
+    - Name: $v
+      Entry: 7
+      Data: 35|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 28
+    - Name: multiplier
+      Entry: 4
+      Data: 0.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 30
+    - Name: $v
+      Entry: 7
+      Data: 36|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 29
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 27
+    - Name: $v
+      Entry: 7
+      Data: 37|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 26
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 31
+    - Name: $v
+      Entry: 7
+      Data: 38|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 30
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 32
+    - Name: $v
+      Entry: 7
+      Data: 39|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 31
+    - Name: multiplier
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 50
+    - Name: $v
+      Entry: 7
+      Data: 40|Audio.Audio, Hung.Audio
+    - Name: clip
+      Entry: 10
+      Data: 32
     - Name: multiplier
       Entry: 4
       Data: 1

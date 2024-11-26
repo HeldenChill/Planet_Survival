@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace _Game.Managers
+namespace Common
 {
     using DesignPattern;
     [DefaultExecutionOrder(-100)]

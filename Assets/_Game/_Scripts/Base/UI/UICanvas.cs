@@ -9,18 +9,18 @@ namespace Base.UI
         //public bool IsAvoidBackKey = false;
         [FormerlySerializedAs("IsDestroyOnClose")]
         public bool isDestroyOnClose;
-
-        [SerializeField] private bool useAnimator;
-
-
         private string _currentAnim = " ";
 
-        private RectTransform _mRectTransform;
 
+        [SerializeField] 
+        private bool useAnimator;
+
+        [SerializeField]
+        private RectTransform rectTf;
+        public RectTransform RectTf => rectTf;
 
         private Canvas _canvas;
-
-        protected Canvas Canvas
+        public Canvas Canvas
         {
             get
             {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Utilities.UI
+namespace Base.UI
 {
     public class UIToggle : MonoBehaviour
     {

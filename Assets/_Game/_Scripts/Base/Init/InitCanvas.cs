@@ -8,7 +8,7 @@ using TMPro;
 namespace Base.Init
 {
     using UI;
-    using Utilities.UI;
+    using Base;
     public class InitCanvas : UICanvas
     {
         public event Action<int, bool> _OnToggleValueChange;
@@ -29,8 +29,9 @@ namespace Base.Init
         public int StartLevel => int.Parse(levelInputField.text);
         void Start()
         {
-            if (Database.LoadData().user != null)
-                levelInputField.text = Database.LoadData().user.normalLevelIndex.ToString();
+            GameData.UserData data = Database.Load<GameData>().user;
+            if (data != null)
+                levelInputField.text = data.normalLevelIndex.ToString();
             gridLogicDebugToggle._OnValueChange = OnToggleValueChange;
             fpsDebugToggle._OnValueChange = OnToggleValueChange;
             logToggle._OnValueChange = OnToggleValueChange;

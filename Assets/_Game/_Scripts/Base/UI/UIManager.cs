@@ -6,12 +6,14 @@ using UnityEngine.Events;
 
 namespace Base.UI
 {
+    using Base.Init;
     using DesignPattern;
     public class UIManager : Singleton<UIManager>
     {
-        public Transform canvasParentTf;
-        public Transform indicatorParentTf;
-
+        [SerializeField]
+        private RectTransform canvasParentTf;
+        [SerializeField]
+        private RectTransform parentCanvasTf;
         //dict for UI active
         private readonly Dictionary<Type, UICanvas> uiCanvas = new();
 
@@ -20,12 +22,46 @@ namespace Base.UI
 
         //list from resource
         private UICanvas[] uiResources;
-
+        public float DpUICanvasBanner
+        {
+            get
+            {
+                //DevLog.Log(DevId.Hung, "Scale: " + GameplayCanvas.scaleFactor + "Screen Density: " + MaxSdkUtils.GetScreenDensity());
+                //return 168 / (canvasUI.scaleFactor * MaxSdkUtils.GetScreenDensity());
+                float unitHeight = parentCanvasTf.rect.height;
+                float pixelHeight = Screen.height;
+                return 168 / pixelHeight * unitHeight;
+            }
+        }
         private void Awake()
         {
             DontDestroyOnLoad(this);
         }
-
+        public void UpdateBannerSpace(bool value)
+        {
+            if (DebugManager.Ins)
+            {
+                if (DebugManager.Ins.IsShowAds && value)
+                {
+                    parentCanvasTf.offsetMin = new Vector2(parentCanvasTf.offsetMin.x, DpUICanvasBanner);
+                }
+                else
+                {
+                    parentCanvasTf.offsetMin = new Vector2(parentCanvasTf.offsetMin.x, 0);
+                }
+            }
+            else
+            {
+                if (value)
+                {
+                    parentCanvasTf.offsetMin = new Vector2(parentCanvasTf.offsetMin.x, DpUICanvasBanner);
+                }
+                else
+                {
+                    parentCanvasTf.offsetMin = new Vector2(parentCanvasTf.offsetMin.x, 0);
+                }
+            }
+        }
         public int ConvertPixelToUnitHeight(float pixel)
         {
             float unitHeight = ((RectTransform)canvasParentTf).rect.height;
@@ -53,7 +89,7 @@ namespace Base.UI
 
         public UICanvas OpenUIDirectly(UICanvas ui)
         {
-            UICanvas canvas = Instantiate(ui, canvasParentTf);
+            UICanvas canvas = Instantiate(ui, parentCanvasTf);
             canvas.Setup();
             canvas.Open();
             return canvas;
@@ -61,7 +97,7 @@ namespace Base.UI
 
         public UICanvas OpenUIDirectly(UICanvas ui, object param)
         {
-            UICanvas canvas = Instantiate(ui, canvasParentTf);
+            UICanvas canvas = Instantiate(ui, parentCanvasTf);
             canvas.Setup(param);
             canvas.Open(param);
             return canvas;
@@ -102,18 +138,26 @@ namespace Base.UI
         public bool IsLoaded<T>() where T : UICanvas
         {
             Type type = typeof(T);
-            return uiCanvas.ContainsKey(type) && uiCanvas[type] is not null;
+            return uiCanvas.ContainsKey(type) && uiCanvas[type] != null;
         }
 
         public T GetUI<T>() where T : UICanvas
         {
             if (!IsLoaded<T>())
             {
-                UICanvas canvas = Instantiate(GetUIPrefab<T>(), canvasParentTf);
+                UICanvas canvas = Instantiate(GetUIPrefab<T>(), parentCanvasTf);
                 uiCanvas[typeof(T)] = canvas;
             }
 
             return uiCanvas[typeof(T)] as T;
+        }
+        
+        public void PreloadUI<T>() where T : UICanvas
+        {
+            if (IsLoaded<T>()) return;
+            UICanvas canvas = Instantiate(GetUIPrefab<T>(), parentCanvasTf);
+            canvas.gameObject.SetActive(false);
+            uiCanvas[typeof(T)] = canvas;
         }
 
 
@@ -132,7 +176,7 @@ namespace Base.UI
             return uiCanvasPrefab[typeof(T)] as T;
         }
 
-        private void UpdateAllUI()
+        public void UpdateAllUI()
         {
             for (int i = 0; i < backCanvas.Count; i++)
             {
@@ -140,8 +184,19 @@ namespace Base.UI
             }
         }
 
+        public void DestroyAllUI(HashSet<UICanvas> exception)
+        {
+            foreach (KeyValuePair<Type, UICanvas> item in uiCanvas)
+            {
+                if (item.Value is null) continue;
+                if (exception.Contains(item.Value)) continue;
+                if (item.Value.gameObject.activeInHierarchy) item.Value.Close();
+                Destroy(item.Value.gameObject);
+            }
+            uiCanvas.Clear();
+        }
+        
         #endregion
-
         #region Back Button
         private readonly Dictionary<UICanvas, UnityAction> backActionEvents = new();
         private readonly List<UICanvas> backCanvas = new();
@@ -181,6 +236,12 @@ namespace Base.UI
             backCanvas.Remove(canvas);
         }
 
+        public void HideAll()
+        {
+            foreach (KeyValuePair<Type, UICanvas> item in uiCanvas.Where(item =>
+                         item.Value != null && item.Value.gameObject.activeInHierarchy))
+                item.Value.Hide();
+        }
         public void CloseAll()
         {
             foreach (KeyValuePair<Type, UICanvas> item in uiCanvas.Where(item =>

@@ -44,5 +44,24 @@ namespace Common
                 level = value;
             }
         }
+
+        private static IGameplayService gameplay;
+        public static IGameplayService Gameplay
+        {
+            get => gameplay;
+            set
+            {
+                gameplay = value;
+            }
+        }
+        private static IIAPService iAPService;
+        public static IIAPService IAPService
+        {
+            get => iAPService;
+            set
+            {
+                iAPService = value;
+            }
+        }
     }
 }

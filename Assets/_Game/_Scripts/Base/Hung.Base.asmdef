@@ -1,9 +1,10 @@
 {
     "name": "Hung.Base",
-    "rootNamespace": "",
+    "rootNamespace": "Base",
     "references": [
         "Hung.DesignPattern",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "Hung.Common"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

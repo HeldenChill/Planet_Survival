@@ -22,7 +22,7 @@ namespace _Game
         public void Shot(ICharacter source = null)
         {
             this.source = source;
-            rb.velocity = Tf.right * speed;
+            rb.linearVelocity = Tf.right * speed;
         }
 
         private void OnTriggerEnter2D(Collider2D collision)

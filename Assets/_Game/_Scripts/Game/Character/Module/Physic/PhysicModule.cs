@@ -34,58 +34,58 @@ namespace _Game.Character
 
         public override void SetVelocity(Vector2 vel)
         {
-            rb.velocity = vel;
+            rb.linearVelocity = vel;
         }
 
         public override void SetVelocity(Vector2 vel, float time)
         {           
-            rb.velocity = vel;
-            TimerManager.Ins.WaitForTime(time, () => rb.velocity = Vector2.zero);
+            rb.linearVelocity = vel;
+            TimerManager.Ins.WaitForTime(time, () => rb.linearVelocity = Vector2.zero);
         }
 
         public override void SetVelocity(Vector2 vel, int frame)
         {
-            rb.velocity = vel;
-            TimerManager.Ins.WaitForFrame(frame, () => rb.velocity = Vector2.zero);
+            rb.linearVelocity = vel;
+            TimerManager.Ins.WaitForFrame(frame, () => rb.linearVelocity = Vector2.zero);
         }
 
         public override void SetVelocityX(float velX)
         {
-            rb.velocity = new Vector2 (velX, rb.velocity.y);
+            rb.linearVelocity = new Vector2 (velX, rb.linearVelocity.y);
         }
 
         public override void SetVelocityX(float velX, float time)
         {
-            rb.velocity = new Vector2(velX, rb.velocity.y);
-            TimerManager.Ins.WaitForTime(time, () => rb.velocity = new Vector2(0, rb.velocity.y));
+            rb.linearVelocity = new Vector2(velX, rb.linearVelocity.y);
+            TimerManager.Ins.WaitForTime(time, () => rb.linearVelocity = new Vector2(0, rb.linearVelocity.y));
         }
 
         public override void SetVelocityX(float velX, int frame)
         {
-            rb.velocity = new Vector2(velX, rb.velocity.y);
-            TimerManager.Ins.WaitForFrame(frame, () => rb.velocity = new Vector2(0, rb.velocity.y));
+            rb.linearVelocity = new Vector2(velX, rb.linearVelocity.y);
+            TimerManager.Ins.WaitForFrame(frame, () => rb.linearVelocity = new Vector2(0, rb.linearVelocity.y));
         }
 
         public override void SetVelocityY(float velY)
         {
-            rb.velocity = new Vector2(rb.velocity.x, velY);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, velY);
         }
 
         public override void SetVelocityY(float velY, float time)
         {
-            rb.velocity = new Vector2(rb.velocity.x, velY);
-            TimerManager.Ins.WaitForTime(time, () => rb.velocity = new Vector2(rb.velocity.x, 0));
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, velY);
+            TimerManager.Ins.WaitForTime(time, () => rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0));
         }
 
         public override void SetVelocityY(float velY, int frame)
         {
-            rb.velocity = new Vector2(rb.velocity.x, velY);
-            TimerManager.Ins.WaitForFrame(frame, () => rb.velocity = new Vector2(rb.velocity.x, 0));
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, velY);
+            TimerManager.Ins.WaitForFrame(frame, () => rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0));
         }
 
         public override void UpdateData()
         {
-            Data.CharacterParameterData.RbVelocity = rb.velocity;
+            Data.CharacterParameterData.RbVelocity = rb.linearVelocity;
         }
 
         public override void UpdateEvent(int type)

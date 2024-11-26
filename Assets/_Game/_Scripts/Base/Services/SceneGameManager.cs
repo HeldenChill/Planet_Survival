@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Base.Services
+namespace Base
 {
     using DesignPattern;
     [DefaultExecutionOrder(-10)]

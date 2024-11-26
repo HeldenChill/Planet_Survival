@@ -85,17 +85,22 @@ namespace Audio
         [SerializeField] private AudioSourceData bgm;
         [SerializeField] private AudioSourceData sfx;
 
+        List<AudioSource> loopSfxAudioSource;
+        GameData.SettingData settingData;
         private void Awake()
         {
             DontDestroyOnLoad(this);
             audioSourcePool.OnInit();
             sfx.audioSourcePool = audioSourcePool;
+            loopSfxAudioSource = new List<AudioSource>();
+
+            settingData = Locator.Data.GetData<GameData>().setting;
 
             bgm.BaseVolume = false ? 0 : 1;
             sfx.BaseVolume = false ? 0 : 1;
 
-            bgm.BaseVolume = Locator.Data.GetData<GameData>().setting.isBgmMute ? 0 : 1;
-            sfx.BaseVolume = Locator.Data.GetData<GameData>().setting.isSfxMute ? 0 : 1;
+            bgm.BaseVolume = settingData.isBgmMute ? 0 : 1;
+            sfx.BaseVolume = settingData.isSfxMute ? 0 : 1;
 
             Locator.Audio = this;
         }
@@ -172,6 +177,34 @@ namespace Audio
             if (audioIn is null) return;
             sfx.SetAudio(audioIn);
             sfx.Play();
+        }
+
+        public AudioSource PlayLoopSfx(SFX_TYPE type, float fadeIn = 0.3f)
+        {
+            Audio audioIn = GetSfxAudio(type);          
+            if (audioIn is null) return null;
+            
+            float volume = audioIn.multiplier * sfx.BaseVolume;
+            AudioSource audioSource = audioSourcePool.Pop(0).AudioSource;
+            audioSource.clip = audioIn.clip;
+            audioSource.loop = true;
+            audioSource.volume = 0;
+            DOVirtual.Float(0, volume, fadeIn, x => audioSource.volume = x).SetEase(Ease.Linear);
+            loopSfxAudioSource.Add(audioSource);
+            audioSource.Play();
+            return audioSource;
+        }
+
+        public void StopLoopSfx(AudioSource source, float fadeOut = 0.3f)
+        {
+            DOVirtual.Float(source.volume, 0, fadeOut, x => source.volume = x)
+                .SetEase(Ease.Linear)
+                .OnComplete(() =>
+                {
+                    source.loop = false;
+                    source.Stop();
+                    audioSourcePool.Push(0, source.transform);
+                });           
         }
 
 
