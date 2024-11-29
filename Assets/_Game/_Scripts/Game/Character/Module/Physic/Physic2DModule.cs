@@ -6,7 +6,7 @@ using Utilities.Timer;
 
 namespace _Game.Character
 {
-    public class PhysicModule : AbstractPhysicModule
+    public class Physic2DModule : Abstract2DPhysicModule
     {
         protected override void OnInit()
         {

@@ -33,16 +33,16 @@ namespace _Game.Character
             base.OnEnable();
             #region LOGIC MODULE --> PHYSIC MODULE
             LogicSystem.Event._SetVelocity += PhysicModule.SetVelocity;
-            LogicSystem.Event._SetVelocityTime += PhysicModule.SetVelocity;
-            LogicSystem.Event._SetVelocityFrame += PhysicModule.SetVelocity;
+            //LogicSystem.Event._SetVelocityTime += PhysicModule.SetVelocity;
+            //LogicSystem.Event._SetVelocityFrame += PhysicModule.SetVelocity;
 
-            LogicSystem.Event._SetVelocityX += PhysicModule.SetVelocityX;
-            LogicSystem.Event._SetVelocityXTime += PhysicModule.SetVelocityX;
-            LogicSystem.Event._SetVelocityXFrame += PhysicModule.SetVelocityX;
+            //LogicSystem.Event._SetVelocityX += PhysicModule.SetVelocityX;
+            //LogicSystem.Event._SetVelocityXTime += PhysicModule.SetVelocityX;
+            //LogicSystem.Event._SetVelocityXFrame += PhysicModule.SetVelocityX;
 
-            LogicSystem.Event._SetVelocityY += PhysicModule.SetVelocityY;
-            LogicSystem.Event._SetVelocityYTime += PhysicModule.SetVelocityY;
-            LogicSystem.Event._SetVelocityYFrame += PhysicModule.SetVelocityY;
+            //LogicSystem.Event._SetVelocityY += PhysicModule.SetVelocityY;
+            //LogicSystem.Event._SetVelocityYTime += PhysicModule.SetVelocityY;
+            //LogicSystem.Event._SetVelocityYFrame += PhysicModule.SetVelocityY;
             //LogicSystem.Event._OnFire += Weapon.Fire;
 
             LogicSystem.Event._SetSkinRotation += displayModule.SetSkinRotation;
@@ -54,16 +54,16 @@ namespace _Game.Character
             base.OnDisable();
             #region LOGIC MODULE --> PHYSIC MODULE
             LogicSystem.Event._SetVelocity -= PhysicModule.SetVelocity;
-            LogicSystem.Event._SetVelocityTime -= PhysicModule.SetVelocity;
-            LogicSystem.Event._SetVelocityFrame -= PhysicModule.SetVelocity;
+            //LogicSystem.Event._SetVelocityTime -= PhysicModule.SetVelocity;
+            //LogicSystem.Event._SetVelocityFrame -= PhysicModule.SetVelocity;
 
-            LogicSystem.Event._SetVelocityX -= PhysicModule.SetVelocityX;
-            LogicSystem.Event._SetVelocityXTime -= PhysicModule.SetVelocityX;
-            LogicSystem.Event._SetVelocityXFrame -= PhysicModule.SetVelocityX;
+            //LogicSystem.Event._SetVelocityX -= PhysicModule.SetVelocityX;
+            //LogicSystem.Event._SetVelocityXTime -= PhysicModule.SetVelocityX;
+            //LogicSystem.Event._SetVelocityXFrame -= PhysicModule.SetVelocityX;
 
-            LogicSystem.Event._SetVelocityY -= PhysicModule.SetVelocityY;
-            LogicSystem.Event._SetVelocityYTime -= PhysicModule.SetVelocityY;
-            LogicSystem.Event._SetVelocityYFrame -= PhysicModule.SetVelocityY;
+            //LogicSystem.Event._SetVelocityY -= PhysicModule.SetVelocityY;
+            //LogicSystem.Event._SetVelocityYTime -= PhysicModule.SetVelocityY;
+            //LogicSystem.Event._SetVelocityYFrame -= PhysicModule.SetVelocityY;
 
             LogicSystem.Event._SetSkinRotation -= displayModule.SetSkinRotation;
             //LogicSystem.Event._OnFire -= Weapon.Fire;

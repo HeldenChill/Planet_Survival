@@ -7,15 +7,19 @@ namespace _Game
     public class SphereEntity : GameUnit
     {
         [SerializeField]
-        float acceleration;
-        [SerializeField]
         List<GameUnit> attractUnits;
         List<Vector3> attractUnitsGravityVectors;
+        List<float> unitDistances;
 
         private void Awake()
         {
             //attractUnits = new List<GameUnit>();
             attractUnitsGravityVectors = new List<Vector3>();
+            unitDistances = new List<float>();
+            for(int i = 0; i < attractUnits.Count; i++)
+            {
+                unitDistances.Add((attractUnits[i].transform.position - Tf.position).magnitude);
+            }
         }
 
         private void FixedUpdate()
@@ -23,8 +27,9 @@ namespace _Game
             attractUnitsGravityVectors.Clear();
             for(int i = 0; i < attractUnits.Count; i++)
             {
-                attractUnitsGravityVectors.Add(attractUnits[i].Tf.position - Tf.position);
+                attractUnitsGravityVectors.Add(attractUnits[i].Tf.position - Tf.position);                
                 attractUnits[i].Tf.rotation = Quaternion.FromToRotation(Vector3.up, attractUnitsGravityVectors[i]);
+                attractUnits[i].Tf.position = unitDistances[i] * attractUnitsGravityVectors[i].normalized + Tf.position;
             }
         }
     }

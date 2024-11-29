@@ -9,7 +9,6 @@ namespace Utilities.Core.Character
     {
         private Transform characterTransform;
         private bool isFaceRight = true;
-        private Vector2 rbVelocity;
        
         public void Initialize(Transform characterTransform)
         {
@@ -45,7 +44,7 @@ namespace Utilities.Core.Character
                 }
             }
         }
-        public Vector2 RbVelocity;
+        public Vector3 RbVelocity;
 
         public Transform CharacterTransform { 
             get => characterTransform;

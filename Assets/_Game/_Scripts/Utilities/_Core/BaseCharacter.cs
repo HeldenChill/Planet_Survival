@@ -34,13 +34,13 @@ namespace Utilities.Core
         [SerializeField]
         protected AbstractLogicModule<LD, LP, LE> LogicModule;
         [SerializeField]
-        protected AbstractPhysicModule PhysicModule;
+        protected Abstract3DPhysicModule PhysicModule;
 
 
         protected CharacterWorldInterfaceSystem WorldInterfaceSystem;
         protected CharacterNavigationSystem<ND, NP> NavigationSystem;
         public CharacterLogicSystem<LD, LP, LE> LogicSystem;
-        protected CharacterPhysicSystem PhysicSystem;
+        protected Character3DPhysicSystem PhysicSystem;
 
         [HideInInspector]
         public CharacterParameterData CharacterData;
@@ -51,7 +51,7 @@ namespace Utilities.Core
             WorldInterfaceSystem = new CharacterWorldInterfaceSystem(WorldInterfaceModule, CharacterData);
             NavigationSystem = new CharacterNavigationSystem<ND, NP>(NavigationModule, CharacterData);
             LogicSystem = new CharacterLogicSystem<LD, LP, LE>(LogicModule, CharacterData);
-            PhysicSystem = new CharacterPhysicSystem(PhysicModule, CharacterData);                   
+            PhysicSystem = new Character3DPhysicSystem(PhysicModule, CharacterData);                   
         }
       
         protected virtual void OnEnable()

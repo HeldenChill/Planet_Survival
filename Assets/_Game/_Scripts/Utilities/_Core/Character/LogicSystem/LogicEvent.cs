@@ -21,7 +21,7 @@ namespace Utilities.Core.Character.LogicSystem
         /// <summary>
         /// Set <c>Velocity</c> for character in a period of time.
         /// </summary>
-        public event Action<Vector2> _SetVelocity;
+        public event Action<Vector3> _SetVelocity;
         public event Action<Vector2, float> _SetVelocityTime;
         public event Action<Vector2, int> _SetVelocityFrame;
         /// <summary>

@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 namespace Utilities.Core.Character.PhysicSystem
-{
-    
-    public abstract class AbstractPhysicModule : AbstractModuleSystem<PhysicData,PhysicParameter>
+{   
+    public abstract class Abstract2DPhysicModule : AbstractModuleSystem<PhysicData,PhysicParameter>
     {
         [SerializeField]
         protected Rigidbody2D rb;

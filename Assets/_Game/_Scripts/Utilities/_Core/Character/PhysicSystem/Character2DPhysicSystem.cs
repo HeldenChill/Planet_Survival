@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Utilities.Core.Character.PhysicSystem
 {
-    public class CharacterPhysicSystem : AbstractCharacterSystem<AbstractPhysicModule,PhysicData,PhysicParameter>
+    public class Character2DPhysicSystem : AbstractCharacterSystem<Abstract2DPhysicModule,PhysicData,PhysicParameter>
     {
         #region Attributes
-        public AbstractPhysicModule MovementModule { get => module; set => module = value; }
+        public Abstract2DPhysicModule MovementModule { get => module; set => module = value; }
         #endregion
-        public CharacterPhysicSystem(AbstractPhysicModule module, CharacterParameterData characterData)
+        public Character2DPhysicSystem(Abstract2DPhysicModule module, CharacterParameterData characterData)
         {
             data = new PhysicData();
             Parameter = new PhysicParameter();
