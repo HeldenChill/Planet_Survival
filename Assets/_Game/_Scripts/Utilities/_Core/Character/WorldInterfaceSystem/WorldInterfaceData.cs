@@ -14,6 +14,7 @@ namespace Utilities.Core.Character.WorldInterfaceSystem
         public bool IsTouchingCorner;
         public RaycastHit2D TouchingWallPoint;
         public RaycastHit2D TouchingGroundPoint;
+        public Vector3 Normal;
 
         public IReadOnlyList<RaycastHit2D> WallHit2D;
         public IReadOnlyList<RaycastHit2D> CharacterHit2D;

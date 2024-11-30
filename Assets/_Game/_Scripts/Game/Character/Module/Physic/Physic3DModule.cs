@@ -7,7 +7,7 @@ namespace _Game.Character
     {
         public override void SetVelocity(Vector3 velocity)
         {
-            
+            rb.linearVelocity = velocity;
         }
 
         public override void UpdateData()

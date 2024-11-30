@@ -90,13 +90,17 @@ namespace Utilities.Core.Character.LogicSystem
             WarningInformation(_SetVelocityYTime, "SetVelocityYFrame");
             _SetVelocityYFrame?.Invoke(speed, frame);
         }
-        public void SetVelocity(Vector2 speed, float time = -1f)
+        public void SetVelocity(Vector3 speed, float time = -1f)
         {
             _SetVelocityTime?.Invoke(speed, time);
         }
-        public void SetVelocity(Vector2 speed, int frame)
+        public void SetVelocity(Vector3 speed, int frame)
         {
             _SetVelocityFrame?.Invoke(speed, frame);
+        }
+        public void SetVelocity(Vector3 velocity)
+        {
+            _SetVelocity?.Invoke(velocity);
         }
         public void DisableGravity()
         {

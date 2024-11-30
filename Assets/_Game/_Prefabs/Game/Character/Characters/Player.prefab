@@ -136,17 +136,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6992681369298089725, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6992681369298089725, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8363515472119934767, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.24
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8363515472119934767, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.98
+      value: 5.88
       objectReference: {fileID: 0}
     - target: {fileID: 8363515472119934767, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.6067169
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8363515472119934767, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       propertyPath: m_LocalRotation.w
@@ -188,7 +196,7 @@ PrefabInstance:
       addedObject: {fileID: 8967391503269435810}
     - targetCorrespondingSourceObject: {fileID: 5600719301390378321, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 832596083715213516}
+      addedObject: {fileID: 8431610674011292408}
     - targetCorrespondingSourceObject: {fileID: 5600719301390378321, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5360080018579477838}
@@ -243,11 +251,10 @@ MonoBehaviour:
   WorldInterfaceModule: {fileID: 4750699293615450764}
   NavigationModule: {fileID: 7121994988495848043}
   LogicModule: {fileID: 3623865738152697113}
-  PhysicModule: {fileID: 832596083715213516}
-  weapon: {fileID: 0}
+  PhysicModule: {fileID: 0}
   displayModule: {fileID: 5360080018579477838}
   takeDamageModule: {fileID: 6917664777779139693}
---- !u!114 &832596083715213516
+--- !u!114 &8431610674011292408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,12 +263,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3698602315297052740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2355cf7ddfa58bc4683136261686fe18, type: 3}
+  m_Script: {fileID: 11500000, guid: 60e0e9cfee5c21f4da2ff03be54ee7cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 7557791436568857822}
-  objectLayerName: 
-  ignoreLayerName: 
+  rb: {fileID: 0}
 --- !u!114 &5360080018579477838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,11 +328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea04a9484ac2ca746b6021b7e5d6cddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &7557791436568857822 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 1589622194287604171, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
-  m_PrefabInstance: {fileID: 9146199181574798613}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9015895387709933311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 284631280836115434, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}

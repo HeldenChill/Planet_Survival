@@ -46,7 +46,7 @@ namespace _Game.Character
             : base(data, parameter, _event) { }
         public override void Enter()
         {
-            Event.SetVelocity(Vector2.zero);
+            Event.SetVelocity(Vector3.zero);
         }
         public override bool Update()
         {
@@ -83,7 +83,7 @@ namespace _Game.Character
 
         public override void Enter()
         {
-            Event.SetVelocityX(Math.Sign(Parameter.NavData.MoveDirection.x) * Stats<CharacterStats>().Speed.Value);
+            Event.SetVelocity(Parameter.NavData.MoveDirection * Stats<CharacterStats>().Speed.Value);
         }
 
         public override void Exit()
@@ -107,7 +107,7 @@ namespace _Game.Character
 
         public override bool FixedUpdate()
         {
-            Event.SetVelocityX(Math.Sign(Parameter.NavData.MoveDirection.x) * Stats<CharacterStats>().Speed.Value);
+            Event.SetVelocity(Parameter.NavData.MoveDirection * Stats<CharacterStats>().Speed.Value);
             return base.FixedUpdate();
         }
     }
