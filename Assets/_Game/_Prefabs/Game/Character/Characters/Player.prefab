@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9209557543700348698}
-  - component: {fileID: 1391427147335464199}
+  - component: {fileID: 6816085844974928003}
   m_Layer: 0
   m_Name: DetectGroundSensor
   m_TagString: Untagged
@@ -65,7 +65,7 @@ Transform:
   - {fileID: 9196557982116763279}
   m_Father: {fileID: 2773135758927419011}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1391427147335464199
+--- !u!114 &6816085844974928003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5499305824693348050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc6b101bf94de04398b9f41cb36e8d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0dd88654c1d39d04ab2fb504d05b8e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   layer:
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensors:
-  - {fileID: 1391427147335464199}
+  - {fileID: 6816085844974928003}
 --- !u!1 &6836722758489343643 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2309564384586627982, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}

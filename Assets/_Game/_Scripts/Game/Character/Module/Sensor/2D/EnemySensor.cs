@@ -9,7 +9,7 @@ namespace Dynamic.WorldInterface
     public class EnemySensor : WorldInterfaceModule
     {
         ScanSensor ScanSensor;
-        DetectGroundAndWallSensor CheckGroundSensor;
+        DetectGroundAndWall2DSensor CheckGroundSensor;
         Type1Sensor Type1Sensor;
 
         public override void UpdateData()

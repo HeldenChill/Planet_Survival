@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
   speed:
-    BaseValue: 5
-    _value: 5
+    BaseValue: 20
+    isDirty: 1
+    _value: 20
   jumpSpeed:
     BaseValue: 16
+    isDirty: 1
     _value: 16
   hp:
     BaseValue: 1
-    _value: 0
+    isDirty: 0
+    _value: 1

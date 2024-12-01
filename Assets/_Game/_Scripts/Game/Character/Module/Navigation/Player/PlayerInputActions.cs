@@ -33,7 +33,7 @@ namespace _Game.Character
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""caab9dcb-5919-4dea-a06e-361d395f3b4a"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -51,7 +51,7 @@ namespace _Game.Character
                     ""name"": ""Fire"",
                     ""type"": ""Button"",
                     ""id"": ""1c49406d-254b-46d0-83b1-43737a299d0e"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -71,7 +71,7 @@ namespace _Game.Character
                 },
                 {
                     ""name"": ""2D Vector"",
-                    ""id"": ""807f4436-24b8-44e1-9e0a-0b68b6633c79"",
+                    ""id"": ""b381196b-5f4d-4724-9d8e-a7b08e4863c6"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -81,8 +81,30 @@ namespace _Game.Character
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": ""up"",
+                    ""id"": ""7d85fc07-3cbf-4ef6-ad88-c048483bec3a"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""e3679efe-46ce-4601-a1a8-528c19805d83"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": ""left"",
-                    ""id"": ""67bc26ef-bcc8-4b3d-9b43-943ae29b5383"",
+                    ""id"": ""5c40303f-6751-4b90-9c26-16284a9e51a9"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -93,7 +115,7 @@ namespace _Game.Character
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""4f2ba1ec-655e-47a8-be9f-bdcb4d5582a4"",
+                    ""id"": ""c889f239-2421-4f58-a6c6-9e7640a80801"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",

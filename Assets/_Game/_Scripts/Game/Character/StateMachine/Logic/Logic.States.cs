@@ -74,6 +74,7 @@ namespace _Game.Character
         where P : LogicParameter
         where E : LogicEvent
     {
+        protected readonly Vector3 NORMAL_PLANE_2D = -Vector3.forward;
         public MoveState(D data, P parameter, E _event)
             : base(data, parameter, _event)
         {
@@ -98,16 +99,13 @@ namespace _Game.Character
             {
                 ChangeState(STATE.IDLE);
             }
-            else
-            {
-                UpdateRotation();
-            }
             return true;
         }
 
         public override bool FixedUpdate()
         {
-            Event.SetVelocity(Parameter.NavData.MoveDirection * Stats<CharacterStats>().Speed.Value);
+            Vector3 direction = Quaternion.FromToRotation(NORMAL_PLANE_2D, Parameter.WIData.Normal) * Parameter.NavData.MoveDirection;
+            Event.SetVelocity(direction * Stats<CharacterStats>().Speed.Value);
             return base.FixedUpdate();
         }
     }
@@ -192,7 +190,6 @@ namespace _Game.Character
         public override bool Update()
         {         
             if(!base.Update()) return false;
-            UpdateRotation();
             if (Parameter.WIData.IsGrounded)
             {
                 if (Parameter.NavData.MoveDirection.sqrMagnitude > 0.0001f)

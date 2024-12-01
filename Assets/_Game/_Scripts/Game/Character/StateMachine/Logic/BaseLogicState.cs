@@ -32,7 +32,7 @@ namespace _Game.Character{
             }
             return true;
         }
-        protected void UpdateRotation()
+        protected void Update2DRotation()
         {
             if (Parameter.NavData.MoveDirection.x > 0)
             {

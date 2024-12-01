@@ -60,13 +60,13 @@ namespace Dynamic.WorldInterface.Sensor
         private TilePosition dynamicVariable = new TilePosition(Vector2Int.zero);
         protected override void UpdateData()
         {
-            if (Data.TouchingGroundPoint)
+            if (Data.TouchingGround2DPoint)
             {
-                SensorData.DynamicPosition = SensorData.GetPosition(TilePosition.CalculateIntPosition(Data.TouchingGroundPoint.point));
+                SensorData.DynamicPosition = SensorData.GetPosition(TilePosition.CalculateIntPosition(Data.TouchingGround2DPoint.point));
             }
-            else if (Data.TouchingWallPoint)
+            else if (Data.TouchingWall2DPoint)
             {
-                SensorData.DynamicPosition = SensorData.GetPosition(TilePosition.CalculateIntPosition(Data.TouchingWallPoint.point));
+                SensorData.DynamicPosition = SensorData.GetPosition(TilePosition.CalculateIntPosition(Data.TouchingWall2DPoint.point));
             }
             else
             {
