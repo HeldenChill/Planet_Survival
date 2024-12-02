@@ -7,7 +7,7 @@ namespace _Game.Character
 {
     using Base;
     using System;
-
+    using Utilities;
     using Utilities.Core.Character.LogicSystem;
     using Utilities.Core.Data;
     using Utilities.StateMachine;
@@ -104,7 +104,11 @@ namespace _Game.Character
 
         public override bool FixedUpdate()
         {
-            Vector3 direction = Quaternion.FromToRotation(NORMAL_PLANE_2D, Parameter.WIData.Normal) * Parameter.NavData.MoveDirection;
+            Vector2 forwardDirection = Parameter.PhysicData.CharacterParameterData.CharacterTransform.forward;
+
+            Vector3 direction = Quaternion.FromToRotation(NORMAL_PLANE_2D, Parameter.WIData.Normal) * (Quaternion.FromToRotation(Vector2.up, forwardDirection) * Parameter.NavData.MoveDirection);
+            DevLog.Log(DevId.Hung, $"FORWARD DIRECTION={forwardDirection} - DIRECTION={direction}");
+
             Event.SetVelocity(direction * Stats<CharacterStats>().Speed.Value);
             return base.FixedUpdate();
         }

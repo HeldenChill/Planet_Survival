@@ -34,7 +34,7 @@ namespace Utilities.Core.Character.LogicSystem
         //Need to update this ReceiveInformation
         public void ReceiveInformation(PhysicData Data)
         {
-
+            Parameter.PhysicData = Data;
         }
         public void ReceiveInformation(WorldInterfaceData worldInterface)
         {
@@ -44,7 +44,7 @@ namespace Utilities.Core.Character.LogicSystem
         public void ReceiveInformation(NavigationData navigation)
         {
             Parameter.NavData = navigation;
-        }       
+        }      
 
         public void ReceiveInformation<T>(T stats) where T : CharacterStats
         {

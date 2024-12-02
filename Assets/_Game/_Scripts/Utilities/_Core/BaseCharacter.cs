@@ -48,6 +48,7 @@ namespace Utilities.Core
         protected virtual void Awake()
         {
             CharacterData = new CharacterParameterData();
+            CharacterData.CharacterTransform = transform;
             WorldInterfaceSystem = new CharacterWorldInterfaceSystem(WorldInterfaceModule, CharacterData);
             NavigationSystem = new CharacterNavigationSystem<ND, NP>(NavigationModule, CharacterData);
             LogicSystem = new CharacterLogicSystem<LD, LP, LE>(LogicModule, CharacterData);

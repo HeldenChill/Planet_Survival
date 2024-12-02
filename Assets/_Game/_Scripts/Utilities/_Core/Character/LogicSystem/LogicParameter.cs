@@ -4,6 +4,7 @@ using Utilities.Core.Character.NavigationSystem;
 namespace Utilities.Core.Character.LogicSystem
 {
     using System;
+    using Utilities.Core.Character.PhysicSystem;
     using Utilities.Core.Character.WorldInterfaceSystem;
 
     public class LogicParameter : AbstractParameterSystem
@@ -12,5 +13,6 @@ namespace Utilities.Core.Character.LogicSystem
         public Action<Type, AnimationClip> OnReceiveAnimationClipData;
         public NavigationData NavData;
         public WorldInterfaceData WIData;
+        public PhysicData PhysicData;
     }
 }

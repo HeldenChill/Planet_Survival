@@ -28,6 +28,6 @@ namespace Utilities.Core.Character.NavigationSystem
         public Trigger Jump = new Trigger();
         public bool Dash = false;
         public bool EquipItem = false;
-        public Vector2 MoveDirection;
+        public Vector3 MoveDirection;
     }
 }
