@@ -8,9 +8,13 @@ public class CameraMovement : MonoBehaviour
     [SerializeField, Tooltip("Player transform for camera to follow")]
     private Transform playerTransform;
     [SerializeField, Tooltip("Camera offset from player (x not used)")]
-    private Vector3 offsetPosition = new Vector3(0, 5, 5);
+    private Vector3 cameraOffset = new Vector3(0, 5, 5);
+    [SerializeField, Tooltip("Track offset from player (x not used)")]
+    private Vector3 trackOffset = new Vector3(0, 0, 0);
     [SerializeField]
     private bool lookAt = true;
+    [SerializeField]
+    private bool useTrackOffset = true;
 
     // privates
     private Transform _mainCam = null;
@@ -44,7 +48,17 @@ public class CameraMovement : MonoBehaviour
             return;
         }
         // camera rig position
-        transform.position = playerTransform.position + -(playerTransform.forward * offsetPosition.z) + (playerTransform.up * offsetPosition.y);
+        if (useTrackOffset)
+        {
+            transform.position = playerTransform.TransformDirection(trackOffset) + playerTransform.position -
+                (playerTransform.forward * cameraOffset.z) + (playerTransform.up * cameraOffset.y);
+        }
+        else
+        {
+            transform.position = playerTransform.position -
+                (playerTransform.forward * cameraOffset.z) + (playerTransform.up * cameraOffset.y);
+        }
+
         // point camera at player
         if (lookAt)
         {
