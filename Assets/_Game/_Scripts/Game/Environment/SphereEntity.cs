@@ -18,7 +18,7 @@ namespace _Game
             unitDistances = new List<float>();
             for(int i = 0; i < attractUnits.Count; i++)
             {
-                unitDistances.Add((attractUnits[i].transform.position - Tf.position).magnitude);
+                unitDistances.Add((attractUnits[i].Tf.position - Tf.position).magnitude);
             }
         }
 
@@ -27,7 +27,8 @@ namespace _Game
             attractUnitsGravityVectors.Clear();
             for(int i = 0; i < attractUnits.Count; i++)
             {
-                attractUnitsGravityVectors.Add(attractUnits[i].Tf.position - Tf.position);                
+                attractUnitsGravityVectors.Add(attractUnits[i].Tf.position - Tf.position);
+                Vector2 forwardDirectionPlane = attractUnits[i].Tf.forward;
                 attractUnits[i].Tf.rotation = Quaternion.FromToRotation(Vector3.up, attractUnitsGravityVectors[i]);
                 attractUnits[i].Tf.position = unitDistances[i] * attractUnitsGravityVectors[i].normalized + Tf.position;
             }

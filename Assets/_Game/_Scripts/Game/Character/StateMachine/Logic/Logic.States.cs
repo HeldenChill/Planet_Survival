@@ -26,7 +26,7 @@ namespace _Game.Character
 
         public override bool Update()
         {
-            if(!base.Update()) return false;
+            if (!base.Update()) return false;
             if (Parameter.WIData.IsGrounded && Parameter.NavData.Jump.Value)
             {
                 ChangeState(STATE.JUMP);
@@ -36,7 +36,7 @@ namespace _Game.Character
         }
     }
     public abstract class IdleState<D, P, E> : GroundedState<D, P, E>
-        where D: LogicData
+        where D : LogicData
         where P : LogicParameter
         where E : LogicEvent
     {
@@ -105,6 +105,8 @@ namespace _Game.Character
         public override bool FixedUpdate()
         {
             Vector2 forwardDirection = Parameter.PhysicData.CharacterParameterData.CharacterTransform.forward;
+            if (forwardDirection.y < 0)
+                forwardDirection = -forwardDirection;
 
             Vector3 direction = Quaternion.FromToRotation(NORMAL_PLANE_2D, Parameter.WIData.Normal) * (Quaternion.FromToRotation(Vector2.up, forwardDirection) * Parameter.NavData.MoveDirection);
             DevLog.Log(DevId.Hung, $"FORWARD DIRECTION={forwardDirection} - DIRECTION={direction}");
@@ -145,7 +147,7 @@ namespace _Game.Character
             if (!isJumping) return false;
             ChangeState(STATE.IN_AIR);
             return true;
-        }       
+        }
     }
     public class DieState<D, P, E> : BaseLogicState<D, P, E>
         where D : LogicData
@@ -164,7 +166,7 @@ namespace _Game.Character
 
         public override void Exit()
         {
-            
+
         }
 
         public override bool Update()
@@ -183,7 +185,7 @@ namespace _Game.Character
 
         public override void Enter()
         {
-            
+
         }
 
         public override void Exit()
@@ -192,8 +194,8 @@ namespace _Game.Character
         }
 
         public override bool Update()
-        {         
-            if(!base.Update()) return false;
+        {
+            if (!base.Update()) return false;
             if (Parameter.WIData.IsGrounded)
             {
                 if (Parameter.NavData.MoveDirection.sqrMagnitude > 0.0001f)
