@@ -21,6 +21,8 @@ namespace _Game.Character
         BaseDisplayModule displayModule;
         [SerializeField]
         TakeDamageModule takeDamageModule;
+        [SerializeField]
+        FakeGravityBody fakeBody;
         //public PlayerWeapon Weapon => weapon;
         protected override void Awake()
         {
@@ -33,6 +35,8 @@ namespace _Game.Character
             base.OnEnable();
             #region LOGIC MODULE --> PHYSIC MODULE
             LogicSystem.Event._SetVelocity += PhysicModule.SetVelocity;
+            LogicSystem.Event._SetLocalVelocityXZ += PhysicModule.SetLocalVelocityXZ;
+            LogicSystem.Event._AddForce += PhysicModule.AddForce;
             LogicSystem.Event._SetSkinRotation += displayModule.SetSkinRotation;
             #endregion
         }
@@ -42,6 +46,8 @@ namespace _Game.Character
             base.OnDisable();
             #region LOGIC MODULE --> PHYSIC MODULE
             LogicSystem.Event._SetVelocity -= PhysicModule.SetVelocity;
+            LogicSystem.Event._SetLocalVelocityXZ -= PhysicModule.SetLocalVelocityXZ;
+            LogicSystem.Event._AddForce -= PhysicModule.AddForce;
             LogicSystem.Event._SetSkinRotation -= displayModule.SetSkinRotation;
             #endregion
         }

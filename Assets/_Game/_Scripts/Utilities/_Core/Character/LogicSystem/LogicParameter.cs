@@ -13,6 +13,7 @@ namespace Utilities.Core.Character.LogicSystem
         public Action<Type, AnimationClip> OnReceiveAnimationClipData;
         public NavigationData NavData;
         public WorldInterfaceData WIData;
+        public CharacterParameterData CharacterData;
         public PhysicData PhysicData;
     }
 }

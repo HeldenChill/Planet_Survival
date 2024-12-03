@@ -6,6 +6,6 @@ namespace Utilities.Core.Character.PhysicSystem
 {
     public class PhysicData : AbstractDataSystem
     {
-
+        public Vector3 RbVelocity;
     }
 }

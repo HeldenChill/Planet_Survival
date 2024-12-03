@@ -44,8 +44,7 @@ namespace Utilities.Core.Character.LogicSystem
         public void ReceiveInformation(NavigationData navigation)
         {
             Parameter.NavData = navigation;
-        }      
-
+        }
         public void ReceiveInformation<T>(T stats) where T : CharacterStats
         {
             Parameter.SetStats(stats);

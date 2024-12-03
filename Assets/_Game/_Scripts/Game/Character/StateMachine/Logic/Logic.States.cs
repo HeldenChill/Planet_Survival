@@ -126,7 +126,7 @@ namespace _Game.Character
 
         public override void Enter()
         {
-            Event.SetVelocityY(Stats<CharacterStats>().JumpSpeed.Value);
+            Event.AddForce(Parameter.PhysicData.CharacterParameterData.Tf.up * Stats<CharacterStats>().JumpSpeed.Value);
             isJumping = false;
         }
 
@@ -207,7 +207,9 @@ namespace _Game.Character
 
         public override bool FixedUpdate()
         {
-            Event.SetVelocityX(Math.Sign(Parameter.NavData.MoveDirection.x) * Stats<CharacterStats>().Speed.Value);
+            Vector3 moveDirection = Parameter.PhysicData.CharacterParameterData.Tf
+               .TransformDirection(new Vector3(Parameter.NavData.MoveDirection.x, 0, Parameter.NavData.MoveDirection.y));
+            Event.SetLocalVelocityXZ(moveDirection * Stats<CharacterStats>().Speed.Value);
             return base.FixedUpdate();
         }
     }

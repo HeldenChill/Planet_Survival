@@ -9,10 +9,19 @@ namespace _Game.Character
         {
             rb.linearVelocity = velocity;
         }
+        public override void SetLocalVelocityXZ(Vector3 velocity)
+        {
+            Vector3 parallelComponent = Vector3.Project(rb.linearVelocity, Data.CharacterParameterData.Tf.up);
+            rb.linearVelocity = parallelComponent + velocity;
+        }
+        public override void AddForce(Vector3 force, ForceMode mode = ForceMode.Impulse)
+        {
+            rb.AddForce(force, mode);
+        }
 
         public override void UpdateData()
         {
-            Data.CharacterParameterData.RbVelocity = rb.linearVelocity;
+            Data.RbVelocity = rb.linearVelocity;
         }
     }
 }

@@ -16,6 +16,7 @@ namespace Utilities.Core.Character.PhysicSystem
         }
 
         public abstract void SetVelocity(Vector3 velocity);
-
+        public abstract void SetLocalVelocityXZ(Vector3 velocity);
+        public abstract void AddForce(Vector3 force, ForceMode mode = ForceMode.Impulse);
     }
 }

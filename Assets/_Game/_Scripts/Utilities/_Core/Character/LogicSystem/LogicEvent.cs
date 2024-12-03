@@ -22,6 +22,8 @@ namespace Utilities.Core.Character.LogicSystem
         /// Set <c>Velocity</c> for character in a period of time.
         /// </summary>
         public event Action<Vector3> _SetVelocity;
+        public event Action<Vector3> _SetLocalVelocityXZ;
+        public event Action<Vector3, ForceMode> _AddForce;
         public event Action<Vector2, float> _SetVelocityTime;
         public event Action<Vector2, int> _SetVelocityFrame;
         /// <summary>
@@ -102,6 +104,15 @@ namespace Utilities.Core.Character.LogicSystem
         {
             _SetVelocity?.Invoke(velocity);
         }
+        public void SetLocalVelocityXZ(Vector3 velocity)
+        {
+            _SetLocalVelocityXZ?.Invoke(velocity);
+        }
+        public void AddForce(Vector3 force, ForceMode mode = ForceMode.Impulse)
+        {
+            _AddForce?.Invoke(force, mode);
+        }
+
         public void DisableGravity()
         {
             _DisableGravity?.Invoke();
