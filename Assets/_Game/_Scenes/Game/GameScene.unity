@@ -216,17 +216,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &741342861 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8967391503269435810, guid: 7a96cfcd3656245499e278ef8d4dcec7, type: 3}
-  m_PrefabInstance: {fileID: 1057730398}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c745c37232cd43147906a431783ffec3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &909414053 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8994416149752107784, guid: 7a96cfcd3656245499e278ef8d4dcec7, type: 3}
@@ -395,7 +384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2298855726539000808, guid: 7a96cfcd3656245499e278ef8d4dcec7, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2298855726539000808, guid: 7a96cfcd3656245499e278ef8d4dcec7, type: 3}
       propertyPath: m_Constraints
@@ -423,11 +412,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8994416149752107784, guid: 7a96cfcd3656245499e278ef8d4dcec7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1915369540}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3698602315297052740, guid: 7a96cfcd3656245499e278ef8d4dcec7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1369320169}
   m_SourcePrefab: {fileID: 100100000, guid: 7a96cfcd3656245499e278ef8d4dcec7, type: 3}
 --- !u!54 &1057730399 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 2298855726539000808, guid: 7a96cfcd3656245499e278ef8d4dcec7, type: 3}
+  m_PrefabInstance: {fileID: 1057730398}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1057730400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3698602315297052740, guid: 7a96cfcd3656245499e278ef8d4dcec7, type: 3}
   m_PrefabInstance: {fileID: 1057730398}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1369320168 stripped
@@ -435,12 +432,26 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8431610674011292408, guid: 7a96cfcd3656245499e278ef8d4dcec7, type: 3}
   m_PrefabInstance: {fileID: 1057730398}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1057730400}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60e0e9cfee5c21f4da2ff03be54ee7cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1369320169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057730400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdacf12c9cc27ed42ad31d636e1659f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attractor: {fileID: 1390372051}
+  setSolid: 0
 --- !u!1 &1390372044
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +465,7 @@ GameObject:
   - component: {fileID: 1390372046}
   - component: {fileID: 1390372045}
   - component: {fileID: 1390372049}
-  - component: {fileID: 1390372050}
+  - component: {fileID: 1390372051}
   m_Layer: 6
   m_Name: Environment
   m_TagString: Untagged
@@ -559,7 +570,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390372044}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -578,7 +589,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1390372050
+--- !u!114 &1390372051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -587,13 +598,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1390372044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65a89128dc29ae142bd3cb134da46a5c, type: 3}
+  m_Script: {fileID: 11500000, guid: 02812c71b56f87845beee4abbce0812c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tf: {fileID: 1390372048}
-  poolType: -1
-  attractUnits:
-  - {fileID: 741342861}
+  gravity: -10
+  size: 10
 --- !u!1 &1915369539
 GameObject:
   m_ObjectHideFlags: 0

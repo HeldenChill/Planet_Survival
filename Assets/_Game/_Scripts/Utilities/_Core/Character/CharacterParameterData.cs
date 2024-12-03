@@ -46,7 +46,7 @@ namespace Utilities.Core.Character
         }
         public Vector3 RbVelocity;
 
-        public Transform CharacterTransform { 
+        public Transform Tf { 
             get => characterTransform;
 
             set 

@@ -104,14 +104,9 @@ namespace _Game.Character
 
         public override bool FixedUpdate()
         {
-            Vector2 forwardDirection = Parameter.PhysicData.CharacterParameterData.CharacterTransform.forward;
-            if (forwardDirection.y < 0)
-                forwardDirection = -forwardDirection;
-
-            Vector3 direction = Quaternion.FromToRotation(NORMAL_PLANE_2D, Parameter.WIData.Normal) * (Quaternion.FromToRotation(Vector2.up, forwardDirection) * Parameter.NavData.MoveDirection);
-            DevLog.Log(DevId.Hung, $"FORWARD DIRECTION={forwardDirection} - DIRECTION={direction}");
-
-            Event.SetVelocity(direction * Stats<CharacterStats>().Speed.Value);
+            Vector3 moveDirection = Parameter.PhysicData.CharacterParameterData.Tf
+                .TransformDirection(new Vector3(Parameter.NavData.MoveDirection.x, 0, Parameter.NavData.MoveDirection.y));
+            Event.SetVelocity(moveDirection * Stats<CharacterStats>().Speed.Value);
             return base.FixedUpdate();
         }
     }
