@@ -14,8 +14,6 @@ namespace _Game.Character{
         private CharacterStats stats;
         public T Stats<T>() where T : CharacterStats => (T)(stats ??= Parameter.GetStats<T>());
 
-        protected readonly Quaternion LEFT_QUATERNION = Quaternion.Euler(0, 180, 0);
-        protected readonly Quaternion RIGHT_QUATERNION = default;
         public BaseLogicState(D data, P parameter, E _event)
         {
             Parameter = parameter;
@@ -32,16 +30,10 @@ namespace _Game.Character{
             }
             return true;
         }
-        protected void Update2DRotation()
+        public void UpdateSkinRotation(Vector3 inputMoveDirection)
         {
-            if (Parameter.NavData.MoveDirection.x > 0)
-            {
-                Event.SetSkinRotation(RIGHT_QUATERNION);
-            }
-            else
-            {
-                Event.SetSkinRotation(LEFT_QUATERNION);
-            }
+            float angle = Vector3.SignedAngle(Vector3.forward, inputMoveDirection, Vector3.up);
+            Event.SetSkinLocalRotation(Quaternion.AngleAxis(angle, Vector3.up));
         }
     }
 }

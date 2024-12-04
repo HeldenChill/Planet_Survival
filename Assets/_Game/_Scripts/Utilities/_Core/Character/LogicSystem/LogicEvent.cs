@@ -50,9 +50,9 @@ namespace Utilities.Core.Character.LogicSystem
 
         public event Action<Type, string> _PlayAnimation; //AnimModule.Activate(string)
         public event Action<Type, string> _ExitAnimation; //AnimModule.Deactivate(string)
-        public event Action<Type, string, float> _PlayFloatAnimation; //AnimModule.UpdateFloatParameter(float)
-        public event Action<Type, string> _PlayTriggerAnimtion;//player.AnimModule.Trigger(nameTrigger);
-        public event Action<Type, bool> _UpdateBoolParameterAnimation;
+        public event Action<Type, string, float> _SetAnimFloat; //AnimModule.UpdateFloatParameter(float)
+        public event Action<Type, string> _SetAnimTrigger;//player.AnimModule.Trigger(nameTrigger);
+        public event Action<Type, string, bool> _SetAnimBool;
 
 
         public event Action<bool, float> _IgnoreCollision;
@@ -62,6 +62,7 @@ namespace Utilities.Core.Character.LogicSystem
         /// Set <c>Rotation</c> of character.
         /// </summary>
         public event Action<Quaternion> _SetSkinRotation;
+        public event Action<Quaternion> _SetSkinLocalRotation;
         public event Action _OnDie;
 
         public void SetVelocityX(float speed)
@@ -143,18 +144,18 @@ namespace Utilities.Core.Character.LogicSystem
             _ExitAnimation?.Invoke(type, name);
         }
 
-        public void PlayFloatAnimation(Type type, string name, float value)
+        public void SetAnimFloat(Type type, string name, float value)
         {
-            _PlayFloatAnimation?.Invoke(type, name, value);
+            _SetAnimFloat?.Invoke(type, name, value);
         }
 
-        public void PlayTriggerAnimation(Type type, string name)
+        public void SetAnimTrigger(Type type, string name)
         {
-            _PlayTriggerAnimtion(type, name);
+            _SetAnimTrigger(type, name);
         }
-        public void UpdateBoolParameterAnimation(Type type, bool value)
+        public void SetAnimBool(Type type, string name, bool value)
         {
-            _UpdateBoolParameterAnimation(type, value);
+            _SetAnimBool(type, name, value);
         }
 
         public void SetTransformPosition(Vector3 pos)
@@ -204,6 +205,10 @@ namespace Utilities.Core.Character.LogicSystem
         public void SetSkinRotation(Quaternion rotation)
         {
             _SetSkinRotation?.Invoke(rotation);
+        }
+        public void SetSkinLocalRotation(Quaternion rotation)
+        {
+            _SetSkinLocalRotation?.Invoke(rotation);
         }
         private void WarningInformation(Delegate action, string name)
         {

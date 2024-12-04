@@ -22,7 +22,7 @@ public class CameraMovement : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        if(playerTransform == null)
+        if (playerTransform == null)
         {
             Debug.LogError("CameraMovement is missing playerTransform");
         }
@@ -48,22 +48,14 @@ public class CameraMovement : MonoBehaviour
             return;
         }
         // camera rig position
-        if (useTrackOffset)
-        {
-            transform.position = playerTransform.TransformDirection(trackOffset) + playerTransform.position -
-                (playerTransform.forward * cameraOffset.z) + (playerTransform.up * cameraOffset.y);
-        }
-        else
-        {
-            transform.position = playerTransform.position -
-                (playerTransform.forward * cameraOffset.z) + (playerTransform.up * cameraOffset.y);
-        }
+        transform.position = playerTransform.position -
+            (playerTransform.forward * cameraOffset.z) + (playerTransform.up * cameraOffset.y);
 
         // point camera at player
         if (lookAt)
         {
             // point camera at player using players up direction
-            _mainCam.LookAt(playerTransform, playerTransform.up);
+            _mainCam.LookAt(playerTransform.position + playerTransform.TransformDirection(trackOffset), playerTransform.up);
         }
         else
         {

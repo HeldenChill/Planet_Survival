@@ -6,6 +6,6 @@ namespace _Game
 {
     public static class CONSTANTS
     {
-        public const string CHAR_COLLIDER = "CharCollider";
+        
     }
 }

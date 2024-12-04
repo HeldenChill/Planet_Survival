@@ -24,6 +24,10 @@ namespace _Game.Character
         {
         }
 
+        public override void Enter()
+        {
+            Event.SetAnimBool(typeof(IdleState<D, P, E>), CONSTANTS.IS_GROUNDED_ANIM_NAME, true);
+        }
         public override bool Update()
         {
             if (!base.Update()) return false;
@@ -33,6 +37,10 @@ namespace _Game.Character
                 return false;
             }
             return true;
+        }
+        public override void Exit()
+        {
+            Event.SetAnimBool(typeof(IdleState<D, P, E>), CONSTANTS.IS_GROUNDED_ANIM_NAME, false);
         }
     }
     public abstract class IdleState<D, P, E> : GroundedState<D, P, E>
@@ -46,7 +54,9 @@ namespace _Game.Character
             : base(data, parameter, _event) { }
         public override void Enter()
         {
-            Event.SetVelocity(Vector3.zero);
+            base.Enter();
+            Event.SetVelocity(Vector3.zero);           
+            Event.SetAnimBool(typeof(IdleState<D, P, E>) ,CONSTANTS.IS_IDLE_ANIM_NAME, true);
         }
         public override bool Update()
         {
@@ -64,7 +74,8 @@ namespace _Game.Character
         }
         public override void Exit()
         {
-
+            base.Exit();
+            Event.SetAnimBool(typeof(IdleState<D, P, E>), CONSTANTS.IS_IDLE_ANIM_NAME, false);
         }
 
 
@@ -84,12 +95,15 @@ namespace _Game.Character
 
         public override void Enter()
         {
+            base.Enter();
             Event.SetVelocity(Parameter.NavData.MoveDirection * Stats<CharacterStats>().Speed.Value);
+            Event.SetAnimBool(typeof(IdleState<D, P, E>), CONSTANTS.IS_RUN_ANIM_NAME, true);
         }
 
         public override void Exit()
         {
-
+            base.Exit();
+            Event.SetAnimBool(typeof(IdleState<D, P, E>), CONSTANTS.IS_RUN_ANIM_NAME, false);
         }
 
         public override bool Update()
@@ -104,8 +118,10 @@ namespace _Game.Character
 
         public override bool FixedUpdate()
         {
+            Vector3 inputMoveDirection = new Vector3(Parameter.NavData.MoveDirection.x, 0, Parameter.NavData.MoveDirection.y);
             Vector3 moveDirection = Parameter.PhysicData.CharacterParameterData.Tf
-                .TransformDirection(new Vector3(Parameter.NavData.MoveDirection.x, 0, Parameter.NavData.MoveDirection.y));
+                .TransformDirection(inputMoveDirection);
+            UpdateSkinRotation(inputMoveDirection);
             Event.SetVelocity(moveDirection * Stats<CharacterStats>().Speed.Value);
             return base.FixedUpdate();
         }
@@ -127,6 +143,7 @@ namespace _Game.Character
         public override void Enter()
         {
             Event.AddForce(Parameter.PhysicData.CharacterParameterData.Tf.up * Stats<CharacterStats>().JumpSpeed.Value);
+            Event.SetAnimTrigger(typeof(IdleState<D, P, E>), CONSTANTS.JUMP_ANIM_NAME);
             isJumping = false;
         }
 
@@ -180,12 +197,10 @@ namespace _Game.Character
 
         public override void Enter()
         {
-
         }
 
         public override void Exit()
-        {
-
+        {           
         }
 
         public override bool Update()
@@ -207,8 +222,10 @@ namespace _Game.Character
 
         public override bool FixedUpdate()
         {
+            Vector3 inputMoveDirection = new Vector3(Parameter.NavData.MoveDirection.x, 0, Parameter.NavData.MoveDirection.y);
             Vector3 moveDirection = Parameter.PhysicData.CharacterParameterData.Tf
-               .TransformDirection(new Vector3(Parameter.NavData.MoveDirection.x, 0, Parameter.NavData.MoveDirection.y));
+               .TransformDirection(inputMoveDirection);
+            UpdateSkinRotation(inputMoveDirection);
             Event.SetLocalVelocityXZ(moveDirection * Stats<CharacterStats>().Speed.Value);
             return base.FixedUpdate();
         }

@@ -27,7 +27,7 @@ namespace _Game
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            int mask = LayerMask.NameToLayer(CONSTANTS.CHAR_COLLIDER);
+            int mask = LayerMask.NameToLayer(Base.CONSTANTS.CHAR_COLLIDER);
             if (collision.gameObject.layer == mask)
             {
                 IDamageable enemy = collision.gameObject.GetComponent<IDamageable>();

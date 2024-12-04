@@ -38,6 +38,9 @@ namespace _Game.Character
             LogicSystem.Event._SetLocalVelocityXZ += PhysicModule.SetLocalVelocityXZ;
             LogicSystem.Event._AddForce += PhysicModule.AddForce;
             LogicSystem.Event._SetSkinRotation += displayModule.SetSkinRotation;
+            LogicSystem.Event._SetSkinLocalRotation += displayModule.SetSkinLocalRotation;
+            LogicSystem.Event._SetAnimBool += displayModule.SetAnimBool;
+            LogicSystem.Event._SetAnimTrigger += displayModule.SetAnimTrigger;
             #endregion
         }
 
@@ -49,6 +52,9 @@ namespace _Game.Character
             LogicSystem.Event._SetLocalVelocityXZ -= PhysicModule.SetLocalVelocityXZ;
             LogicSystem.Event._AddForce -= PhysicModule.AddForce;
             LogicSystem.Event._SetSkinRotation -= displayModule.SetSkinRotation;
+            LogicSystem.Event._SetSkinLocalRotation -= displayModule.SetSkinLocalRotation;
+            LogicSystem.Event._SetAnimBool -= displayModule.SetAnimBool;
+            LogicSystem.Event._SetAnimTrigger -= displayModule.SetAnimTrigger;
             #endregion
         }
         public void Teleport(Vector2 position)

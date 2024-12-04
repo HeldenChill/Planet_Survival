@@ -35,11 +35,11 @@ namespace Base
     #region GAME DEFINE
     public static class CONSTANTS
     {
-        public const string VEHICLE_TAG = "GameVehicle";
-        public const string VEHICLE_LAYER = "Vehicle";
-        public const string HOLDER_TAG = "GameHolder";
-        public const string HOLDER_LAYER = "Holder";
-        public const string SPAWN_HOLDER_LAYER = "SpawnHolder";
+        public const string CHAR_COLLIDER = "CharCollider";
+        public const string IS_RUN_ANIM_NAME = "IsRun";
+        public const string IS_IDLE_ANIM_NAME = "IsIdle";
+        public const string JUMP_ANIM_NAME = "Jump";
+        public const string IS_GROUNDED_ANIM_NAME = "IsGrounded";
         public const int MAX_LEVEL = 50;
     }
     #region ENUM
