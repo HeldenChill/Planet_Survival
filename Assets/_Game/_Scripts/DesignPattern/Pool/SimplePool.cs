@@ -350,7 +350,7 @@ namespace DesignPattern
     {
         NONE = -1,
         PLAYER = 0,
-        ENEMY_ZOMBIE = 1,
+        ENEMY_ZOMBIE1 = 1,
         TYPE1_BULLET = 100,
 
     }

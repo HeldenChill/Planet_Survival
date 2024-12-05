@@ -68,7 +68,6 @@ namespace Utilities
             }
             return 0;
         }
-
         public static int WheelRandom(float[] rates)
         {
             float totalRate = 0f;
@@ -90,6 +89,13 @@ namespace Utilities
             }
             return 0;
 
+        }
+        public static Vector3 DirectionRandom()
+        {
+            float x = UnityEngine.Random.Range(0, 1f);
+            float y = UnityEngine.Random.Range(0, 1f);
+            float z = UnityEngine.Random.Range(0, 1f);
+            return new Vector3(x, y, z).normalized;
         }
     }
 }

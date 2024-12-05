@@ -15,24 +15,24 @@ namespace _Game.Character
         LogicData, LogicParameter, EnemyLogicEvent,
         EnemyNavigationData, NavigationParameter>
     {
-        [SerializeField]
-        EnemyWeapon weapon;
-        public EnemyWeapon Weapon => weapon;
+        //[SerializeField]
+        //EnemyWeapon weapon;
+        //public EnemyWeapon Weapon => weapon;
         public EnemyDisplayModule DisplayModule => displayModule as EnemyDisplayModule;
         protected override void Awake()
         {
             base.Awake();
-            weapon.Equip(WorldInterfaceModule, WorldInterfaceSystem.Data, this);
+            //weapon.Equip(WorldInterfaceModule, WorldInterfaceSystem.Data, this);
             takeDamageModule.OnInit(typeof(Enemy));
         }
         protected override void OnEnable()
         {
             base.OnEnable();
             #region LOGIC MODULE --> PHYSIC MODULE
-            LogicSystem.Event._OnAlertStateChange += DisplayModule.OnChangeAlertState;
+            //LogicSystem.Event._OnAlertStateChange += DisplayModule.OnChangeAlertState;
             LogicSystem.Event._OnDie += OnDie;
-            LogicSystem.Event._OnFire += Weapon.Fire;
-            NavigationSystem.Module.StartNavigation();
+            //LogicSystem.Event._OnFire += Weapon.Fire;
+            //NavigationSystem.Module.StartNavigation();
             #endregion
         }
 
@@ -40,9 +40,9 @@ namespace _Game.Character
         {
             base.OnDisable();
             #region LOGIC MODULE --> PHYSIC MODULE
-            LogicSystem.Event._OnAlertStateChange -= DisplayModule.OnChangeAlertState;
+            //LogicSystem.Event._OnAlertStateChange -= DisplayModule.OnChangeAlertState;
             LogicSystem.Event._OnDie -= OnDie;
-            LogicSystem.Event._OnFire -= Weapon.Fire;
+            //LogicSystem.Event._OnFire -= Weapon.Fire;
 
             #endregion
         }  

@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tf: {fileID: 5485303756789145182}
-  poolType: 1
+  poolType: -1
   rb: {fileID: 5798186096713879031}
   speed: 15
   fakeGravityBody: {fileID: 6172611502301574110}

@@ -1,11 +1,12 @@
 ﻿/*********************************************************************************************************
  * The FakeGravity class should be place on your world object that other objects are to be drawn to.
- * *******************************************************************************************************/ 
+ * *******************************************************************************************************/
+using DesignPattern;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FakeGravity : MonoBehaviour {
+public class FakeGravity : GameUnit {
 
     // inspector variables
     [SerializeField, Tooltip("Amount of gravity to be applied to objects")]
