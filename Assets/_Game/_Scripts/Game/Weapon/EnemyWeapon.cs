@@ -11,7 +11,7 @@ namespace _Game
     {
         public override void Fire()
         {
-            BaseBullet bullet = SimplePool.Spawn<BaseBullet>(PoolType.ENEMY_BULLET);
+            BaseBullet bullet = SimplePool.Spawn<BaseBullet>(PoolType.TYPE1_BULLET);
             bullet.Tf.position = transform.position;
             bullet.Tf.rotation = transform.rotation;
             bullet.Shot();

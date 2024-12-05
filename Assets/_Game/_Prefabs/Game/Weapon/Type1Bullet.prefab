@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6078872795619955062, guid: 2ecae4beea3e0f5438389d72d69735f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7287033456081514702, guid: 2ecae4beea3e0f5438389d72d69735f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -69,9 +73,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7287033456081514702, guid: 2ecae4beea3e0f5438389d72d69735f6, type: 3}
   m_PrefabInstance: {fileID: 7319496775131281194}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &6645796555580263890 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 4156417048742820600, guid: 2ecae4beea3e0f5438389d72d69735f6, type: 3}
+--- !u!114 &1802176634465659492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8977518559634955598, guid: 2ecae4beea3e0f5438389d72d69735f6, type: 3}
+  m_PrefabInstance: {fileID: 7319496775131281194}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8785725562429269990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdacf12c9cc27ed42ad31d636e1659f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &2079626068939248717 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8739309213694894951, guid: 2ecae4beea3e0f5438389d72d69735f6, type: 3}
   m_PrefabInstance: {fileID: 7319496775131281194}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8785725562429269990 stripped
@@ -92,7 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tf: {fileID: 50856641321568228}
-  poolType: 0
-  rb: {fileID: 6645796555580263890}
-  speed: 50
-  Damage: 0
+  poolType: 100
+  rb: {fileID: 2079626068939248717}
+  speed: 20
+  fakeGravityBody: {fileID: 1802176634465659492}
+  Damage: 1

@@ -14,6 +14,8 @@ namespace _Game
         protected ICharacter source;
         [SerializeField]
         protected float damage;
+        [SerializeField]
+        protected Transform fireTf;
 
         public abstract void Fire();
         public virtual void Equip(WorldInterfaceModule module, WorldInterfaceData data, ICharacter source)

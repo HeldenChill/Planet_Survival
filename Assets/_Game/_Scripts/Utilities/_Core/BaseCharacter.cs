@@ -18,7 +18,8 @@ namespace Utilities.Core
     }
     public abstract class BaseCharacter<T, 
         LD, LP, LE,
-        ND, NP> : GameUnit, ICharacter where T : CharacterStats
+        ND, NP> : GameUnit, ICharacter 
+        where T : CharacterStats
         where LD : LogicData, new()
         where LP : LogicParameter, new()
         where LE : LogicEvent, new()
@@ -44,6 +45,7 @@ namespace Utilities.Core
 
         [HideInInspector]
         public CharacterParameterData CharacterData;
+        
 
         protected virtual void Awake()
         {

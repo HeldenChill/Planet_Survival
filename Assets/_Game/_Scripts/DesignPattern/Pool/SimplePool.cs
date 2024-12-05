@@ -349,7 +349,9 @@ namespace DesignPattern
     public enum PoolType
     {
         NONE = -1,
-        TYPE1_BULLET = 0,
-        ENEMY_BULLET = 1,
+        PLAYER = 0,
+        ENEMY_ZOMBIE = 1,
+        TYPE1_BULLET = 100,
+
     }
 }

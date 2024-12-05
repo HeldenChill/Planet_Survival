@@ -11,17 +11,14 @@ namespace _Game.Character
     using Utilities.Core.Character.LogicSystem;
     using Utilities.Core.Character.NavigationSystem;
 
-    public class Enemy : BaseCharacter<EnemyStats, 
+    public class Enemy : Character<EnemyStats, 
         LogicData, LogicParameter, EnemyLogicEvent,
         EnemyNavigationData, NavigationParameter>
     {
         [SerializeField]
-        EnemyDisplayModule displayModule;
-        [SerializeField]
         EnemyWeapon weapon;
-        [SerializeField]
-        TakeDamageModule takeDamageModule;
         public EnemyWeapon Weapon => weapon;
+        public EnemyDisplayModule DisplayModule => displayModule as EnemyDisplayModule;
         protected override void Awake()
         {
             base.Awake();
@@ -32,23 +29,9 @@ namespace _Game.Character
         {
             base.OnEnable();
             #region LOGIC MODULE --> PHYSIC MODULE
-            LogicSystem.Event._SetVelocity += PhysicModule.SetVelocity;
-            //LogicSystem.Event._SetVelocityTime += PhysicModule.SetVelocity;
-            //LogicSystem.Event._SetVelocityFrame += PhysicModule.SetVelocity;
-
-            //LogicSystem.Event._SetVelocityX += PhysicModule.SetVelocityX;
-            //LogicSystem.Event._SetVelocityXTime += PhysicModule.SetVelocityX;
-            //LogicSystem.Event._SetVelocityXFrame += PhysicModule.SetVelocityX;
-
-            //LogicSystem.Event._SetVelocityY += PhysicModule.SetVelocityY;
-            //LogicSystem.Event._SetVelocityYTime += PhysicModule.SetVelocityY;
-            //LogicSystem.Event._SetVelocityYFrame += PhysicModule.SetVelocityY;
-            LogicSystem.Event._OnAlertStateChange += displayModule.OnChangeAlertState;
-            LogicSystem.Event._OnFire += Weapon.Fire;
-
-            LogicSystem.Event._SetSkinRotation += displayModule.SetSkinRotation;
-            LogicSystem.Event._SetSkinLocalRotation += displayModule.SetSkinLocalRotation;
+            LogicSystem.Event._OnAlertStateChange += DisplayModule.OnChangeAlertState;
             LogicSystem.Event._OnDie += OnDie;
+            LogicSystem.Event._OnFire += Weapon.Fire;
             NavigationSystem.Module.StartNavigation();
             #endregion
         }
@@ -57,21 +40,7 @@ namespace _Game.Character
         {
             base.OnDisable();
             #region LOGIC MODULE --> PHYSIC MODULE
-            LogicSystem.Event._SetVelocity -= PhysicModule.SetVelocity;
-            //LogicSystem.Event._SetVelocityTime -= PhysicModule.SetVelocity;
-            //LogicSystem.Event._SetVelocityFrame -= PhysicModule.SetVelocity;
-
-            //LogicSystem.Event._SetVelocityX -= PhysicModule.SetVelocityX;
-            //LogicSystem.Event._SetVelocityXTime -= PhysicModule.SetVelocityX;
-            //LogicSystem.Event._SetVelocityXFrame -= PhysicModule.SetVelocityX;
-
-            //LogicSystem.Event._SetVelocityY -= PhysicModule.SetVelocityY;
-            //LogicSystem.Event._SetVelocityYTime -= PhysicModule.SetVelocityY;
-            //LogicSystem.Event._SetVelocityYFrame -= PhysicModule.SetVelocityY;
-            LogicSystem.Event._OnAlertStateChange -= displayModule.OnChangeAlertState;
-
-            LogicSystem.Event._SetSkinRotation -= displayModule.SetSkinRotation;
-            LogicSystem.Event._SetSkinLocalRotation -= displayModule.SetSkinLocalRotation;
+            LogicSystem.Event._OnAlertStateChange -= DisplayModule.OnChangeAlertState;
             LogicSystem.Event._OnDie -= OnDie;
             LogicSystem.Event._OnFire -= Weapon.Fire;
 

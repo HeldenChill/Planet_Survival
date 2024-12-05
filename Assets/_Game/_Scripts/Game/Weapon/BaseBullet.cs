@@ -11,36 +11,39 @@ namespace _Game
     public class BaseBullet : GameUnit
     {
         [SerializeField]
-        Rigidbody2D rb;
+        Rigidbody rb;
         [SerializeField]
         float speed;
         [SerializeField]
-
         ICharacter source;
+        [SerializeField]
+        FakeGravityBody fakeGravityBody;
 
         public float Damage;
         public void Shot(ICharacter source = null)
         {
             this.source = source;
-            rb.linearVelocity = Tf.right * speed;
+            rb.linearVelocity = Tf.forward * speed;
+            fakeGravityBody.Attractor = ((Player)source).FakeGravityBody.Attractor;
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerEnter(Collider collision)
         {
-            int mask = LayerMask.NameToLayer(Base.CONSTANTS.CHAR_COLLIDER);
-            if (collision.gameObject.layer == mask)
+            int characterMask = LayerMask.NameToLayer(Base.CONSTANTS.CHAR_COLLIDER_LAYER);
+            if (collision.gameObject.layer == characterMask)
             {
                 IDamageable enemy = collision.gameObject.GetComponent<IDamageable>();
                 if(enemy.Type == typeof(Enemy))
                 {
                     float value = enemy.TakeDamage(-Damage, source);
                     this.Despawn();
-
-                    if(value <= 0 && source is Player)
-                    {
-                        ((Player)source).Teleport(Tf.position);
-                    }
                 }
+            }
+            int groundMask = LayerMask.NameToLayer(Base.CONSTANTS.GROUND_LAYER);
+
+            if (collision.gameObject.layer == groundMask)
+            {
+                this.Despawn();
             }
         }
     }

@@ -35,7 +35,8 @@ namespace Base
     #region GAME DEFINE
     public static class CONSTANTS
     {
-        public const string CHAR_COLLIDER = "CharCollider";
+        public const string CHAR_COLLIDER_LAYER = "CharCollider";
+        public const string GROUND_LAYER = "Ground";
         public const string IS_RUN_ANIM_NAME = "IsRun";
         public const string IS_IDLE_ANIM_NAME = "IsIdle";
         public const string JUMP_ANIM_NAME = "Jump";
