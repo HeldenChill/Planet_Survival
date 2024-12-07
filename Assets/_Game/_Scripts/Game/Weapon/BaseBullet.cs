@@ -25,8 +25,13 @@ namespace _Game
             this.source = source;
             rb.linearVelocity = Tf.forward * speed;
             fakeGravityBody.Attractor = ((Player)source).FakeGravityBody.Attractor;
+            fakeGravityBody.Distance = (Tf.position - fakeGravityBody.Attractor.Tf.position).magnitude;
         }
 
+        private void FixedUpdate()
+        {
+            
+        }
         private void OnTriggerEnter(Collider collision)
         {
             int characterMask = LayerMask.NameToLayer(Base.CONSTANTS.CHAR_COLLIDER_LAYER);

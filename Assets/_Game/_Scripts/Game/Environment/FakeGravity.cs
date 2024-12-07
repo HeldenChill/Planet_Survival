@@ -32,17 +32,24 @@ public class FakeGravity : GameUnit {
     /// Generates false gravity for world objects 
     /// </summary>
     /// <param name="objBody"></param>
-    public void Attract(Transform objBody)
+    public void Attract(FakeGravityBody objBody)
     {
         // set planet gravity direction for the object body
-        Vector3 gravityDir = (objBody.position - transform.position).normalized;
-        Vector3 bodyUp = objBody.up;
+        Vector3 gravityDir = (objBody.Tf.position - transform.position).normalized;
+        Vector3 bodyUp = objBody.Tf.up;
         // apply gravity to objects rigidbody
-        objBody.GetComponent<Rigidbody>().AddForce(gravityDir * (gravity + _gravityBoost));
+        Vector3 gravityForce = gravityDir * (gravity + _gravityBoost);
+        if (objBody.IgnoreYVel)
+        {
+            gravityForce = -gravityDir * Mathf.Pow(objBody.Rb.linearVelocity.magnitude, 2) / objBody.Distance;
+        }
+
+        objBody.Rb.AddForce(gravityForce);
         // update the objects rotation in relation to the planet
-        Quaternion targetRotation = Quaternion.FromToRotation(bodyUp, gravityDir) * objBody.rotation;
+        Quaternion targetRotation = Quaternion.FromToRotation(bodyUp, gravityDir) * objBody.Tf.rotation;
         // smooth rotation
-        objBody.rotation = Quaternion.Slerp(objBody.rotation, targetRotation, _objRotSpeed * Time.deltaTime);
+        //objBody.Tf.rotation = Quaternion.Slerp(objBody.Tf.rotation, targetRotation, _objRotSpeed * Time.fixedDeltaTime);
+        objBody.Tf.rotation = targetRotation;
     }
 
     /// <summary>

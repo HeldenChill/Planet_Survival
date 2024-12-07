@@ -324,6 +324,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ff48e92dfde707247b1e1bfe2bd88c13, type: 2}
+    - target: {fileID: 3976657366715852219, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
+      propertyPath: setSolid
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5600719301390378321, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       propertyPath: m_Name
       value: Player
@@ -331,6 +335,14 @@ PrefabInstance:
     - target: {fileID: 5600719301390378321, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6992681369298089725, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6992681369298089725, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8363515472119934767, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       propertyPath: m_LocalPosition.x

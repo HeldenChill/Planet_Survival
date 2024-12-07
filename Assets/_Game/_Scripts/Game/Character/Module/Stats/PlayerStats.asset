@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed:
     BaseValue: 5
-    isDirty: 0
+    isDirty: 1
     _value: 5
   jumpSpeed:
-    BaseValue: 15
-    isDirty: 0
-    _value: 15
+    BaseValue: 10
+    isDirty: 1
+    _value: 10
   hp:
     BaseValue: 1
-    isDirty: 0
+    isDirty: 1
     _value: 1

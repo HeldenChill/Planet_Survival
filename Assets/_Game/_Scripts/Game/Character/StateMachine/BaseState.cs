@@ -13,12 +13,6 @@ namespace Utilities.StateMachine
         JUMP = 3,
         DIE = 4,
         IN_AIR = 5,
-
-        NAV_IDLE = 1000,
-        NAV_PATROL = 1001,
-        NAV_ATTACK = 1002,
-        NAV_ALERT = 1003,
-        NAV_GUARD = 1004,
     }
     public abstract class BaseState
     {

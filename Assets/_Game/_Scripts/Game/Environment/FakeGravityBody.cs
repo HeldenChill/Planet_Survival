@@ -5,12 +5,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using DesignPattern;
+
 [RequireComponent(typeof(Rigidbody))]
 public class FakeGravityBody : MonoBehaviour {
 
     // inspector variables
     [SerializeField, Tooltip("Attractor object to be drawn to, if left blank first available world will be used")]
     private FakeGravity attractor;
+    [SerializeField]
+    private bool ignoreYVel;
     [SerializeField, Tooltip("Set object solid once settled")]
     private bool setSolid = false;
     
@@ -20,7 +24,11 @@ public class FakeGravityBody : MonoBehaviour {
     
     // properties
     public FakeGravity Attractor { get { return attractor; } set { attractor = value; } }
-    
+    public Transform Tf => _objTransform;
+    public bool IgnoreYVel => ignoreYVel;
+    public Rigidbody Rb => _objRigidbody;
+    [HideInInspector]
+    public float Distance;
     // Use this for initialization
 	private void Start () {
         // set rigidbody
@@ -34,10 +42,9 @@ public class FakeGravityBody : MonoBehaviour {
             attractor = GameObject.FindGameObjectWithTag("World").GetComponent<FakeGravity>();
         }
 	}
-	
-	// Update is called once per frame
-	private void Update () {
-        // return if kinematic
+
+    private void FixedUpdate()
+    {
         if (_objRigidbody.isKinematic)
         {
             return;
@@ -47,19 +54,17 @@ public class FakeGravityBody : MonoBehaviour {
         {
             ObjectResting();
         }
-        // apply gravity to object
         if (attractor != null)
         {
-            attractor.Attract(_objTransform);
+            attractor.Attract(this);
         }
-	}
-
+    }
     /// <summary>
     /// Check if rigidbody is sleeping
     /// </summary>
     private void ObjectResting()
     {
-        if(gameObject.GetComponent<Rigidbody>().IsSleeping())
+        if(_objRigidbody.IsSleeping())
         {
             _objRigidbody.isKinematic = true;
         }
