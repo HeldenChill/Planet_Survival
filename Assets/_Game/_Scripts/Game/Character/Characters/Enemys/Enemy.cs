@@ -7,13 +7,12 @@ using UnityEngine;
 
 namespace _Game.Character
 {
-    using Utilities.Core;
     using Utilities.Core.Character.LogicSystem;
     using Utilities.Core.Character.NavigationSystem;
 
     public class Enemy : Character<EnemyStats, 
         LogicData, LogicParameter, EnemyLogicEvent,
-        EnemyNavigationData, NavigationParameter>
+        EnemyNavigationData, EnemyNavigationParameter>
     {
         //[SerializeField]
         //EnemyWeapon weapon;
@@ -23,11 +22,13 @@ namespace _Game.Character
         {
             base.Awake();
             //weapon.Equip(WorldInterfaceModule, WorldInterfaceSystem.Data, this);
-            takeDamageModule.OnInit(typeof(Enemy));
+            NavigationSystem = new EnemyNavigationSystem(NavigationModule, CharacterData);
+            takeDamageModule.OnInit(typeof(Enemy));        
         }
         protected override void OnEnable()
         {
             base.OnEnable();
+            ((EnemyNavigationSystem)NavigationSystem).ReceiveInformation(Player.Ins);
             #region LOGIC MODULE --> PHYSIC MODULE
             //LogicSystem.Event._OnAlertStateChange += DisplayModule.OnChangeAlertState;
             LogicSystem.Event._OnDie += OnDie;

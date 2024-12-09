@@ -140,6 +140,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 284631280836115434, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5432576593416594369}
+    - targetCorrespondingSourceObject: {fileID: 284631280836115434, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1476196634417041352}
     - targetCorrespondingSourceObject: {fileID: 2822408722138982115, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4710470140045078096}
@@ -258,6 +261,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f257065285dbed745a606749a432e2ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 1476196634417041352}
+--- !u!114 &1476196634417041352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630060725597198995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Graph: {fileID: 5482563368811021786, guid: 56a390c33bdd92744b8ed88621c30c2d, type: 2}
+  m_BlackboardVariableOverridesList:
+  - rid: 4997267371763171676
+  - rid: 4997267371763172151
+  references:
+    version: 2
+    RefIds:
+    - rid: 4997267371763171676
+      type: {class: 'BlackboardVariable`1[[_Game.Character.Enemy1AI, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 18006490898448774449
+          m_Value1: 11155287008425637718
+        Name: NavigationModule
+        m_Value: {fileID: 5432576593416594369}
+    - rid: 4997267371763172151
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 2857989085545235496}
 --- !u!114 &8430164201651570689 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2228622953144789368, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}

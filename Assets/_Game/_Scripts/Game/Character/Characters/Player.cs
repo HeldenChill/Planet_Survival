@@ -9,16 +9,22 @@ namespace _Game.Character
     using Utilities.Core.Character.NavigationSystem;
     using Utilities.Core.Data;
 
+    [DefaultExecutionOrder(-10)]
     public class Player : Character<CharacterStats, 
         LogicData, LogicParameter, LogicEvent,
         NavigationData, NavigationParameter>
     {
+        protected static Player _instance;
+        public static Player Ins => _instance;
+
         [SerializeField]
         PlayerWeapon weapon;
         public PlayerWeapon Weapon => weapon;
         protected override void Awake()
         {
             base.Awake();
+            if(_instance == null)
+                _instance = this;
             weapon.Equip(WorldInterfaceModule, WorldInterfaceSystem.Data, this);
             takeDamageModule.OnInit(typeof(Player));
         }

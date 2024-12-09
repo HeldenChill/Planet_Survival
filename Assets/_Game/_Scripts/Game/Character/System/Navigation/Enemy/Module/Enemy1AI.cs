@@ -6,11 +6,16 @@ using UnityEngine;
 
 namespace _Game.Character
 {
+    using Unity.Behavior;
     using Utilities.Core.Character.NavigationSystem;
     using Utilities.StateMachine;
-    public class Enemy1AI : AbstractNavigationModule<EnemyNavigationData, NavigationParameter>
+    public class Enemy1AI : AbstractNavigationModule<EnemyNavigationData, EnemyNavigationParameter>
     {
-        public override void Initialize(EnemyNavigationData Data, NavigationParameter Parameter)
+        public EnemyNavigationData NavData => Data;
+        public EnemyNavigationParameter NavParameter => Parameter;
+        [SerializeField]
+        BehaviorGraphAgent agent;
+        public override void Initialize(EnemyNavigationData Data, EnemyNavigationParameter Parameter)
         {
             base.Initialize(Data, Parameter);
         }

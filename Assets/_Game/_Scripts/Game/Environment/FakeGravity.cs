@@ -38,10 +38,15 @@ public class FakeGravity : GameUnit {
         Vector3 gravityDir = (objBody.Tf.position - transform.position).normalized;
         Vector3 bodyUp = objBody.Tf.up;
         // apply gravity to objects rigidbody
-        Vector3 gravityForce = gravityDir * (gravity + _gravityBoost);
+        Vector3 gravityForce;
         if (objBody.IgnoreYVel)
         {
             gravityForce = -gravityDir * Mathf.Pow(objBody.Rb.linearVelocity.magnitude, 2) / objBody.Distance;
+            objBody.Tf.position = transform.position + gravityDir * objBody.Distance;
+        }
+        else
+        {
+            gravityForce = gravityDir * (gravity + _gravityBoost);
         }
 
         objBody.Rb.AddForce(gravityForce);
