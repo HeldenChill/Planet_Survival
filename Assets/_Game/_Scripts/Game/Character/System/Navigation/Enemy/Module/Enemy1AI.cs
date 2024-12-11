@@ -7,6 +7,7 @@ using UnityEngine;
 namespace _Game.Character
 {
     using Unity.Behavior;
+    using UnityEditor.Overlays;
     using Utilities.Core.Character.NavigationSystem;
     using Utilities.StateMachine;
     public class Enemy1AI : AbstractNavigationModule<EnemyNavigationData, EnemyNavigationParameter>
@@ -37,6 +38,16 @@ namespace _Game.Character
         private void AddStates(StateMachine stateMachine)
         {
             
+        }
+
+        private void OnDrawGizmos()
+        {
+            if(NavParameter != null && NavData != null)
+            {
+                Vector3 direction = new Vector3(NavData.MoveDirection.x * 2, 0, NavData.MoveDirection.y * 2);
+                direction = NavData.CharacterParameterData.Tf.TransformDirection(direction);
+                Gizmos.DrawLine(NavData.CharacterParameterData.Tf.position, NavData.CharacterParameterData.Tf.position + direction);
+            }
         }
     }
 }

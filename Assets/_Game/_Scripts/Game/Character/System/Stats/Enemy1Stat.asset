@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Enemy1Stat
   m_EditorClassIdentifier: 
   speed:
-    BaseValue: 5
-    isDirty: 1
-    _value: 2.5
+    BaseValue: 2
+    isDirty: 0
+    _value: 2
   jumpSpeed:
     BaseValue: 16
     isDirty: 1
     _value: 0
   hp:
     BaseValue: 1
-    isDirty: 1
+    isDirty: 0
     _value: 1
   hidden:
     maxPatrolTime: 10
