@@ -24,6 +24,7 @@ MonoBehaviour:
     BaseValue: 1
     isDirty: 0
     _value: 1
+  attackRange: 1
   hidden:
     maxPatrolTime: 10
     minPatrolTime: 6

@@ -29,9 +29,11 @@ namespace _Game.Character
             public float MinIdleTime => minIdleTime;
             public float TurnGuardTime => turnGuardTime;
         }
-
+        [SerializeField]
+        protected float attackRange;
         [SerializeField]
         HiddenStats hidden;
         public HiddenStats Hidden => hidden;
+        public float AttackRange => attackRange;
     }
 }

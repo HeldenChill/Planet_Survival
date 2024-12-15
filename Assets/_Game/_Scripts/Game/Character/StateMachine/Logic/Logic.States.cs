@@ -118,6 +118,8 @@ namespace _Game.Character
 
         public override bool FixedUpdate()
         {
+            if (Parameter.NavData.MoveDirection.sqrMagnitude < 0.0001f)
+                return false;
             Vector3 inputMoveDirection = new Vector3(Parameter.NavData.MoveDirection.x, 0, Parameter.NavData.MoveDirection.y);
             Vector3 moveDirection = Parameter.PhysicData.CharacterParameterData.Tf
                 .TransformDirection(inputMoveDirection);
@@ -222,6 +224,8 @@ namespace _Game.Character
 
         public override bool FixedUpdate()
         {
+            if (Parameter.NavData.MoveDirection.sqrMagnitude < 0.0001f)
+                return false;
             Vector3 inputMoveDirection = new Vector3(Parameter.NavData.MoveDirection.x, 0, Parameter.NavData.MoveDirection.y);
             Vector3 moveDirection = Parameter.PhysicData.CharacterParameterData.Tf
                .TransformDirection(inputMoveDirection);
