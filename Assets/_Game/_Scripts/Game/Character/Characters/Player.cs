@@ -26,7 +26,7 @@ namespace _Game.Character
             if(_instance == null)
                 _instance = this;
             weapon.Equip(WorldInterfaceModule, WorldInterfaceSystem.Data, this);
-            takeDamageModule.OnInit(typeof(Player));
+            takeDamageModule.OnInit(typeof(Player), Stats);
         }
         protected override void OnEnable()
         {

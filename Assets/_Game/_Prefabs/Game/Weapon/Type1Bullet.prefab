@@ -116,7 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tf: {fileID: 50856641321568228}
   poolType: 100
+  despawnTime: 1
   rb: {fileID: 2079626068939248717}
-  speed: 50
+  speed: 20
   fakeGravityBody: {fileID: 1802176634465659492}
   Damage: 1

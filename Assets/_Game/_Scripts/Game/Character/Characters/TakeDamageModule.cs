@@ -9,16 +9,15 @@ namespace _Game.Character
     using Utilities.Core.Data;
     public class TakeDamageModule : MonoBehaviour, IDamageable
     {
-        [SerializeField]
-        CharacterStats stats;
-
+        protected CharacterStats stats;
         public CharacterStats Stats => stats;
         protected Type type;
         public Type Type => type;
 
-        public void OnInit(Type type)
+        public void OnInit(Type type, CharacterStats stats)
         {
             this.type = type;
+            this.stats = stats;
         }
         public float TakeDamage(float damage, object source)
         {

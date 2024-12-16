@@ -23,7 +23,7 @@ namespace _Game.Character
             base.Awake();
             //weapon.Equip(WorldInterfaceModule, WorldInterfaceSystem.Data, this);
             NavigationSystem = new EnemyNavigationSystem(NavigationModule, CharacterData);
-            takeDamageModule.OnInit(typeof(Enemy));        
+            takeDamageModule.OnInit(typeof(Enemy), Stats);        
         }
         protected override void OnEnable()
         {

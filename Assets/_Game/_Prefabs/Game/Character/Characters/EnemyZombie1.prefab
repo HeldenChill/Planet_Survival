@@ -83,6 +83,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 5717261696194978234}
+    - target: {fileID: 2228622953144789368, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 11400000, guid: 6390f171d5bd52b4e95d54d950870f22, type: 2}
     - target: {fileID: 5600719301390378321, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       propertyPath: m_Name
       value: EnemyZombie1

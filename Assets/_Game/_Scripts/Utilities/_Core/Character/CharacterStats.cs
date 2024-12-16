@@ -18,11 +18,12 @@ namespace Utilities.Core.Data
         public Stat Speed => speed;
         public Stat JumpSpeed => jumpSpeed;
         public Stat Hp => hp;
-        private void OnEnable()
+        public virtual void OnInit<T>(T stats) where T : CharacterStats
         {
-            speed.isDirty = true;
-            jumpSpeed.isDirty = true;
-            hp.isDirty = true;
+            CharacterStats stat = stats as CharacterStats;
+            speed = new Stat(stat.speed.Value);
+            jumpSpeed = new Stat(stat.jumpSpeed.Value);
+            hp = new Stat(stat.hp.Value);
         }
     }
 }

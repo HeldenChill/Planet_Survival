@@ -11,29 +11,21 @@ namespace _Game.Character
     {
         [Serializable]
         public class HiddenStats
-        {
-            [SerializeField]
-            float maxPatrolTime;
-            [SerializeField]
-            float minPatrolTime;
-            [SerializeField]
-            float maxIdleTime;
-            [SerializeField]
-            float minIdleTime;
-            [SerializeField]
-            float turnGuardTime;
-
-            public float MaxPatrolTime => maxPatrolTime;
-            public float MinPatrolTime => minIdleTime;
-            public float MaxIdleTime => maxIdleTime;
-            public float MinIdleTime => minIdleTime;
-            public float TurnGuardTime => turnGuardTime;
-        }
+        {}
         [SerializeField]
         protected float attackRange;
         [SerializeField]
         HiddenStats hidden;
         public HiddenStats Hidden => hidden;
         public float AttackRange => attackRange;
+
+        public override void OnInit<T>(T stats)
+        {
+            base.OnInit(stats);
+            EnemyStats enemyStats = stats as EnemyStats;
+            attackRange = enemyStats.AttackRange;
+
+            hidden = new HiddenStats();
+        }
     }
 }

@@ -50,6 +50,9 @@ namespace Utilities.Core
         protected virtual void Awake()
         {
             CharacterData = new CharacterParameterData();
+            T newStats = ScriptableObject.CreateInstance<T>();
+            newStats.OnInit(Stats);
+            Stats = newStats;
             CharacterData.Tf = transform;
             WorldInterfaceSystem = new CharacterWorldInterfaceSystem(WorldInterfaceModule, CharacterData);
             NavigationSystem = new CharacterNavigationSystem<ND, NP>(NavigationModule, CharacterData);

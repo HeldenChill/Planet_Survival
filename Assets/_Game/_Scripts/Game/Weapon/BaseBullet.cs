@@ -7,9 +7,12 @@ namespace _Game
     using _Game.Character;
     using DesignPattern;
     using Utilities.Core;
+    using Utilities.Timer;
 
     public class BaseBullet : GameUnit
     {
+        [SerializeField]
+        float despawnTime;
         [SerializeField]
         Rigidbody rb;
         [SerializeField]
@@ -19,19 +22,19 @@ namespace _Game
         [SerializeField]
         FakeGravityBody fakeGravityBody;
 
+        STimer timer;
+
         public float Damage;
         public void Shot(ICharacter source = null)
         {
             this.source = source;
+            timer = TimerManager.Ins.PopSTimer();
+            timer.Start(despawnTime, OnDespawn);
             rb.linearVelocity = Tf.forward * speed;
             fakeGravityBody.Attractor = ((Player)source).FakeGravityBody.Attractor;
             fakeGravityBody.Distance = (Tf.position - fakeGravityBody.Attractor.Tf.position).magnitude;
         }
 
-        private void FixedUpdate()
-        {
-            
-        }
         private void OnTriggerEnter(Collider collision)
         {
             int characterMask = LayerMask.NameToLayer(Base.CONSTANTS.CHAR_COLLIDER_LAYER);
@@ -50,6 +53,13 @@ namespace _Game
             {
                 this.Despawn();
             }
+        }
+
+        public void OnDespawn()
+        {
+            TimerManager.Ins.PushSTimer(timer);
+            timer = null;
+            this.Despawn();
         }
     }
 }
