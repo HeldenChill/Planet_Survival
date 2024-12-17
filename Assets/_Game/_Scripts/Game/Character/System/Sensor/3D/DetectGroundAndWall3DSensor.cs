@@ -25,13 +25,13 @@ namespace Dynamic.WorldInterface.Sensor
             Physics.Raycast(new Ray(groundCheck.position, -groundCheck.up), out Data.TouchingGroundPoint, groundCheckRadius, layer);
             Data.Normal = groundCheck.up;
             Data.IsGrounded = Physics.OverlapSphereNonAlloc(groundCheck.position, groundCheckRadius, colliders, layer) > 0;
-            Data.IsTouchingWall = Physics.Raycast(new Ray(wallCheck.position, wallCheck.right), out Data.TouchingWallPoint, wallCheckRadius, layer);
+            Data.IsTouchingWall = Physics.Raycast(new Ray(wallCheck.position, wallCheck.forward), out Data.TouchingWallPoint, wallCheckRadius, layer);
         }
 
         protected override void OnDrawGizmos()
         {
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-            Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(transform.right * wallCheckRadius));
+            Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.forward * wallCheckRadius);
             Gizmos.color = Color.yellow;
             Gizmos.DrawLine(groundCheck.position, groundCheck.position + Vector3.down * groundCheckRadius);
         }

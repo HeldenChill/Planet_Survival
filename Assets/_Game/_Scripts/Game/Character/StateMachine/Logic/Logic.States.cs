@@ -55,16 +55,12 @@ namespace _Game.Character
         public override void Enter()
         {
             base.Enter();
-            Event.SetVelocity(Vector3.zero);           
-            Event.SetAnimBool(typeof(IdleState<D, P, E>) ,CONSTANTS.IS_IDLE_ANIM_NAME, true);
+            Event.SetVelocity(Vector3.zero);
+            Event.SetAnimBool(typeof(IdleState<D, P, E>), CONSTANTS.IS_IDLE_ANIM_NAME, true);
         }
         public override bool Update()
         {
             if (!base.Update()) return false;
-            if (Parameter.NavData.Fire.Value)
-            {
-                Event.OnFire();
-            }
             if (Parameter.NavData.MoveDirection.sqrMagnitude > 0.0001f)
             {
                 ChangeState(STATE.MOVE);
@@ -202,7 +198,7 @@ namespace _Game.Character
         }
 
         public override void Exit()
-        {           
+        {
         }
 
         public override bool Update()
@@ -236,33 +232,33 @@ namespace _Game.Character
     }
     #endregion
     #region PLAYER STATE
-    public class PlayerIdleState : IdleState<LogicData, LogicParameter, LogicEvent>
+    public class PlayerIdleState : IdleState<PlayerLogicData, PlayerLogicParameter, LogicEvent>
     {
-        public PlayerIdleState(LogicData data, LogicParameter parameter, LogicEvent _event) : base(data, parameter, _event)
+        public PlayerIdleState(PlayerLogicData data, PlayerLogicParameter parameter, LogicEvent _event) : base(data, parameter, _event)
         {
         }
     }
-    public class PlayerMoveState : MoveState<LogicData, LogicParameter, LogicEvent>
+    public class PlayerMoveState : MoveState<PlayerLogicData, PlayerLogicParameter, LogicEvent>
     {
-        public PlayerMoveState(LogicData data, LogicParameter parameter, LogicEvent _event) : base(data, parameter, _event)
+        public PlayerMoveState(PlayerLogicData data, PlayerLogicParameter parameter, LogicEvent _event) : base(data, parameter, _event)
         {
         }
     }
-    public class PlayerJumpState : JumpState<LogicData, LogicParameter, LogicEvent>
+    public class PlayerJumpState : JumpState<PlayerLogicData, PlayerLogicParameter, LogicEvent>
     {
-        public PlayerJumpState(LogicData data, LogicParameter parameter, LogicEvent _event) : base(data, parameter, _event)
+        public PlayerJumpState(PlayerLogicData data, PlayerLogicParameter parameter, LogicEvent _event) : base(data, parameter, _event)
         {
         }
     }
 
-    public class PlayerAirState : AirState<LogicData, LogicParameter, LogicEvent>
+    public class PlayerAirState : AirState<PlayerLogicData, PlayerLogicParameter, LogicEvent>
     {
-        public PlayerAirState(LogicData data, LogicParameter parameter, LogicEvent _event) : base(data, parameter, _event) { }
+        public PlayerAirState(PlayerLogicData data, PlayerLogicParameter parameter, LogicEvent _event) : base(data, parameter, _event) { }
     }
 
-    public class PlayerDieState : DieState<LogicData, LogicParameter, LogicEvent>
+    public class PlayerDieState : DieState<PlayerLogicData, PlayerLogicParameter, LogicEvent>
     {
-        public PlayerDieState(LogicData data, LogicParameter parameter, LogicEvent _event) : base(data, parameter, _event) { }
+        public PlayerDieState(PlayerLogicData data, PlayerLogicParameter parameter, LogicEvent _event) : base(data, parameter, _event) { }
     }
     #endregion
     #region ENEMY STATE

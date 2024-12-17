@@ -9,7 +9,9 @@ namespace _Game
 {
     public class EnemyWeapon : BaseWeapon
     {
-        public override void Fire()
+        public override void SkillExecute()
+        {}
+        public override void SkillActivation()
         {
             BaseBullet bullet = SimplePool.Spawn<BaseBullet>(PoolType.TYPE1_BULLET);
             bullet.Tf.position = transform.position;

@@ -24,7 +24,6 @@ namespace Utilities.Core.Character.NavigationSystem
         public bool Attack1 = false;
         public bool Attack2 = false;
         public bool Attack3 = false;
-        public Trigger Fire = new Trigger();
         public Trigger Jump = new Trigger();
         public bool Dash = false;
         public bool EquipItem = false;

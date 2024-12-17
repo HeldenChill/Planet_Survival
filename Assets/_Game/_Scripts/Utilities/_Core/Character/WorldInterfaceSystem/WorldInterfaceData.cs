@@ -20,6 +20,7 @@ namespace Utilities.Core.Character.WorldInterfaceSystem
 
         public IReadOnlyList<RaycastHit2D> WallHit2D;
         public IReadOnlyList<RaycastHit2D> CharacterHit2D;
+        public List<Collider> EnemyColliders;
         protected List<SensorData> sensorDatas;
         public List<SensorData> SensorDatas => sensorDatas ??= new List<SensorData>();
         public T GetSensorData<T>() where T : SensorData

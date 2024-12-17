@@ -56,7 +56,7 @@ namespace Utilities.Core.Character.LogicSystem
 
 
         public event Action<bool, float> _IgnoreCollision;
-        public event Action _OnFire;
+        public event Action<int> _SkillActivation;
 
         /// <summary>
         /// Set <c>Rotation</c> of character.
@@ -172,9 +172,9 @@ namespace Utilities.Core.Character.LogicSystem
         {
             _OnDie?.Invoke();
         }
-        public void OnFire()
+        public void SkillActivation(int id)
         {
-            _OnFire?.Invoke();
+            _SkillActivation?.Invoke(id);
         }
         //public void InflictDamage(Type type, float damage, int frame = 1)
         //{

@@ -8,8 +8,6 @@ namespace Utilities.Core.Character.LogicSystem
         public bool IsDashing = false;
         public bool CanDash = true;
         
-
-
         public bool IsInflictEffect = false;
         public bool IsGetDamage = false;
         public bool IsDeflecting = false;

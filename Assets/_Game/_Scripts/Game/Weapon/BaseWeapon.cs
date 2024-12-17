@@ -7,7 +7,7 @@ namespace _Game
     using UnityEngine;
     using Utilities.Core;
     using Utilities.Core.Character.WorldInterfaceSystem;
-    public abstract class BaseWeapon : MonoBehaviour
+    public abstract class BaseWeapon : BaseSkill
     {
         protected WorldInterfaceData data;
         protected WorldInterfaceModule module;
@@ -17,7 +17,6 @@ namespace _Game
         [SerializeField]
         protected Transform fireTf;
 
-        public abstract void Fire();
         public virtual void Equip(WorldInterfaceModule module, WorldInterfaceData data, ICharacter source)
         {
             this.data = data;

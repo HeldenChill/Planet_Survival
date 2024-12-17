@@ -40,9 +40,6 @@ namespace _Game.Character
             Data.Jump.Value = true;
         }
 
-        protected void OnFire(InputAction.CallbackContext callback) 
-        { 
-            Data.Fire.Value = true;
-        }
+        protected void OnFire(InputAction.CallbackContext callback) {}
     }
 }
