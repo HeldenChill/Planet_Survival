@@ -4,29 +4,44 @@ using Utilities;
 namespace _Game
 {
     using DesignPattern;
-    using Dynamic.WorldInterface.Data;
-    using SStats;
-    using Utilities.Core;
-    using Utilities.Core.Character.WorldInterfaceSystem;
     public class PlayerWeapon : BaseWeapon
     {
         public override void SkillExecute()
-        {}
+        {
+            skillTimer.Start(1f, SkillActivation, true);
+        }
         public override void SkillActivation()
         {
+            (Collider target, Vector3 direction) = FindTarget();
+            if(target == null) return;
+            direction = Vector3.ProjectOnPlane(direction, Data.CharacterParameterData.Tf.up);
+
+            tf.rotation *= Quaternion.FromToRotation(tf.forward, direction);
             BaseBullet bullet = SimplePool.Spawn<BaseBullet>(PoolType.TYPE1_BULLET);
             bullet.Tf.position = fireTf.position;
             bullet.Tf.rotation = fireTf.rotation;
             bullet.Damage = damage;
             bullet.Shot(source);
-        }       
-        public override void Equip(WorldInterfaceModule module, WorldInterfaceData data, ICharacter source)
-        {
-            base.Equip(module, data, source);
         }
-        public override void Unequip()
+
+        protected (Collider, Vector3) FindTarget()
         {
-            base.Unequip();
+            if(Parameter.WIData.EnemyColliders.Count == 0) return (null, default);
+            float minSqrDistance = float.MaxValue;
+            Collider target = null;
+            Vector3 direction = default;
+
+            foreach(Collider col in Parameter.WIData.EnemyColliders)
+            {
+                direction = col.transform.position - Tf.position;
+                float sqrDistance = direction.sqrMagnitude;
+                if(sqrDistance < minSqrDistance)
+                {
+                    minSqrDistance = sqrDistance;
+                    target = col;
+                }
+            }
+            return (target, direction);
         }
     }
 }

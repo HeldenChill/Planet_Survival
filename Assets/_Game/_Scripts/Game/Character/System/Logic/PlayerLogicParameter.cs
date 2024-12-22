@@ -6,6 +6,6 @@ namespace _Game.Character
     using System.Collections.Generic;
     public class PlayerLogicParameter : LogicParameter
     {
-        public List<BaseSkill> Skills;
+        
     }
 }

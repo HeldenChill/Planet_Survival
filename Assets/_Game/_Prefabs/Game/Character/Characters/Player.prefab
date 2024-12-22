@@ -261,6 +261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerWeapon
       objectReference: {fileID: 0}
+    - target: {fileID: 8789937199821836004, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
+      propertyPath: tf
+      value: 
+      objectReference: {fileID: 203295557134838243}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -554,6 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensors:
   - {fileID: 6816085844974928003}
+  - {fileID: 4437321382601544032}
 --- !u!1 &6836722758489343643 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2309564384586627982, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}

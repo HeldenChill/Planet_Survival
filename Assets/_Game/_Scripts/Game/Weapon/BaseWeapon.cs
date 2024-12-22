@@ -9,25 +9,20 @@ namespace _Game
     using Utilities.Core.Character.WorldInterfaceSystem;
     public abstract class BaseWeapon : BaseSkill
     {
-        protected WorldInterfaceData data;
-        protected WorldInterfaceModule module;
         protected ICharacter source;
         [SerializeField]
         protected float damage;
         [SerializeField]
         protected Transform fireTf;
 
-        public virtual void Equip(WorldInterfaceModule module, WorldInterfaceData data, ICharacter source)
+        public virtual void Equip(ICharacter source)
         {
-            this.data = data;
-            this.module = module;
             this.source = source;
         }
 
         public virtual void Unequip()
         {
-            data = null;
-            module = null;           
+            this.source = null;          
         }
     }
 }

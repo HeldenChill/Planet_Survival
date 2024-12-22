@@ -7,13 +7,34 @@ namespace _Game.Character
 
     public class PlayerLogicSystem : CharacterLogicSystem<PlayerLogicData, PlayerLogicParameter, LogicEvent>
     {
+        protected ProcessSkillModule SkillModule;
         public PlayerLogicSystem(AbstractLogicModule<PlayerLogicData, PlayerLogicParameter, LogicEvent> module, CharacterParameterData characterData) : base(module, characterData)
         {
+            SkillModule = new ProcessSkillModule(this);
         }
 
-        public void ReceiveInformation(List<BaseSkill> Skills)
+        public void AddSkill(BaseSkill skill)
         {
-            Parameter.Skills = Skills;
+            skill.OnInit(Parameter, Data);
+            SkillModule?.Skills.Add(skill);
+        }
+
+        public void RemoveSkill(BaseSkill skill)
+        {
+            SkillModule?.Skills.Remove(skill);
+        }
+        public class ProcessSkillModule
+        {
+            public PlayerLogicSystem LogicSystem;
+            public List<BaseSkill> Skills;
+
+            public ProcessSkillModule(PlayerLogicSystem logicSystem)
+            {
+                this.LogicSystem = logicSystem;
+                Skills = new List<BaseSkill>();
+            }
         }
     }
+
+    
 }

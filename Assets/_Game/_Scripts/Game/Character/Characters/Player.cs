@@ -19,8 +19,6 @@ namespace _Game.Character
 
         [SerializeField]
         protected PlayerWeapon weapon;
-        [SerializeField]
-        protected List<BaseSkill> Skills;
 
         public PlayerWeapon Weapon => weapon;
         protected override void Awake()
@@ -28,32 +26,37 @@ namespace _Game.Character
             base.Awake();
             if(_instance == null)
                 _instance = this;
-            weapon.Equip(WorldInterfaceModule, WorldInterfaceSystem.Data, this);
+            weapon.Equip(this);
             LogicSystem = new PlayerLogicSystem(LogicModule, CharacterData);
-            Skills = new List<BaseSkill>();
-            Skills.Add(weapon);
+            AddSkill(weapon);
             takeDamageModule.OnInit(typeof(Player), Stats);
+        }
+        private void Start()
+        {
+            weapon.SkillExecute();
         }
         protected override void OnEnable()
         {
             base.OnEnable();
-            ((PlayerLogicSystem)LogicSystem).ReceiveInformation(Skills);
-            LogicSystem.Event._SkillActivation += SkillActivation;
         }
 
         protected override void OnDisable()
         {        
             base.OnDisable();
-            LogicSystem.Event._SkillActivation -= SkillActivation;
         }
         public void Teleport(Vector2 position)
         {
             Tf.position = position;
         }
 
-        protected void SkillActivation(int id)
+        public void AddSkill(BaseSkill skill)
         {
-            Skills[id].SkillActivation();
+            ((PlayerLogicSystem)LogicSystem).AddSkill(skill);
+        }
+
+        public void RemoveSkill(BaseSkill skill)
+        {
+            ((PlayerLogicSystem)LogicSystem).RemoveSkill(skill);
         }
     }
 }
