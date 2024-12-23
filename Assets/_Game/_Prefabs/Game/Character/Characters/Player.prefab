@@ -206,18 +206,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 5257953144239494371}
     m_Modifications:
     - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281957570062616581, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -261,10 +249,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerWeapon
       objectReference: {fileID: 0}
-    - target: {fileID: 8789937199821836004, guid: 8b422c645c01dcd429fa2cf51eeea14d, type: 3}
-      propertyPath: tf
-      value: 
-      objectReference: {fileID: 203295557134838243}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

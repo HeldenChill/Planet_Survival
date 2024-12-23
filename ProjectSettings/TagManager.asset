@@ -15,8 +15,8 @@ TagManager:
   - Ground
   - Character
   - EnemyCollider
-  - DealDamage
   - PlayerCollider
+  - DealDamage
   - 
   - 
   - 

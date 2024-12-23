@@ -37,7 +37,7 @@ namespace _Game
 
         private void OnTriggerEnter(Collider collision)
         {
-            int characterMask = LayerMask.NameToLayer(Base.CONSTANTS.CHAR_COLLIDER_LAYER);
+            int characterMask = LayerMask.NameToLayer(Base.CONSTANTS.ENEMY_COLLIDER_LAYER);
             if (collision.gameObject.layer == characterMask)
             {
                 IDamageable enemy = collision.gameObject.GetComponent<IDamageable>();

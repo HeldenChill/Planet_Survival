@@ -6,17 +6,19 @@ namespace _Game
     using DesignPattern;
     public class PlayerWeapon : BaseWeapon
     {
+        Collider target;
+        Vector3 direction;
         public override void SkillExecute()
         {
             skillTimer.Start(1f, SkillActivation, true);
         }
         public override void SkillActivation()
         {
-            (Collider target, Vector3 direction) = FindTarget();
+            (target, direction) = FindTarget();
             if(target == null) return;
             direction = Vector3.ProjectOnPlane(direction, Data.CharacterParameterData.Tf.up);
 
-            tf.rotation *= Quaternion.FromToRotation(tf.forward, direction);
+            tf.rotation = Quaternion.FromToRotation(Vector3.forward, direction);
             BaseBullet bullet = SimplePool.Spawn<BaseBullet>(PoolType.TYPE1_BULLET);
             bullet.Tf.position = fireTf.position;
             bullet.Tf.rotation = fireTf.rotation;
@@ -42,6 +44,12 @@ namespace _Game
                 }
             }
             return (target, direction);
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(Tf.position, Tf.position + direction.normalized * 2);
         }
     }
 }
