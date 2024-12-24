@@ -23,6 +23,7 @@ namespace _Game
         public void SpawnEnemy(PoolType type)
         {
             Enemy enemy = SimplePool.Spawn<Enemy>(PoolType.ENEMY_ZOMBIE1);
+            enemy.OnInit();
             enemy.FakeGravityBody.Attractor = environment;
             Vector3 posSpawn = environment.Tf.position + SRandom.DirectionRandom().normalized * (environment.WorldSize + 1f);
             enemy.Tf.position = posSpawn;

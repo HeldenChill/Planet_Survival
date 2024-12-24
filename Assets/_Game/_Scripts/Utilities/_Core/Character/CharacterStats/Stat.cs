@@ -43,6 +43,7 @@ namespace SStats
 		public void Reset()
 		{
 			_value = BaseValue;
+			statModifiers.Clear();
 		}
 		public virtual void AddModifier(StatModifier mod)
 		{

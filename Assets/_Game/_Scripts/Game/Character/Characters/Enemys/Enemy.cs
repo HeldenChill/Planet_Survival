@@ -7,8 +7,10 @@ using UnityEngine;
 
 namespace _Game.Character
 {
+    using DesignPattern;
     using Utilities.Core.Character.LogicSystem;
     using Utilities.Core.Character.NavigationSystem;
+    using Utilities.Core.Data;
 
     public class Enemy : Character<EnemyStats, 
         LogicData, LogicParameter, EnemyLogicEvent,
@@ -18,6 +20,11 @@ namespace _Game.Character
         //EnemyWeapon weapon;
         //public EnemyWeapon Weapon => weapon;
         public EnemyDisplayModule DisplayModule => displayModule as EnemyDisplayModule;
+        public override void OnInit(CharacterStats stats = null)
+        {
+            base.OnInit(stats);
+            ((EnemyLogicModule)LogicModule).StartModule();
+        }
         protected override void Awake()
         {
             base.Awake();
@@ -50,7 +57,8 @@ namespace _Game.Character
         
         protected void OnDie()
         {
-            Destroy(gameObject);
+            ((EnemyLogicModule)LogicModule).StopModule();
+            SimplePool.Despawn(this);
         }
     }
 }

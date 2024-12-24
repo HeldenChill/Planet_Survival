@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
   m_Name: ChasingPlayer Blackboard Editor
   m_EditorClassIdentifier: 
-  VersionTimestamp: 638699052682911294
+  VersionTimestamp: 638706692194015122
   AssetID:
     m_Value0: 8400019503753241430
     m_Value1: 3246183980190961227
   m_Blackboard:
     m_Variables:
-    - rid: 4997267508990051326
-    - rid: 4997267508990051327
-    - rid: 4997267510217932800
+    - rid: 4997267710199201964
+    - rid: 4997267710199201965
+    - rid: 4997267710199201966
   m_SharedBlackboardVariableGuids: []
   references:
     version: 2
     RefIds:
-    - rid: 4997267508990051326
+    - rid: 4997267710199201964
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -33,7 +33,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 0}
-    - rid: 4997267508990051327
+    - rid: 4997267710199201965
       type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -41,13 +41,13 @@ MonoBehaviour:
           m_Value1: 13173419062442906933
         Name: Player
         m_Value: {fileID: 0}
-    - rid: 4997267510217932800
-      type: {class: 'BlackboardVariable`1[[_Game.Character.Enemy1AI, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 4997267710199201966
+      type: {class: 'BlackboardVariable`1[[_Game.Character.Enemy1AI, PlanetSurvival.Game]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 18006490898448774449
-          m_Value1: 11155287008425637718
-        Name: NavigationModule
+          m_Value0: 3223777655570562375
+          m_Value1: 3990702103999876359
+        Name: Enemy1AI
         m_Value: {fileID: 0}
 --- !u!114 &-3580849427712106572
 MonoBehaviour:
@@ -67,8 +67,8 @@ MonoBehaviour:
   m_Variables:
   - rid: 4997267371763171407
   - rid: 4997267371763171442
-  - rid: 4997267371763171602
-  m_VersionTimestamp: 638699052682911294
+  - rid: 4997267710199201962
+  m_VersionTimestamp: 638706692194015122
   m_CommandBuffer:
     m_Commands: []
   m_RuntimeBlackboardAsset: {fileID: -6361164755696520643}
@@ -95,13 +95,13 @@ MonoBehaviour:
         IsExposed: 0
         m_IsShared: 0
         m_Value: {fileID: 0}
-    - rid: 4997267371763171602
-      type: {class: 'TypedVariableModel`1[[_Game.Character.Enemy1AI, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+    - rid: 4997267710199201962
+      type: {class: 'TypedVariableModel`1[[_Game.Character.Enemy1AI, PlanetSurvival.Game]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
         ID:
-          m_Value0: 18006490898448774449
-          m_Value1: 11155287008425637718
-        Name: NavigationModule
+          m_Value0: 3223777655570562375
+          m_Value1: 3990702103999876359
+        Name: Enemy1AI
         IsExposed: 1
         m_IsShared: 0
         m_Value: {fileID: 0}
@@ -139,7 +139,7 @@ MonoBehaviour:
   - rid: 4997267508990051037
   - rid: 4997267508990051310
   - rid: 4997267508990051323
-  m_VersionTimestamp: 638699053021003897
+  m_VersionTimestamp: 638706692193741870
   m_DebugInfo: {fileID: -1817578243023295884}
   AssetID:
     m_Value0: 8400019503753241430
@@ -164,7 +164,7 @@ MonoBehaviour:
     Variables:
     - Name: Navigation
       Type:
-        m_SerializableType: _Game.Character.Enemy1AI, Assembly-CSharp, Version=0.0.0.0,
+        m_SerializableType: _Game.Character.Enemy1AI, PlanetSurvival.Game, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
       Tooltip: 
     - Name: Agent
@@ -186,7 +186,7 @@ MonoBehaviour:
     Variables:
     - Name: NavigationModule
       Type:
-        m_SerializableType: _Game.Character.Enemy1AI, Assembly-CSharp, Version=0.0.0.0,
+        m_SerializableType: _Game.Character.Enemy1AI, PlanetSurvival.Game, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
       Tooltip: 
     - Name: Self
@@ -208,7 +208,7 @@ MonoBehaviour:
     Variables:
     - Name: NavigationModule
       Type:
-        m_SerializableType: _Game.Character.Enemy1AI, Assembly-CSharp, Version=0.0.0.0,
+        m_SerializableType: _Game.Character.Enemy1AI, PlanetSurvival.Game, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
       Tooltip: 
     - Name: Character
@@ -271,13 +271,13 @@ MonoBehaviour:
         - rid: 4997267371763171843
         - rid: 4997267371763171844
         NodeType:
-          m_SerializableType: MoveToCharacterAction, Assembly-CSharp, Version=0.0.0.0,
+          m_SerializableType: MoveToCharacterAction, PlanetSurvival.Game, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
         NodeTypeID:
           m_Value0: 9156298878402156095
           m_Value1: 9288757791509695556
         m_FieldValues:
-        - rid: 4997267371763171845
+        - rid: 4997267710199201864
         - rid: 4997267371763171912
         - rid: 4997267371763171846
     - rid: 4997267371763171843
@@ -298,17 +298,6 @@ MonoBehaviour:
         m_NodeModel:
           rid: 4997267371763171842
         m_Connections: []
-    - rid: 4997267371763171845
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: Navigation
-        Type:
-          m_SerializableType: _Game.Character.Enemy1AI, Assembly-CSharp, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-        LocalValue:
-          rid: 4997267371763171847
-        LinkedVariable:
-          rid: 4997267532366217216
     - rid: 4997267371763171846
       type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -319,15 +308,7 @@ MonoBehaviour:
         LocalValue:
           rid: 4997267371763171848
         LinkedVariable:
-          rid: 4997267532366217218
-    - rid: 4997267371763171847
-      type: {class: 'BlackboardVariable`1[[_Game.Character.Enemy1AI, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: {fileID: 0}
+          rid: 4997267710199202056
     - rid: 4997267371763171848
       type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -346,7 +327,7 @@ MonoBehaviour:
         LocalValue:
           rid: 4997267371763171914
         LinkedVariable:
-          rid: 4997267532366217217
+          rid: 4997267710199202055
     - rid: 4997267371763171914
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -368,13 +349,13 @@ MonoBehaviour:
         - rid: 4997267508990051023
         - rid: 4997267508990051024
         NodeType:
-          m_SerializableType: CheckCharacterInAttackRange, Assembly-CSharp, Version=0.0.0.0,
+          m_SerializableType: CheckCharacterInAttackRange, PlanetSurvival.Game, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
         NodeTypeID:
           m_Value0: 14148272539748137970
           m_Value1: 13901946252616560480
         m_FieldValues:
-        - rid: 4997267508990051025
+        - rid: 4997267710199201865
         - rid: 4997267508990051026
         - rid: 4997267508990051027
     - rid: 4997267508990051023
@@ -395,17 +376,6 @@ MonoBehaviour:
         m_NodeModel:
           rid: 4997267508990051022
         m_Connections: []
-    - rid: 4997267508990051025
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: NavigationModule
-        Type:
-          m_SerializableType: _Game.Character.Enemy1AI, Assembly-CSharp, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-        LocalValue:
-          rid: 4997267508990051031
-        LinkedVariable:
-          rid: 4997267532366217216
     - rid: 4997267508990051026
       type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -416,7 +386,7 @@ MonoBehaviour:
         LocalValue:
           rid: 4997267508990051032
         LinkedVariable:
-          rid: 4997267532366217217
+          rid: 4997267710199202055
     - rid: 4997267508990051027
       type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -427,15 +397,7 @@ MonoBehaviour:
         LocalValue:
           rid: 4997267508990051033
         LinkedVariable:
-          rid: 4997267532366217218
-    - rid: 4997267508990051031
-      type: {class: 'BlackboardVariable`1[[_Game.Character.Enemy1AI, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: {fileID: 0}
+          rid: 4997267710199202056
     - rid: 4997267508990051032
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -488,7 +450,7 @@ MonoBehaviour:
     - rid: 4997267508990051310
       type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
-        Position: {x: 217.66943, y: -62.41922}
+        Position: {x: 236.0695, y: -50.41923}
         ID:
           m_Value0: 9553934206807279303
           m_Value1: 15405897844662306598
@@ -497,13 +459,13 @@ MonoBehaviour:
         - rid: 4997267508990051311
         - rid: 4997267508990051312
         NodeType:
-          m_SerializableType: AttackCharacterAction, Assembly-CSharp, Version=0.0.0.0,
+          m_SerializableType: AttackCharacterAction, PlanetSurvival.Game, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
         NodeTypeID:
           m_Value0: 14416673277415735894
           m_Value1: 17215490119973580044
         m_FieldValues:
-        - rid: 4997267508990051313
+        - rid: 4997267710199201866
         - rid: 4997267508990051314
     - rid: 4997267508990051311
       type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
@@ -524,17 +486,6 @@ MonoBehaviour:
         m_NodeModel:
           rid: 4997267508990051310
         m_Connections: []
-    - rid: 4997267508990051313
-      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
-      data:
-        FieldName: NavigationModule
-        Type:
-          m_SerializableType: _Game.Character.Enemy1AI, Assembly-CSharp, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-        LocalValue:
-          rid: 4997267508990051318
-        LinkedVariable:
-          rid: 4997267532366217216
     - rid: 4997267508990051314
       type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -545,15 +496,7 @@ MonoBehaviour:
         LocalValue:
           rid: 4997267508990051319
         LinkedVariable:
-          rid: 4997267532366217218
-    - rid: 4997267508990051318
-      type: {class: 'BlackboardVariable`1[[_Game.Character.Enemy1AI, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: {fileID: 0}
+          rid: 4997267710199202056
     - rid: 4997267508990051319
       type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -601,17 +544,74 @@ MonoBehaviour:
         m_Connections:
         - rid: 4997267508990051038
         - rid: 4997267508990051311
-    - rid: 4997267532366217216
-      type: {class: 'TypedVariableModel`1[[_Game.Character.Enemy1AI, Assembly-CSharp]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+    - rid: 4997267710199201864
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Navigation
+        Type:
+          m_SerializableType: _Game.Character.Enemy1AI, PlanetSurvival.Game, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 4997267710199201867
+        LinkedVariable:
+          rid: 4997267710199202054
+    - rid: 4997267710199201865
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: NavigationModule
+        Type:
+          m_SerializableType: _Game.Character.Enemy1AI, PlanetSurvival.Game, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 4997267710199201870
+        LinkedVariable:
+          rid: 4997267710199202054
+    - rid: 4997267710199201866
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: NavigationModule
+        Type:
+          m_SerializableType: _Game.Character.Enemy1AI, PlanetSurvival.Game, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 4997267710199201871
+        LinkedVariable:
+          rid: 4997267710199202054
+    - rid: 4997267710199201867
+      type: {class: 'BlackboardVariable`1[[_Game.Character.Enemy1AI, PlanetSurvival.Game]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 4997267710199201870
+      type: {class: 'BlackboardVariable`1[[_Game.Character.Enemy1AI, PlanetSurvival.Game]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 4997267710199201871
+      type: {class: 'BlackboardVariable`1[[_Game.Character.Enemy1AI, PlanetSurvival.Game]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 4997267710199202054
+      type: {class: 'TypedVariableModel`1[[_Game.Character.Enemy1AI, PlanetSurvival.Game]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
         ID:
-          m_Value0: 18006490898448774449
-          m_Value1: 11155287008425637718
-        Name: NavigationModule
+          m_Value0: 3223777655570562375
+          m_Value1: 3990702103999876359
+        Name: Enemy1AI
         IsExposed: 1
         m_IsShared: 0
         m_Value: {fileID: 0}
-    - rid: 4997267532366217217
+    - rid: 4997267710199202055
       type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
         ID:
@@ -621,7 +621,7 @@ MonoBehaviour:
         IsExposed: 1
         m_IsShared: 0
         m_Value: {fileID: 0}
-    - rid: 4997267532366217218
+    - rid: 4997267710199202056
       type: {class: 'TypedVariableModel`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
         ID:
@@ -644,95 +644,95 @@ MonoBehaviour:
   m_Name: ChasingPlayer
   m_EditorClassIdentifier: 
   Graphs:
-  - rid: 4997267532366217255
+  - rid: 4997267710199202041
   RootGraph:
-    rid: 4997267532366217255
+    rid: 4997267710199202041
   m_DebugInfo: {fileID: -1817578243023295884}
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 4997267532366217255
+    - rid: 4997267710199202041
       type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         AuthoringAssetID:
           m_Value0: 8400019503753241430
           m_Value1: 3246183980190961227
-        m_DebugInfo: {fileID: 0}
+        m_DebugInfo: {fileID: -1817578243023295884}
         Root:
-          rid: 4997267532366217256
+          rid: 4997267710199202042
         BlackboardReference:
-          rid: 4997267532366217257
+          rid: 4997267710199202043
         BlackboardGroupReferences: []
-        m_VersionTimestamp: 638699053021003897
-    - rid: 4997267532366217256
+        m_VersionTimestamp: 638706692193741870
+    - rid: 4997267710199202042
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 7860685346335288864
           m_Value1: 12639290497819945682
         Graph:
-          rid: 4997267532366217255
+          rid: 4997267710199202041
         m_Parent:
           rid: -2
         m_Child:
-          rid: 4997267532366217258
+          rid: 4997267710199202044
         Repeat: 1
-    - rid: 4997267532366217257
+    - rid: 4997267710199202043
       type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Blackboard:
-          rid: 4997267532366217259
+          rid: 4997267710199202045
         m_Source: {fileID: -6361164755696520643}
-    - rid: 4997267532366217258
+    - rid: 4997267710199202044
       type: {class: SelectorComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 8719887094741799445
           m_Value1: 2267647620289627768
         Graph:
-          rid: 4997267532366217255
+          rid: 4997267710199202041
         m_Parent:
-          rid: 4997267532366217256
+          rid: 4997267710199202042
         m_Children:
-        - rid: 4997267532366217260
-        - rid: 4997267532366217261
-    - rid: 4997267532366217259
+        - rid: 4997267710199202046
+        - rid: 4997267710199202047
+    - rid: 4997267710199202045
       type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Variables:
-        - rid: 4997267532366217262
-        - rid: 4997267532366217263
-        - rid: 4997267532366217264
-    - rid: 4997267532366217260
+        - rid: 4997267710199202048
+        - rid: 4997267710199202049
+        - rid: 4997267710199202050
+    - rid: 4997267710199202046
       type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 12393154618643993375
           m_Value1: 17411368359122375815
         Graph:
-          rid: 4997267532366217255
+          rid: 4997267710199202041
         m_Parent:
-          rid: 4997267532366217258
+          rid: 4997267710199202044
         m_Children:
-        - rid: 4997267532366217265
-        - rid: 4997267532366217266
-    - rid: 4997267532366217261
-      type: {class: AttackCharacterAction, ns: , asm: Assembly-CSharp}
+        - rid: 4997267710199202051
+        - rid: 4997267710199202052
+    - rid: 4997267710199202047
+      type: {class: AttackCharacterAction, ns: , asm: PlanetSurvival.Game}
       data:
         ID:
           m_Value0: 9553934206807279303
           m_Value1: 15405897844662306598
         Graph:
-          rid: 4997267532366217255
+          rid: 4997267710199202041
         m_Parent:
-          rid: 4997267532366217258
+          rid: 4997267710199202044
         NavigationModule:
-          rid: 4997267532366217264
+          rid: 4997267710199202050
         Character:
-          rid: 4997267532366217263
-    - rid: 4997267532366217262
+          rid: 4997267710199202049
+    - rid: 4997267710199202048
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -740,7 +740,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 0}
-    - rid: 4997267532366217263
+    - rid: 4997267710199202049
       type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -748,43 +748,43 @@ MonoBehaviour:
           m_Value1: 13173419062442906933
         Name: Player
         m_Value: {fileID: 0}
-    - rid: 4997267532366217264
-      type: {class: 'BlackboardVariable`1[[_Game.Character.Enemy1AI, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 4997267710199202050
+      type: {class: 'BlackboardVariable`1[[_Game.Character.Enemy1AI, PlanetSurvival.Game]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 18006490898448774449
-          m_Value1: 11155287008425637718
-        Name: NavigationModule
+          m_Value0: 3223777655570562375
+          m_Value1: 3990702103999876359
+        Name: Enemy1AI
         m_Value: {fileID: 0}
-    - rid: 4997267532366217265
-      type: {class: CheckCharacterInAttackRange, ns: , asm: Assembly-CSharp}
+    - rid: 4997267710199202051
+      type: {class: CheckCharacterInAttackRange, ns: , asm: PlanetSurvival.Game}
       data:
         ID:
           m_Value0: 10956642740275317959
           m_Value1: 8297011534123443094
         Graph:
-          rid: 4997267532366217255
+          rid: 4997267710199202041
         m_Parent:
-          rid: 4997267532366217260
+          rid: 4997267710199202046
         NavigationModule:
-          rid: 4997267532366217264
+          rid: 4997267710199202050
         Self:
-          rid: 4997267532366217262
+          rid: 4997267710199202048
         Character:
-          rid: 4997267532366217263
-    - rid: 4997267532366217266
-      type: {class: MoveToCharacterAction, ns: , asm: Assembly-CSharp}
+          rid: 4997267710199202049
+    - rid: 4997267710199202052
+      type: {class: MoveToCharacterAction, ns: , asm: PlanetSurvival.Game}
       data:
         ID:
           m_Value0: 5454582268712195596
           m_Value1: 5469429830649511018
         Graph:
-          rid: 4997267532366217255
+          rid: 4997267710199202041
         m_Parent:
-          rid: 4997267532366217260
+          rid: 4997267710199202046
         Navigation:
-          rid: 4997267532366217264
+          rid: 4997267710199202050
         Agent:
-          rid: 4997267532366217262
+          rid: 4997267710199202048
         Character:
-          rid: 4997267532366217263
+          rid: 4997267710199202049

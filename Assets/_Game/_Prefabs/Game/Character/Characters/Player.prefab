@@ -111,7 +111,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   tf: {fileID: 8256574436287002512}
-  visionRadius: 4
+  visionRadius: 8
 --- !u!1 &5499305824693348050
 GameObject:
   m_ObjectHideFlags: 0

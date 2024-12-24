@@ -11,14 +11,15 @@ namespace Utilities.Core
     using Utilities.Core.Character.PhysicSystem;
     using Utilities.Core.Data;
     using DesignPattern;
-
     public interface ICharacter
     {
-
+        public Transform Tf { get; }
+        public bool IsDie { get; }
+        public void OnInit(CharacterStats stats);
     }
     public abstract class BaseCharacter<T, 
         LD, LP, LE,
-        ND, NP> : GameUnit, ICharacter 
+        ND, NP> : GameUnit 
         where T : CharacterStats
         where LD : LogicData, new()
         where LP : LogicParameter, new()
@@ -65,12 +66,10 @@ namespace Utilities.Core
             #region Update Data Event
             NavigationSystem.ReceiveInformation(WorldInterfaceSystem.Data);
             NavigationSystem.ReceiveInformation(Stats);
-            NavigationSystem.ReceiveInformation(this);
             LogicSystem.ReceiveInformation(WorldInterfaceSystem.Data);
             LogicSystem.ReceiveInformation(NavigationSystem.Data);
             LogicSystem.ReceiveInformation(PhysicSystem.Data);
             LogicSystem.ReceiveInformation(Stats);
-            LogicSystem.ReceiveInformation(this);
             #endregion
 
         }

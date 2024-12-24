@@ -280,20 +280,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Graph: {fileID: 5482563368811021786, guid: 56a390c33bdd92744b8ed88621c30c2d, type: 2}
   m_BlackboardVariableOverridesList:
-  - rid: 4997267371763171676
-  - rid: 4997267371763172151
+  - rid: 4997267710199201991
+  - rid: 4997267710199201992
   references:
     version: 2
     RefIds:
-    - rid: 4997267371763171676
-      type: {class: 'BlackboardVariable`1[[_Game.Character.Enemy1AI, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 18006490898448774449
-          m_Value1: 11155287008425637718
-        Name: NavigationModule
-        m_Value: {fileID: 5432576593416594369}
-    - rid: 4997267371763172151
+    - rid: 4997267710199201991
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -301,6 +293,14 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 2857989085545235496}
+    - rid: 4997267710199201992
+      type: {class: 'BlackboardVariable`1[[_Game.Character.Enemy1AI, PlanetSurvival.Game]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 3223777655570562375
+          m_Value1: 3990702103999876359
+        Name: Enemy1AI
+        m_Value: {fileID: 5432576593416594369}
 --- !u!114 &8430164201651570689 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2228622953144789368, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}

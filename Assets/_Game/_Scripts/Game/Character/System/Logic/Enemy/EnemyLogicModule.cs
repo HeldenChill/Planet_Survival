@@ -24,9 +24,13 @@ namespace _Game.Character
             stateMachine.AddState(STATE.DIE, new EnemyDieState(Data, Parameter, Event));
         }
 
-        private void Start()
+        public void StartModule()
         {
             stateMachine.Start(STATE.IDLE);
+        }
+        public void StopModule()
+        {
+            stateMachine.Stop();
         }
         public override void UpdateData()
         {

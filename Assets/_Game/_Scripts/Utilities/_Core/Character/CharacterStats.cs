@@ -25,5 +25,12 @@ namespace Utilities.Core.Data
             jumpSpeed = new Stat(stat.jumpSpeed.Value);
             hp = new Stat(stat.hp.Value);
         }
+
+        public virtual void Reset()
+        {
+            speed.Reset();
+            jumpSpeed.Reset();
+            hp.Reset();            
+        }
     }
 }

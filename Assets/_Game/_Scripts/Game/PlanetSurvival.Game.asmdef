@@ -1,0 +1,23 @@
+{
+    "name": "PlanetSurvival.Game",
+    "rootNamespace": "_Game",
+    "references": [
+        "Hung.Character",
+        "Hung.DesignPattern",
+        "Hung.Base",
+        "Hung.Utilities.STimer",
+        "Hung.Utilities",
+        "Unity.Behavior",
+        "Unity.InputSystem",
+        "DOTween.Modules"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
