@@ -24,7 +24,7 @@ namespace _Game
             if(target == null) return;
             shootDirection = Vector3.ProjectOnPlane(direction, Data.CharacterParameterData.Tf.up);
 
-            Quaternion rotToTarget = Quaternion.FromToRotation(Vector3.forward, direction);
+            Quaternion rotToTarget = Quaternion.LookRotation(shootDirection, Data.CharacterParameterData.Tf.up);
             Tf.DORotateQuaternion(rotToTarget, 0.1f)
                 .OnComplete(Action);
 
