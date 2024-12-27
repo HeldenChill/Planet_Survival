@@ -10,6 +10,7 @@ namespace _Game
     {
         Collider target;
         Vector3 direction;
+        Vector3 shootDirection;
 
         bool isTrackingTarget = false;
         public override void SkillExecute()
@@ -21,7 +22,7 @@ namespace _Game
             isTrackingTarget = false;
             (target, direction) = FindTarget();
             if(target == null) return;
-            direction = Vector3.ProjectOnPlane(direction, Data.CharacterParameterData.Tf.up);
+            shootDirection = Vector3.ProjectOnPlane(direction, Data.CharacterParameterData.Tf.up);
 
             Quaternion rotToTarget = Quaternion.FromToRotation(Vector3.forward, direction);
             Tf.DORotateQuaternion(rotToTarget, 0.1f)
@@ -57,6 +58,7 @@ namespace _Game
             if(Parameter.WIData.EnemyColliders.Count == 0) return (null, default);
             float minSqrDistance = float.MaxValue;
             Collider target = null;
+            Vector3 minDirection = default;
             Vector3 direction = default;
 
             foreach(Collider col in Parameter.WIData.EnemyColliders)
@@ -66,15 +68,26 @@ namespace _Game
                 if(sqrDistance < minSqrDistance)
                 {
                     minSqrDistance = sqrDistance;
+                    minDirection = direction;
                     target = col;
                 }
             }
-            return (target, direction);
+            return (target, minDirection);
         }
         private void OnDrawGizmos()
         {
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(Tf.position, Tf.position + direction.normalized * 2);
+            
+            if(target != null)
+            {
+                Gizmos.color = Color.white;
+                Gizmos.DrawLine(Tf.position, target.transform.position);
+                Gizmos.color = Color.red;
+                Gizmos.DrawLine(Tf.position, Tf.position + direction.normalized * 3);
+                Gizmos.color = Color.green;
+                Gizmos.DrawLine(Tf.position, Tf.position + shootDirection.normalized * 3);
+                Gizmos.color = Color.yellow;
+                Gizmos.DrawLine(Tf.position, Tf.position + Data.CharacterParameterData.Tf.up * 3);
+            }
         }
     }
 }

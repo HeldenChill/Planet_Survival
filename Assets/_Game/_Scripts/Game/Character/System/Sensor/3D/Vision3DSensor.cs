@@ -3,6 +3,7 @@ namespace Dynamic.WorldInterface.Sensor
 {
     using Utilities.Core.Character.WorldInterfaceSystem;
     using System.Collections.Generic;
+    using System;
 
     public class Vision3DSensor : BaseSensor
     {
@@ -11,14 +12,15 @@ namespace Dynamic.WorldInterface.Sensor
         Collider[] colliders;
         private void Awake()
         {
-            colliders = new Collider[4];
+            colliders = new Collider[10];
             Data.EnemyColliders = new List<Collider>();
         }
         public override void UpdateState()
         {
-            Physics.OverlapSphereNonAlloc(tf.position, visionRadius, colliders, layer);
+            Array.Clear(colliders, 0, colliders.Length);
             Data.EnemyColliders.Clear();
 
+            Physics.OverlapSphereNonAlloc(tf.position, visionRadius, colliders, layer);
             for(int i = 0; i < colliders.Length; i++)
             {
                 if(colliders[i] != null)
