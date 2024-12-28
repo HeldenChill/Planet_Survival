@@ -3,45 +3,52 @@ using Utilities;
 
 namespace _Game
 {
+    using _Game.Character;
     using DesignPattern;
     using DG.Tweening;
+    using Utilities.Core;
 
     public class PlayerWeapon : BaseWeapon
     {
         Collider target;
-        Vector3 direction;
         Vector3 shootDirection;
+        Transform trackingTf;
 
-        bool isTrackingTarget = false;
+        public override void Equip(ICharacter source, Transform trackingTf = null)
+        {
+            base.Equip(source);
+            if(trackingTf != null)
+            {
+                Tf.parent = null;
+                this.trackingTf = trackingTf;
+            }
+        }
         public override void SkillExecute()
         {
             skillTimer.Start(1f, SkillActivation, true);
         }
         public override void SkillActivation()
         {
-            isTrackingTarget = false;
-            (target, direction) = FindTarget();
+            target = FindTarget();
             if(target == null) return;
-            shootDirection = Vector3.ProjectOnPlane(direction, Data.CharacterParameterData.Tf.up);
 
-            Quaternion rotToTarget = Quaternion.LookRotation(shootDirection, Data.CharacterParameterData.Tf.up);
+            Quaternion rotToTarget = ShootDirection(target.transform.position);
             Tf.DORotateQuaternion(rotToTarget, 0.1f)
                 .OnComplete(Action);
 
             
             void Action()
             {
-                tf.rotation = rotToTarget;
+                tf.rotation = ShootDirection(target.transform.position);
                 Projectile();
-                isTrackingTarget = true;
             }
         }
 
         private void FixedUpdate()
         {
-            if(isTrackingTarget)
+            if(trackingTf != null)
             {
-
+                tf.position = Vector3.Lerp(tf.position, trackingTf.position, 10f * Time.fixedDeltaTime);
             }
         }
 
@@ -53,12 +60,17 @@ namespace _Game
             bullet.Damage = damage;
             bullet.Shot(source);
         }
-        protected (Collider, Vector3) FindTarget()
+
+        protected Quaternion ShootDirection(Vector3 targetPosition)
         {
-            if(Parameter.WIData.EnemyColliders.Count == 0) return (null, default);
+            shootDirection = Vector3.ProjectOnPlane(targetPosition - Tf.position, Data.CharacterParameterData.Tf.up);
+            return Quaternion.LookRotation(shootDirection, Data.CharacterParameterData.Tf.up);
+        }
+        protected Collider FindTarget()
+        {
+            if(Parameter.WIData.EnemyColliders.Count == 0) return null;
             float minSqrDistance = float.MaxValue;
             Collider target = null;
-            Vector3 minDirection = default;
             Vector3 direction = default;
 
             foreach(Collider col in Parameter.WIData.EnemyColliders)
@@ -68,11 +80,10 @@ namespace _Game
                 if(sqrDistance < minSqrDistance)
                 {
                     minSqrDistance = sqrDistance;
-                    minDirection = direction;
                     target = col;
                 }
             }
-            return (target, minDirection);
+            return target;
         }
         private void OnDrawGizmos()
         {
@@ -81,8 +92,6 @@ namespace _Game
             {
                 Gizmos.color = Color.white;
                 Gizmos.DrawLine(Tf.position, target.transform.position);
-                Gizmos.color = Color.red;
-                Gizmos.DrawLine(Tf.position, Tf.position + direction.normalized * 3);
                 Gizmos.color = Color.green;
                 Gizmos.DrawLine(Tf.position, Tf.position + shootDirection.normalized * 3);
                 Gizmos.color = Color.yellow;

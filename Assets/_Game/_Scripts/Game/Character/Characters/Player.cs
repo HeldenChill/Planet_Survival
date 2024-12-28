@@ -19,14 +19,15 @@ namespace _Game.Character
 
         [SerializeField]
         protected PlayerWeapon weapon;
-
+        [SerializeField]
+        protected Transform weaponPosTf;
         public PlayerWeapon Weapon => weapon;
         protected override void Awake()
         {
             base.Awake();
             if(_instance == null)
                 _instance = this;
-            weapon.Equip(this);
+            weapon.Equip(this, weaponPosTf);
             LogicSystem = new PlayerLogicSystem(LogicModule, CharacterData);
             AddSkill(weapon);
             takeDamageModule.OnInit(typeof(Player), Stats);

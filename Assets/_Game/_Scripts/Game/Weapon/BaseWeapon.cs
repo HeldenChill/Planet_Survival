@@ -6,7 +6,6 @@ namespace _Game
 {
     using UnityEngine;
     using Utilities.Core;
-    using Utilities.Core.Character.WorldInterfaceSystem;
     public abstract class BaseWeapon : BaseSkill
     {
         protected ICharacter source;
@@ -15,7 +14,7 @@ namespace _Game
         [SerializeField]
         protected Transform fireTf;
 
-        public virtual void Equip(ICharacter source)
+        public virtual void Equip(ICharacter source, Transform trackingTf = null)
         {
             this.source = source;
         }

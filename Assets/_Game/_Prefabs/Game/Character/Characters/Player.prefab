@@ -512,6 +512,7 @@ MonoBehaviour:
   takeDamageModule: {fileID: 6917664777779139693}
   fakeGravityBody: {fileID: 5314880312699918510}
   weapon: {fileID: 6243601457095651074}
+  weaponPosTf: {fileID: 5257953144239494371}
 --- !u!114 &5314880312699918510 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3976657366715852219, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
