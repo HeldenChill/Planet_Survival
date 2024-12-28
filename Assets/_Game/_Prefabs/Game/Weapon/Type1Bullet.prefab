@@ -118,6 +118,6 @@ MonoBehaviour:
   poolType: 100
   despawnTime: 1
   rb: {fileID: 2079626068939248717}
-  speed: 20
+  speed: 30
   fakeGravityBody: {fileID: 1802176634465659492}
   Damage: 1

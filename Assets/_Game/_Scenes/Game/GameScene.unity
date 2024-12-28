@@ -25068,7 +25068,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1647815382879638139, guid: 22dc14e3753fa0a4baa491601486cc83, type: 3}
       propertyPath: spawnTime
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1647815382879638139, guid: 22dc14e3753fa0a4baa491601486cc83, type: 3}
       propertyPath: environment

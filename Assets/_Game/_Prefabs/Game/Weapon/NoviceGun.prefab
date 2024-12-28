@@ -72,7 +72,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4577578948044349938, guid: c6ba2a64f3ac8a94587f61ddb5f67ace, type: 3}
       propertyPath: m_Name
-      value: PlayerWeapon
+      value: NoviceGun
       objectReference: {fileID: 0}
     - target: {fileID: 8390443144850398919, guid: c6ba2a64f3ac8a94587f61ddb5f67ace, type: 3}
       propertyPath: m_LocalPosition.x
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7385304551645689648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1ff9914db4bef649852c7747677a32c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6cd63c4e51c799541a8dcdf1b0364cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tf: {fileID: 3281957570062616581}

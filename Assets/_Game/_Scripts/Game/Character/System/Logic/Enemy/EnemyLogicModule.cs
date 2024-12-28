@@ -16,7 +16,7 @@ namespace _Game.Character
             base.Initialize(Data, Parameter, Event);
 
             stateMachine = new StateMachine();
-            stateMachine.IsDebug = true;
+            stateMachine.IsDebug = false;
 
             stateMachine.AddState(STATE.IDLE, new EnemyIdleState(Data, Parameter, Event));
             stateMachine.AddState(STATE.MOVE, new EnemyMoveState(Data, Parameter, Event));

@@ -17,6 +17,8 @@ Material:
   m_InvalidKeywords:
   - OUTLINE_USE_COLOR
   - OUTLINE_USE_COLOR
+  - OUTLINE_USE_COLOR
+  - OUTLINE_USE_NORMALS
   - OUTLINE_USE_NORMALS
   - OUTLINE_USE_NORMALS
   m_LightmapFlags: 4

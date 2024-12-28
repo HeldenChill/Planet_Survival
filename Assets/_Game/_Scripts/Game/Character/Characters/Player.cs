@@ -18,10 +18,10 @@ namespace _Game.Character
         public static Player Ins => _instance;
 
         [SerializeField]
-        protected PlayerWeapon weapon;
+        protected NoviceGun weapon;
         [SerializeField]
         protected Transform weaponPosTf;
-        public PlayerWeapon Weapon => weapon;
+        public NoviceGun Weapon => weapon;
         protected override void Awake()
         {
             base.Awake();
