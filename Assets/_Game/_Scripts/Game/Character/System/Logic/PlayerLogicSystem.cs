@@ -16,6 +16,7 @@ namespace _Game.Character
         public void AddSkill(BaseSkill skill)
         {
             skill.OnInit(Parameter, Data);
+            skill.SkillLevel = 2;
             SkillModule?.Skills.Add(skill);
         }
 

@@ -1,4 +1,5 @@
 using _Game.Character;
+using System;
 using UnityEngine;
 using Utilities.Timer;
 
@@ -13,6 +14,7 @@ namespace _Game
         protected STimer skillTimer;
         protected bool isExecute = false;
         protected int skillLevel;
+        protected Type skillType;
 
         public virtual int SkillLevel
         {
@@ -22,11 +24,11 @@ namespace _Game
 
         public Transform Tf => tf;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             skillTimer = TimerManager.Ins.PopSTimer();
         }
-        public void OnInit(PlayerLogicParameter Parameter, PlayerLogicData Data)
+        public virtual void OnInit(PlayerLogicParameter Parameter, PlayerLogicData Data)
         {
             this.Parameter = Parameter;
             this.Data = Data;
@@ -37,5 +39,6 @@ namespace _Game
             isExecute = true;
         }
         public abstract void SkillActivation();
+        protected abstract void UpdateLevelSkillPropertys();
     }
 }

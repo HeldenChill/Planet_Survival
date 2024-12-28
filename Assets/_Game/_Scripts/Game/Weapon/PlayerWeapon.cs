@@ -6,14 +6,68 @@ namespace _Game
     using _Game.Character;
     using DesignPattern;
     using DG.Tweening;
+    using System;
+    using System.Collections.Generic;
     using Utilities.Core;
+    using Utilities.Timer;
 
     public class PlayerWeapon : BaseWeapon
     {
+        int shootNum = 1;
+        float betweenShootTime = 0.05f;
+        float weaponRotateTime = 0.1f;
+
         Collider target;
+        Quaternion rotToTarget;
         Vector3 shootDirection;
         Transform trackingTf;
 
+        List<Action> actions;
+        List<float> times;
+        STimer activationTimer;
+        protected override void Awake()
+        {
+            base.Awake();
+            actions = new List<Action>();
+            times = new List<float>();
+            activationTimer = TimerManager.Ins.PopSTimer();
+        }
+        public override int SkillLevel 
+        { 
+            get => base.SkillLevel; 
+            set
+            {
+                base.SkillLevel = value;
+                switch (skillLevel)
+                {
+                    case 0:
+                    case 1:
+                        shootNum = 1;
+                        break;
+                    case 2:
+                        shootNum = 2;
+                        break;
+                    case 3:
+                        shootNum = 3;
+                        break;
+                    case 4:
+                        shootNum = 4;
+                        break;
+                    case 5:
+                        shootNum = 5;
+                        break;
+                }
+                if(skillType == typeof(PlayerWeapon))
+                {
+                    UpdateLevelSkillPropertys();
+                }
+            }
+        }
+        public override void OnInit(PlayerLogicParameter Parameter, PlayerLogicData Data)
+        {
+            base.OnInit(Parameter, Data);
+            skillType = typeof(PlayerWeapon);
+        }
         public override void Equip(ICharacter source, Transform trackingTf = null)
         {
             base.Equip(source);
@@ -38,19 +92,9 @@ namespace _Game
                 target = null;
                 return;
             }
-
-            Quaternion rotToTarget = ShootDirection(target.transform.position);
-            Tf.DORotateQuaternion(rotToTarget, 0.1f)
-                .OnComplete(Action);
-
-            
-            void Action()
-            {
-                tf.rotation = ShootDirection(target.transform.position);
-                Projectile();
-            }
+            rotToTarget = ShootDirection(target.transform.position);
+            activationTimer.Start(times, actions);
         }
-
         private void FixedUpdate()
         {
             if(trackingTf != null)
@@ -66,8 +110,7 @@ namespace _Game
                     SkillExecute();
                 }
             }
-        }
-
+        }        
         protected void Projectile()
         {
             BaseBullet bullet = SimplePool.Spawn<BaseBullet>(PoolType.TYPE1_BULLET);
@@ -76,7 +119,6 @@ namespace _Game
             bullet.Damage = damage;
             bullet.Shot(source);
         }
-
         protected Quaternion ShootDirection(Vector3 targetPosition)
         {
             shootDirection = Vector3.ProjectOnPlane(targetPosition - Tf.position, Data.CharacterParameterData.Tf.up);
@@ -100,6 +142,37 @@ namespace _Game
                 }
             }
             return target;
+        }
+        protected override void UpdateLevelSkillPropertys()
+        {          
+            times.Clear();
+            actions.Clear();
+            float currentTime = 0;
+            switch (skillLevel)
+            {
+                case 0:
+                case 1:
+                    times.Add(currentTime);
+                    actions.Add(() => Tf.DORotateQuaternion(rotToTarget, weaponRotateTime)
+                        .OnComplete(Action));                    
+                    break;
+                case 2:
+                    for(int i = 0; i < shootNum; i++)
+                    {
+                        times.Add(currentTime);
+                        actions.Add(() => Tf.DORotateQuaternion(rotToTarget, weaponRotateTime)
+                            .OnComplete(Action));
+                        currentTime += betweenShootTime;
+                    }
+                    break;
+                    
+            }
+
+            void Action()
+            {
+                tf.rotation = ShootDirection(target.transform.position);
+                Projectile();
+            }
         }
         private void OnDrawGizmos()
         {

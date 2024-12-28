@@ -16,5 +16,10 @@ namespace _Game
             bullet.Tf.rotation = transform.rotation;
             bullet.Shot();
         }
+
+        protected override void UpdateLevelSkillPropertys()
+        {
+            
+        }
     }
 }

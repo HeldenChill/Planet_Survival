@@ -27,13 +27,14 @@ namespace _Game.Character
             base.Awake();
             if(_instance == null)
                 _instance = this;
-            weapon.Equip(this, weaponPosTf);
             LogicSystem = new PlayerLogicSystem(LogicModule, CharacterData);
-            AddSkill(weapon);
+            
             takeDamageModule.OnInit(typeof(Player), Stats);
         }
         private void Start()
         {
+            AddSkill(weapon);
+            weapon.Equip(this, weaponPosTf);
             weapon.SkillExecute();
         }
         protected override void OnEnable()
