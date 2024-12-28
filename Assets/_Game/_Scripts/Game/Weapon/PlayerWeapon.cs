@@ -25,12 +25,19 @@ namespace _Game
         }
         public override void SkillExecute()
         {
+            base.SkillExecute();
+            SkillActivation();
             skillTimer.Start(1f, SkillActivation, true);
         }
         public override void SkillActivation()
         {
             target = FindTarget();
-            if(target == null) return;
+            if(target == null)
+            {
+                skillTimer.Stop();
+                target = null;
+                return;
+            }
 
             Quaternion rotToTarget = ShootDirection(target.transform.position);
             Tf.DORotateQuaternion(rotToTarget, 0.1f)
@@ -49,6 +56,15 @@ namespace _Game
             if(trackingTf != null)
             {
                 tf.position = Vector3.Lerp(tf.position, trackingTf.position, 10f * Time.fixedDeltaTime);
+            }
+
+            if(isExecute && !skillTimer.IsStart)
+            {
+                target = FindTarget();
+                if(target != null)
+                {
+                    SkillExecute();
+                }
             }
         }
 

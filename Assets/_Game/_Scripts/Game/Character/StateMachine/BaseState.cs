@@ -14,6 +14,7 @@ namespace Utilities.StateMachine
         DIE = 4,
         IN_AIR = 5,
     }
+    [Serializable]
     public abstract class BaseState
     {
         public event Action<STATE> _OnStateChanged;

@@ -16,12 +16,13 @@ namespace _Game.Character
             base.Initialize(Data, Parameter, Event);
 
             stateMachine = new StateMachine();
-            stateMachine.IsDebug = false;
+            stateMachine.IsDebug = true;
 
             stateMachine.AddState(STATE.IDLE, new EnemyIdleState(Data, Parameter, Event));
             stateMachine.AddState(STATE.MOVE, new EnemyMoveState(Data, Parameter, Event));
             stateMachine.AddState(STATE.JUMP, new EnemyJumpState(Data, Parameter, Event));
             stateMachine.AddState(STATE.DIE, new EnemyDieState(Data, Parameter, Event));
+            stateMachine.AddState(STATE.IN_AIR, new EnemyAirState(Data, Parameter, Event));
         }
 
         public void StartModule()

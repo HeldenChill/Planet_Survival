@@ -87,6 +87,10 @@ PrefabInstance:
       propertyPath: stats
       value: 
       objectReference: {fileID: 11400000, guid: 6390f171d5bd52b4e95d54d950870f22, type: 2}
+    - target: {fileID: 4539642048967219097, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
+      propertyPath: sensors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5600719301390378321, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       propertyPath: m_Name
       value: EnemyZombie1
@@ -147,9 +151,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 284631280836115434, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1476196634417041352}
-    - targetCorrespondingSourceObject: {fileID: 2822408722138982115, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4710470140045078096}
     - targetCorrespondingSourceObject: {fileID: 2309564384586627982, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6442037779427275978}
@@ -184,7 +185,7 @@ MonoBehaviour:
   tf: {fileID: 2162132901463002710}
   poolType: 1
   Stats: {fileID: 11400000, guid: 6390f171d5bd52b4e95d54d950870f22, type: 2}
-  WorldInterfaceModule: {fileID: 4710470140045078096}
+  WorldInterfaceModule: {fileID: 6129488212110620384}
   NavigationModule: {fileID: 5432576593416594369}
   LogicModule: {fileID: 6442037779427275978}
   PhysicModule: {fileID: 4133136382198325450}
@@ -219,24 +220,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8e5d94328fdea40b0062329ba1e6a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5565156864969983898 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2822408722138982115, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
+--- !u!114 &6129488212110620384 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4539642048967219097, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}
   m_PrefabInstance: {fileID: 7642711275512930681}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4710470140045078096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5565156864969983898}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6181591e05012a347bec572d229f1782, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f27542ec963ff94bafc0d54a67e9845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensors: []
 --- !u!114 &6719284503121740994 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3976657366715852219, guid: 7d8b50da0590b654aabe0c469d6734ad, type: 3}

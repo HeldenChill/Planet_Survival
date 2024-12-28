@@ -11,6 +11,14 @@ namespace _Game
         protected PlayerLogicParameter Parameter;
         protected PlayerLogicData Data;
         protected STimer skillTimer;
+        protected bool isExecute = false;
+        protected int skillLevel;
+
+        public virtual int SkillLevel
+        {
+            get => skillLevel;
+            set => skillLevel = value;
+        }
 
         public Transform Tf => tf;
 
@@ -22,8 +30,12 @@ namespace _Game
         {
             this.Parameter = Parameter;
             this.Data = Data;
+            isExecute = false;
         }
-        public abstract void SkillExecute();
+        public virtual void SkillExecute()
+        {
+            isExecute = true;
+        }
         public abstract void SkillActivation();
     }
 }

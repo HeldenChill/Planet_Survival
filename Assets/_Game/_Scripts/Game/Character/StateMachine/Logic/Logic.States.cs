@@ -31,10 +31,18 @@ namespace _Game.Character
         public override bool Update()
         {
             if (!base.Update()) return false;
-            if (Parameter.WIData.IsGrounded && Parameter.NavData.Jump.Value)
+            if (!Parameter.WIData.IsGrounded)
             {
-                ChangeState(STATE.JUMP);
+                ChangeState(STATE.IN_AIR);
                 return false;
+            }
+            else
+            {
+                if (Parameter.NavData.Jump.Value)
+                {
+                    ChangeState(STATE.JUMP);
+                    return false;
+                }
             }
             return true;
         }
@@ -232,36 +240,40 @@ namespace _Game.Character
     }
     #endregion
     #region PLAYER STATE
+    [Serializable]
     public class PlayerIdleState : IdleState<PlayerLogicData, PlayerLogicParameter, LogicEvent>
     {
         public PlayerIdleState(PlayerLogicData data, PlayerLogicParameter parameter, LogicEvent _event) : base(data, parameter, _event)
         {
         }
     }
+    [Serializable]
     public class PlayerMoveState : MoveState<PlayerLogicData, PlayerLogicParameter, LogicEvent>
     {
         public PlayerMoveState(PlayerLogicData data, PlayerLogicParameter parameter, LogicEvent _event) : base(data, parameter, _event)
         {
         }
     }
+    [Serializable]
     public class PlayerJumpState : JumpState<PlayerLogicData, PlayerLogicParameter, LogicEvent>
     {
         public PlayerJumpState(PlayerLogicData data, PlayerLogicParameter parameter, LogicEvent _event) : base(data, parameter, _event)
         {
         }
     }
-
+    [Serializable]
     public class PlayerAirState : AirState<PlayerLogicData, PlayerLogicParameter, LogicEvent>
     {
         public PlayerAirState(PlayerLogicData data, PlayerLogicParameter parameter, LogicEvent _event) : base(data, parameter, _event) { }
     }
-
+    [Serializable]
     public class PlayerDieState : DieState<PlayerLogicData, PlayerLogicParameter, LogicEvent>
     {
         public PlayerDieState(PlayerLogicData data, PlayerLogicParameter parameter, LogicEvent _event) : base(data, parameter, _event) { }
     }
     #endregion
     #region ENEMY STATE
+    [Serializable]
     public class EnemyIdleState : IdleState<LogicData, LogicParameter, EnemyLogicEvent>
     {
         EnemyNavigationData NavData;
@@ -311,23 +323,31 @@ namespace _Game.Character
             Event.ChangeAlertState(currentAlertState);
         }
     }
+    [Serializable]
     public class EnemyMoveState : MoveState<LogicData, LogicParameter, EnemyLogicEvent>
     {
         public EnemyMoveState(LogicData data, LogicParameter parameter, EnemyLogicEvent _event) : base(data, parameter, _event)
         {
         }
     }
+    [Serializable]
     public class EnemyJumpState : JumpState<LogicData, LogicParameter, EnemyLogicEvent>
     {
         public EnemyJumpState(LogicData data, LogicParameter parameter, EnemyLogicEvent _event) : base(data, parameter, _event)
         {
         }
     }
+    [Serializable]
     public class EnemyDieState : DieState<LogicData, LogicParameter, EnemyLogicEvent>
     {
         public EnemyDieState(LogicData data, LogicParameter parameter, EnemyLogicEvent _event) : base(data, parameter, _event)
         {
         }
+    }
+    [Serializable]
+    public class EnemyAirState : AirState<LogicData, LogicParameter, EnemyLogicEvent>
+    {
+        public EnemyAirState(LogicData data, LogicParameter parameter, EnemyLogicEvent _event) : base(data, parameter, _event) { }
     }
     #endregion
 }
