@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ad8c1272c63b042b9d0b1dce2dd703, type: 3}
   m_Name: NoviceData
   m_EditorClassIdentifier: 
-  Level: 0
   coolDowns:
   - 1.5
   - 1.5
   - 1.5
   - 1.5
   - 1.5
+  damages:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1

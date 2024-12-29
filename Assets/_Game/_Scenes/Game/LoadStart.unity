@@ -365,6 +365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PoolManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7583184922037235138, guid: 31f173781ae61774d87a3c5f2b42352a, type: 3}
+      propertyPath: _particleAmounts.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

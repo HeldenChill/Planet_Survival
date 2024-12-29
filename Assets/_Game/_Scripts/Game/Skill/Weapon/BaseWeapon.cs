@@ -10,9 +10,9 @@ namespace _Game
     {
         protected ICharacter source;
         [SerializeField]
-        protected float damage;
-        [SerializeField]
         protected Transform fireTf;
+        [SerializeField]
+        protected Transform skinTf;
 
         public virtual void Equip(ICharacter source, Transform trackingTf = null)
         {

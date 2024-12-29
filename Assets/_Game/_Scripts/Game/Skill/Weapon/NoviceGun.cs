@@ -13,9 +13,12 @@ namespace _Game
 
     public class NoviceGun : BaseWeapon
     {
+
+        protected readonly Vector3 RECOIL_POSITION = new Vector3(0, 0, -0.3f);
         int shootNum = 1;
         float betweenShootTime = 0.15f;
         float weaponRotateTime = 0.1f;
+        float recoilTime = 0.08f;
 
         List<Collider> targets;
         Quaternion rotToTarget;
@@ -114,7 +117,7 @@ namespace _Game
             BaseBullet bullet = SimplePool.Spawn<BaseBullet>(PoolType.TYPE1_BULLET);
             bullet.Tf.position = fireTf.position;
             bullet.Tf.rotation = rotation;
-            bullet.Damage = damage;
+            bullet.Damage = skillData.Damage;
             bullet.Shot(source);
         }
         protected void TurnDirection(Vector3 targetPosition)
@@ -150,20 +153,7 @@ namespace _Game
                     times.Add(currentTime);
                     actions.Add(() =>
                     {
-                        Transform targetTf = null;
-                        if (targets.Count > 0)
-                        {
-                            TurnDirection(targets[0].transform.position);
-                            targetTf = targets[0].transform;
-                            Tf.DORotateQuaternion(rotToTarget, weaponRotateTime).OnComplete(() => Projectile(targetTf));
-                            targets.RemoveAt(0);
-                        }
-                        else
-                        {
-                            TurnDirection(Data.CharacterParameterData.Tf.forward);
-                            Tf.DORotateQuaternion(rotToTarget, weaponRotateTime).OnComplete(() => Projectile(targetTf));
-                        }
-                        
+                        Shoot();                          
                     });
                     break;
                 case 2:
@@ -172,29 +162,32 @@ namespace _Game
                 case 5:
                     for (int i = 0; i < shootNum; i++)
                     {
-                        Transform targetTf = null;
                         times.Add(currentTime);
                         actions.Add(() =>
                         {
-                            if (targets.Count > 0)
-                            {
-                                TurnDirection(targets[0].transform.position);
-                                targetTf = targets[0].transform;
-                                Tf.DORotateQuaternion(rotToTarget, weaponRotateTime).OnComplete(() => Projectile(targetTf));
-                                targets.RemoveAt(0);
-                            }
-                            else
-                            {
-                                TurnDirection(Data.CharacterParameterData.Tf.forward);
-                                Tf.DORotateQuaternion(rotToTarget, weaponRotateTime).OnComplete(() => Projectile(targetTf));
-                            }
+                            Shoot();
                         });
                         currentTime += betweenShootTime;
                     }
                     break;
 
             }
-
+            void Shoot()
+            {
+                Transform targetTf = null;
+                if (targets.Count > 0)
+                {
+                    TurnDirection(targets[0].transform.position);
+                    targetTf = targets[0].transform;
+                    Tf.DORotateQuaternion(rotToTarget, weaponRotateTime).OnComplete(() => Projectile(targetTf));
+                    targets.RemoveAt(0);
+                }
+                else
+                {
+                    TurnDirection(Data.CharacterParameterData.Tf.forward);
+                    Tf.DORotateQuaternion(rotToTarget, weaponRotateTime).OnComplete(() => Projectile(targetTf));
+                }
+            }
             void Projectile(Transform targetTranform = null)
             {
                 if (targetTranform)
@@ -205,6 +198,7 @@ namespace _Game
                 {
                     TurnDirection(Data.CharacterParameterData.Tf.position + Data.CharacterParameterData.Tf.forward);
                 }
+                skinTf.DOLocalMove(RECOIL_POSITION, recoilTime / 2).SetLoops(2, LoopType.Yoyo);
                 tf.rotation = rotToTarget;
                 this.Projectile(fireTf.rotation);
             }
