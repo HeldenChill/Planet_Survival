@@ -158,5 +158,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tf: {fileID: 3281957570062616581}
+  skillData: {fileID: 11400000, guid: 25010a184b74b1a43a4f37631a4818db, type: 2}
   damage: 1
   fireTf: {fileID: 1195886164920426136}

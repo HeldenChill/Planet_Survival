@@ -10,7 +10,6 @@ namespace _Game
     using System.Collections.Generic;
     using Utilities.Core;
     using Utilities.Timer;
-    using static UnityEngine.GraphicsBuffer;
 
     public class NoviceGun : BaseWeapon
     {
@@ -83,7 +82,7 @@ namespace _Game
         {
             base.SkillExecute();
             SkillActivation();
-            skillTimer.Start(1.5f, SkillActivation, true);
+            skillTimer.Start(skillData.CD, SkillActivation, true);
         }
         public override void SkillActivation()
         {
@@ -212,7 +211,7 @@ namespace _Game
         }
         private void OnDrawGizmos()
         {
-            if (targets.Count > 0)
+            if (targets != null && targets.Count > 0)
             {
                 Gizmos.color = Color.white;
                 Gizmos.DrawLine(Tf.position, targets[0].transform.position);

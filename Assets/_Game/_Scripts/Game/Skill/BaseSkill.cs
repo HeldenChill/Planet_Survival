@@ -9,6 +9,8 @@ namespace _Game
     {
         [SerializeField]
         protected Transform tf;
+        [SerializeField]
+        protected SkillData skillData;
         protected PlayerLogicParameter Parameter;
         protected PlayerLogicData Data;
         protected STimer skillTimer;
@@ -19,7 +21,11 @@ namespace _Game
         public virtual int SkillLevel
         {
             get => skillLevel;
-            set => skillLevel = value;
+            set
+            {
+                skillLevel = value;
+                skillData.Level = skillLevel;
+            }
         }
 
         public Transform Tf => tf;
