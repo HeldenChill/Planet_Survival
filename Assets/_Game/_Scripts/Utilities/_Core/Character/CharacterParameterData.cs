@@ -7,24 +7,19 @@ namespace Utilities.Core.Character
 {
     public class CharacterParameterData 
     {
-        private Transform characterTransform;       
+        private Transform characterTransform;
+        private Transform characterSkinTransform;
         private bool isFaceRight = true;
        
-        public void Initialize(Transform characterTransform)
+        public void Initialize(Transform characterTransform, Transform characterSkinTransform)
         {
             this.characterTransform = characterTransform;
+            this.characterSkinTransform = characterSkinTransform;
         }
         public bool IsFaceRight { 
             get => isFaceRight; 
-        }      
-
-        public Transform Tf { 
-            get => characterTransform;
-
-            set 
-            { 
-                characterTransform = value;
-            }
         }
+        public Transform Tf => characterTransform;
+        public Transform SkinTf => characterSkinTransform;
     }
 }

@@ -54,7 +54,7 @@ namespace Utilities.Core
             T newStats = ScriptableObject.CreateInstance<T>();
             newStats.OnInit(Stats);
             Stats = newStats;
-            CharacterData.Tf = transform;
+            CharacterData.Initialize(Tf, SkinTf);
             WorldInterfaceSystem = new CharacterWorldInterfaceSystem(WorldInterfaceModule, CharacterData);
             NavigationSystem = new CharacterNavigationSystem<ND, NP>(NavigationModule, CharacterData);
             LogicSystem = new CharacterLogicSystem<LD, LP, LE>(LogicModule, CharacterData);

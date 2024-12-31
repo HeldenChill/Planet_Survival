@@ -184,7 +184,7 @@ namespace _Game
                 }
                 else
                 {
-                    TurnDirection(Data.CharacterParameterData.Tf.forward);
+                    TurnDirection(Data.CharacterParameterData.Tf.position + Data.CharacterParameterData.SkinTf.forward);
                     Tf.DORotateQuaternion(rotToTarget, weaponRotateTime).OnComplete(() => Projectile(targetTf));
                 }
             }
@@ -196,7 +196,7 @@ namespace _Game
                 }
                 else
                 {
-                    TurnDirection(Data.CharacterParameterData.Tf.position + Data.CharacterParameterData.Tf.forward);
+                    TurnDirection(Data.CharacterParameterData.Tf.position + Data.CharacterParameterData.SkinTf.forward);
                 }
                 skinTf.DOLocalMove(RECOIL_POSITION, recoilTime / 2).SetLoops(2, LoopType.Yoyo);
                 tf.rotation = rotToTarget;

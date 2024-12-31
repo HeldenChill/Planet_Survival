@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tf: {fileID: 2162132901463002710}
+  skinTf: {fileID: 1162165747643846312}
   poolType: 1
   Stats: {fileID: 11400000, guid: 6390f171d5bd52b4e95d54d950870f22, type: 2}
   WorldInterfaceModule: {fileID: 6129488212110620384}
