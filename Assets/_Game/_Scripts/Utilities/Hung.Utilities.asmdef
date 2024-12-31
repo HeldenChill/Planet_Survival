@@ -1,3 +1,16 @@
 {
-	"name": "Hung.Utilities"
+    "name": "Hung.Utilities",
+    "rootNamespace": "",
+    "references": [
+        "GUID:87a836354f1c0e6409cf71e2f6b053be"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

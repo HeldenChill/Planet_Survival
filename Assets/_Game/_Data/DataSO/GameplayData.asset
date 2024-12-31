@@ -1,0 +1,666 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d503d574d7a77154f83be67f133e6e24, type: 3}
+  m_Name: GameplayData
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 2100000, guid: f15b9f93f5ba57e4299b98af88153f81, type: 2}
+    - {fileID: 2100000, guid: 431dabde8e2bb444c99d62ee52349f42, type: 2}
+    - {fileID: 2100000, guid: 207216563e6ba3449977d26243bf3b24, type: 2}
+    - {fileID: 2100000, guid: e27cfdf93f8741b41a0f1a8ff90f8e93, type: 2}
+    - {fileID: 2100000, guid: 2d4d813a980c8544491f6d2a70476a3d, type: 2}
+    - {fileID: 2100000, guid: 3da8f5e572b6ab448bec4fbb85914f49, type: 2}
+    - {fileID: 2100000, guid: e07935da0114ea94887c555cc0846d35, type: 2}
+    - {fileID: 2100000, guid: 837f5fb7c26ef374faeb47eca784bb79, type: 2}
+    - {fileID: 4133812061537593866, guid: 209dd37076050d74e850da8901969115, type: 3}
+    - {fileID: 8561155872958264538, guid: f13d05499f1b9394cad7707cf7002ebb, type: 3}
+    - {fileID: 8561155872958264538, guid: 1bb7476d973337e4c9e8e884a377ba65, type: 3}
+    - {fileID: 8561155872958264538, guid: 06c9332f854306d40836dad18a142da5, type: 3}
+    - {fileID: 3434481850943786694, guid: 7f40f1beb8d715b40ae7d05bbf617f4b, type: 3}
+    - {fileID: 4028324928981558203, guid: 221a8fcf8e55c7c4a915828d97182b2c, type: 3}
+    - {fileID: 21300000, guid: ced58a7f4e996f8459f3f7fd7d9a58e4, type: 3}
+    - {fileID: 21300000, guid: e8271767335fba348ad1b97bc5012435, type: 3}
+    - {fileID: 21300000, guid: 4bce16b1b976af546a3abebcc1481239, type: 3}
+    - {fileID: 21300000, guid: 96609d01d3fc53c4d8c0bad3dcde7e93, type: 3}
+    - {fileID: 21300000, guid: 1ac912c1d62f13d43b1db53d5e67fb64, type: 3}
+    - {fileID: 21300000, guid: ef0598a3cb526444fb2e67c3e5f9ba99, type: 3}
+    - {fileID: 21300000, guid: 977a4d701cbf98a46bfda5d93c386ef4, type: 3}
+    - {fileID: 21300000, guid: 34d0e2d9432a84d4fad7c3a7f3a2b539, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: vehicleMaterials
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[Base.COLOR, Hung.Base],[UnityEngine.Material,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Base.COLOR, Hung.Base]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 8
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5
+    - Name: $v
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 6
+    - Name: $v
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 7
+    - Name: $v
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 8
+    - Name: $v
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: vehicleSize
+      Entry: 7
+      Data: 2|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[UnityEngine.Vector2,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 3|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1.6
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 6
+    - Name: $v
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 2.4
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 10
+    - Name: $v
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 3.2
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: vfxs
+      Entry: 7
+      Data: 4|System.Collections.Generic.Dictionary`2[[DesignPattern.VFX, Hung.DesignPattern],[UnityEngine.ParticleSystem,
+        UnityEngine.ParticleSystemModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 5|System.Collections.Generic.EnumEqualityComparer`1[[DesignPattern.VFX,
+        Hung.DesignPattern]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 6
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 10
+      Data: 12
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5
+    - Name: $v
+      Entry: 10
+      Data: 13
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: items
+      Entry: 7
+      Data: 6|System.Collections.Generic.Dictionary`2[[Base.ITEM, Hung.Base],[Base.ItemData,
+        Hung.Base]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 7|System.Collections.Generic.EnumEqualityComparer`1[[Base.ITEM, Hung.Base]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 8
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: 8|Base.ItemData, Hung.Base
+    - Name: Icon
+      Entry: 10
+      Data: 14
+    - Name: Name
+      Entry: 1
+      Data: Refresh
+    - Name: Frame
+      Entry: 6
+      Data: 
+    - Name: Type
+      Entry: 3
+      Data: 0
+    - Name: Description
+      Entry: 1
+      Data: Rearrange the COLOR of the boats on field
+    - Name: Cost
+      Entry: 3
+      Data: 100
+    - Name: WatchVideoCount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 9|Base.ItemData, Hung.Base
+    - Name: Icon
+      Entry: 10
+      Data: 15
+    - Name: Name
+      Entry: 1
+      Data: Vip Space
+    - Name: Frame
+      Entry: 6
+      Data: 
+    - Name: Type
+      Entry: 3
+      Data: 1
+    - Name: Description
+      Entry: 1
+      Data: Choose a BOAT to the VIP space. It can pick up required passengers instantly
+    - Name: Cost
+      Entry: 3
+      Data: 100
+    - Name: WatchVideoCount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: 10|Base.ItemData, Hung.Base
+    - Name: Icon
+      Entry: 10
+      Data: 16
+    - Name: Name
+      Entry: 1
+      Data: Sort
+    - Name: Frame
+      Entry: 6
+      Data: 
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Description
+      Entry: 1
+      Data: Sort the PASSENGERS according to boat colors
+    - Name: Cost
+      Entry: 3
+      Data: 100
+    - Name: WatchVideoCount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 7
+      Data: 11|Base.ItemData, Hung.Base
+    - Name: Icon
+      Entry: 10
+      Data: 17
+    - Name: Name
+      Entry: 1
+      Data: Gold
+    - Name: Frame
+      Entry: 10
+      Data: 18
+    - Name: Type
+      Entry: 3
+      Data: 3
+    - Name: Description
+      Entry: 1
+      Data: Using to buy item
+    - Name: Cost
+      Entry: 3
+      Data: 0
+    - Name: WatchVideoCount
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5
+    - Name: $v
+      Entry: 7
+      Data: 12|Base.ItemData, Hung.Base
+    - Name: Icon
+      Entry: 10
+      Data: 19
+    - Name: Name
+      Entry: 1
+      Data: Slot
+    - Name: Frame
+      Entry: 6
+      Data: 
+    - Name: Type
+      Entry: 3
+      Data: 5
+    - Name: Description
+      Entry: 1
+      Data: Add a new slot to the dock
+    - Name: Cost
+      Entry: 3
+      Data: 100
+    - Name: WatchVideoCount
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 6
+    - Name: $v
+      Entry: 7
+      Data: 13|Base.ItemData, Hung.Base
+    - Name: Icon
+      Entry: 6
+      Data: 
+    - Name: Name
+      Entry: 6
+      Data: 
+    - Name: Frame
+      Entry: 6
+      Data: 
+    - Name: Type
+      Entry: 3
+      Data: 6
+    - Name: Description
+      Entry: 6
+      Data: 
+    - Name: Cost
+      Entry: 3
+      Data: 150
+    - Name: WatchVideoCount
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 7
+    - Name: $v
+      Entry: 7
+      Data: 14|Base.ItemData, Hung.Base
+    - Name: Icon
+      Entry: 10
+      Data: 20
+    - Name: Name
+      Entry: 1
+      Data: All Booster
+    - Name: Frame
+      Entry: 6
+      Data: 
+    - Name: Type
+      Entry: 3
+      Data: 7
+    - Name: Description
+      Entry: 1
+      Data: All current boosters
+    - Name: Cost
+      Entry: 3
+      Data: 300
+    - Name: WatchVideoCount
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 8
+    - Name: $v
+      Entry: 7
+      Data: 15|Base.ItemData, Hung.Base
+    - Name: Icon
+      Entry: 10
+      Data: 21
+    - Name: Name
+      Entry: 1
+      Data: Refresh and Clear Booster
+    - Name: Frame
+      Entry: 6
+      Data: 
+    - Name: Type
+      Entry: 3
+      Data: 0
+    - Name: Description
+      Entry: 1
+      Data: Refresh and Clear Booster
+    - Name: Cost
+      Entry: 3
+      Data: 600
+    - Name: WatchVideoCount
+      Entry: 3
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  gameplayUniversalRendererData: {fileID: 11400000, guid: 16e00db9a1ddca8429b9af4bf1f6f482, type: 2}
+  emojis: 90010000920100009301000095010000a2010000a3010000a4010000a7010000aa010000ae010000ba010000af010000
+  reviveGoldCost: 150
+  winLevelGold: 20

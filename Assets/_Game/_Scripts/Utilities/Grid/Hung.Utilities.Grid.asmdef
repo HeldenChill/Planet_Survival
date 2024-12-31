@@ -1,9 +1,8 @@
 {
-    "name": "Hung.Utilities.STimer",
-    "rootNamespace": "Utilities.STimer",
+    "name": "Hung.Utilities.Grid",
+    "rootNamespace": "Utilities.Grid",
     "references": [
-        "Hung.DesignPattern",
-        "Hung.Utilities"
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

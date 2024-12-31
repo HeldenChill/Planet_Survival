@@ -1,9 +1,12 @@
 {
-    "name": "Hung.Utilities.STimer",
-    "rootNamespace": "Utilities.STimer",
+    "name": "Hung.Data",
+    "rootNamespace": "_Game.Data",
     "references": [
+        "Hung.Common",
         "Hung.DesignPattern",
-        "Hung.Utilities"
+        "Hung.Base",
+        "Hung.Utilities.Json",
+        "Unity.RenderPipelines.Universal.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

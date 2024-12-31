@@ -94,10 +94,6 @@ namespace Utilities.Timer
             {
                 isStart = true;
                 timeRemaining = time;
-                if (!isUnscaleTime)
-                    timeRemaining += Time.deltaTime * TimeScale;
-                else
-                    timeRemaining += Time.unscaledDeltaTime * TimeScale;
             }
             else
             {
@@ -127,7 +123,7 @@ namespace Utilities.Timer
                 if (frame > 0)
                 {
                     isStart = true;
-                    timeFixedFrame = frame;
+                    timeFixedFrame = frame + 1;
                     FrameFixedUpdate?.Invoke();
                 }
                 else

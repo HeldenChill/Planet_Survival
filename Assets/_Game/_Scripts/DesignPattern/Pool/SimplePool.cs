@@ -354,4 +354,10 @@ namespace DesignPattern
         TYPE1_BULLET = 100,
 
     }
+
+    public enum VFX
+    {
+        NONE = -1,
+        MUZZLE_1 = 0,
+    }
 }
