@@ -10,6 +10,7 @@ namespace _Game
     using System.Collections.Generic;
     using Utilities.Core;
     using Utilities.Timer;
+    using Common;
 
     public class NoviceGun : BaseWeapon
     {
@@ -28,6 +29,8 @@ namespace _Game
         List<Action> actions;
         List<float> times;
         STimer activationTimer;
+
+        ParticleSystem shootMuzzle;
         protected override void Awake()
         {
             base.Awake();
@@ -35,6 +38,7 @@ namespace _Game
             actions = new List<Action>();
             times = new List<float>();
             activationTimer = TimerManager.Ins.PopSTimer();
+            shootMuzzle = Locator.Data.GetSOData<GameplayData>().VFXS[VFX.MUZZLE_1];
         }
         public override int SkillLevel
         {
@@ -199,6 +203,8 @@ namespace _Game
                     TurnDirection(Data.CharacterParameterData.Tf.position + Data.CharacterParameterData.SkinTf.forward);
                 }
                 skinTf.DOLocalMove(RECOIL_POSITION, recoilTime / 2).SetLoops(2, LoopType.Yoyo);
+                ParticleSystem vfx = ParticlePool.Play(shootMuzzle, fireTf.position, fireTf.rotation);
+                vfx.GetComponent<VFXController>().Tracking(fireTf);
                 tf.rotation = rotToTarget;
                 this.Projectile(fireTf.rotation);
             }

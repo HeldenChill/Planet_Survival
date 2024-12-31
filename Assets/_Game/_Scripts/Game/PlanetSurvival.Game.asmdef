@@ -2,6 +2,7 @@
     "name": "PlanetSurvival.Game",
     "rootNamespace": "_Game",
     "references": [
+        "Hung.Data",
         "Hung.Character",
         "Hung.DesignPattern",
         "Hung.Base",
