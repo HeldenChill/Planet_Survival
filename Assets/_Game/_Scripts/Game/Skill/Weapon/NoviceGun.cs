@@ -93,6 +93,7 @@ namespace _Game
         }
         public override void SkillActivation()
         {
+            base.SkillActivation();
             FindTarget();
             if (targets.Count == 0)
             {

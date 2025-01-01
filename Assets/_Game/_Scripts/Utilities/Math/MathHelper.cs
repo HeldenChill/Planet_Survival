@@ -114,30 +114,15 @@ namespace Utilities
             Quaternion quaternion = GetQuaternion2Vector(vec1, vec2);
             gObject.transform.rotation = quaternion;
         }
-
         public static Quaternion GetQuaternion2Vector(Vector2 vec1, Vector2 vec2)
         {
             float angle = Vector2.SignedAngle(vec1, vec2); //angle is the angle between vector face and vector vectorToPoint
             Quaternion quaternion = Quaternion.Euler(0, 0, angle); // Convert from Euler to Quaternion
             return quaternion;
         }
-
         public static Vector2 AngleToVector(float angle)
         {
-            while (angle < 0)
-            {
-                angle += 360;
-            }
-
-            while (angle >= 360)
-            {
-                angle -= 360;
-            }
-
-
-            float vecX = Mathf.Cos(Mathf.Deg2Rad * angle);
-            float vecY = Mathf.Sin(Mathf.Deg2Rad * angle);
-            return new Vector2(vecX, vecY);
+            return new Vector2(Mathf.Sin(Mathf.Deg2Rad * angle), Mathf.Cos(Mathf.Deg2Rad * angle));
         }
         public static Vector2 AngleToVector(float angle, bool isFaceRight)
         {
@@ -152,7 +137,6 @@ namespace Utilities
                 return res;
             }
         }
-
         public static void Flip(GameObject gameObject)
         {
             gameObject.transform.Rotate(0, 180f, 0);
@@ -181,7 +165,6 @@ namespace Utilities
                     valY = GetSystemRandom(-1f, 1f);
             return new Vector2(valX, valY).normalized;
         }
-
         public static Vector2 GetRandomVector2D()
         {
             float valX = GetSystemRandom(-1f, 1f);
@@ -193,7 +176,6 @@ namespace Utilities
             float angle = GetSystemRandom(min, max);
             return AngleToVector(angle);
         }
-
         public static Vector2 GetRandomDirection(Vector2 min, Vector2 max)
         {
             float randomX = Random.Range(min.x, max.x);
@@ -202,8 +184,6 @@ namespace Utilities
             // Create a new Vector2 with the random components
             return new Vector2(randomX, randomY);
         }
-
-
         public static void InitArrayWithValue(Collider2D[] array, Collider2D value)
         {
             for (int i = 0; i < array.Length; i++)
@@ -211,7 +191,6 @@ namespace Utilities
                 array[i] = value;
             }
         }
-
         public static float GetSystemRandom(float min, float max)
         {
             min = min * 1000;
@@ -222,12 +201,10 @@ namespace Utilities
             value = value / 1000;
             return value;
         }
-
         public static Vector2 GetMidPoint(Vector2 p1, Vector2 p2)
         {
             return new Vector2((p1.x + p2.x) / 2, (p1.y + p2.y) / 2);
         }
-
         public static Vector2Int Sign(Vector2Int value)
         {
             if(value == Vector2Int.zero)
@@ -248,14 +225,12 @@ namespace Utilities
             }
             return value;
         }
-
         public static int Sign(float value)
         {
             if (value == 0) return 0;
             else if (value > 0) return 1;
             else return -1;
         }
-
         public static float[] CaculateTime(float S,float v0, float a)
         {
             float[] res = null;

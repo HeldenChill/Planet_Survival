@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1ad8c1272c63b042b9d0b1dce2dd703, type: 3}
-  m_Name: NoviceData
+  m_Name: NoviceGunData
   m_EditorClassIdentifier: 
   coolDowns:
   - 1.5

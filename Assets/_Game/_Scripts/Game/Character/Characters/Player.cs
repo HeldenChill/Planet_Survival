@@ -21,6 +21,8 @@ namespace _Game.Character
         protected NoviceGun weapon;
         [SerializeField]
         protected Transform weaponPosTf;
+        [SerializeField]
+        protected DefendOrbSkill testSkill;
         public NoviceGun Weapon => weapon;
         protected override void Awake()
         {
@@ -36,6 +38,9 @@ namespace _Game.Character
             AddSkill(weapon);
             weapon.Equip(this, weaponPosTf);
             weapon.SkillExecute();
+
+            AddSkill(testSkill);
+            testSkill.SkillExecute();
         }
         protected override void OnEnable()
         {

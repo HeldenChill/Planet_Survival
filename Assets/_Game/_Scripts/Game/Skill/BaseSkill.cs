@@ -15,6 +15,7 @@ namespace _Game
         protected PlayerLogicData Data;
         protected STimer skillTimer;
         protected bool isExecute = false;
+        protected bool isActivation = false;
         protected int skillLevel;
         protected Type skillType;
 
@@ -44,7 +45,10 @@ namespace _Game
         {
             isExecute = true;
         }
-        public abstract void SkillActivation();
+        public virtual void SkillActivation()
+        {
+            isActivation = true;
+        }
         protected abstract void UpdateLevelSkillPropertys();
     }
 }

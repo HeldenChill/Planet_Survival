@@ -18,5 +18,8 @@ namespace _Game
         [SerializeField]
         List<float> damages;
         public float Damage => damages[Level];
+        [SerializeField]
+        List<float> speeds;
+        public float Speed => speeds[Level];
     }
 }
