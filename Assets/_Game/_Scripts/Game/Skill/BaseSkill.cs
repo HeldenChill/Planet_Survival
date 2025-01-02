@@ -1,6 +1,7 @@
 using _Game.Character;
 using System;
 using UnityEngine;
+using Utilities.Core;
 using Utilities.Timer;
 
 namespace _Game
@@ -11,6 +12,7 @@ namespace _Game
         protected Transform tf;
         [SerializeField]
         protected SkillData skillData;
+        protected ICharacter source;
         protected PlayerLogicParameter Parameter;
         protected PlayerLogicData Data;
         protected STimer skillTimer;
@@ -35,8 +37,9 @@ namespace _Game
         {
             skillTimer = TimerManager.Ins.PopSTimer();
         }
-        public virtual void OnInit(PlayerLogicParameter Parameter, PlayerLogicData Data)
+        public virtual void OnInit(ICharacter source, PlayerLogicParameter Parameter, PlayerLogicData Data)
         {
+            this.source = source;
             this.Parameter = Parameter;
             this.Data = Data;
             isExecute = false;

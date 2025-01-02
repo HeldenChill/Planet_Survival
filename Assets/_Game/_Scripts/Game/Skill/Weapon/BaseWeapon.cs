@@ -8,7 +8,6 @@ namespace _Game
     using Utilities.Core;
     public abstract class BaseWeapon : BaseSkill
     {
-        protected ICharacter source;
         [SerializeField]
         protected Transform fireTf;
         [SerializeField]

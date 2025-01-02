@@ -3,6 +3,7 @@ using Utilities.Core.Character.LogicSystem;
 using Utilities.Core.Character.NavigationSystem;
 using Utilities.Core.Data;
 using Utilities.Core;
+using System;
 
 namespace _Game.Character
 {   
@@ -24,6 +25,15 @@ namespace _Game.Character
 
         public bool IsDie => Stats.Hp.Value >= 0;
 
+        public virtual C GetVariable<C>() where C : class
+        {
+            switch (typeof(C))
+            {
+                case Type type when type == typeof(FakeGravityBody):
+                    return fakeGravityBody as C;
+            }
+            return default;
+        }
         public virtual void OnInit(CharacterStats stats = null)
         {
             if (stats == null)

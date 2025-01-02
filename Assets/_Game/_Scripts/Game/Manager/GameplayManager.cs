@@ -13,12 +13,15 @@ namespace _Game
         float spawnTime;
         [SerializeField]
         FakeGravity environment;
+        [SerializeField]
+        Player player;
         STimer spawnTimer;
         private void Awake()
         {
             spawnTimer = TimerManager.Ins.PopSTimer();
             SpawnEnemy(PoolType.ENEMY_ZOMBIE1);
             spawnTimer.Start(spawnTime, SpawnEnemy, true);
+            player.FakeGravityBody.Attractor = environment;
         }
         public void SpawnEnemy(PoolType type)
         {

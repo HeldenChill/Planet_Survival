@@ -16,6 +16,7 @@ namespace Utilities.Core
         public Transform Tf { get; }
         public bool IsDie { get; }
         public void OnInit(CharacterStats stats);
+        public abstract C GetVariable<C>() where C : class;
     }
     public abstract class BaseCharacter<T, 
         LD, LP, LE,

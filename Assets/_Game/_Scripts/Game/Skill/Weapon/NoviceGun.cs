@@ -71,9 +71,9 @@ namespace _Game
                 }
             }
         }
-        public override void OnInit(PlayerLogicParameter Parameter, PlayerLogicData Data)
+        public override void OnInit(ICharacter source, PlayerLogicParameter Parameter, PlayerLogicData Data)
         {
-            base.OnInit(Parameter, Data);
+            base.OnInit(source ,Parameter, Data);
             skillType = typeof(NoviceGun);
         }
         public override void Equip(ICharacter source, Transform trackingTf = null)

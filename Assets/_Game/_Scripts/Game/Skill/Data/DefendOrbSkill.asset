@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: DefendOrbSkill
   m_EditorClassIdentifier: 
   coolDowns: []
-  damages: []
+  damages:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
   speeds:
   - 5
   - 5
