@@ -2,8 +2,7 @@
     "name": "Hung.Utilities.STimer",
     "rootNamespace": "Utilities.STimer",
     "references": [
-        "Hung.DesignPattern",
-        "Hung.Utilities"
+        "Hung.DesignPattern"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
