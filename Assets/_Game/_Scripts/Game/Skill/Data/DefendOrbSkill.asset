@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ad8c1272c63b042b9d0b1dce2dd703, type: 3}
   m_Name: DefendOrbSkill
   m_EditorClassIdentifier: 
-  coolDowns: []
+  coolDowns:
+  - 15
+  - 14
+  - 13
+  - 12
+  - 10
   damages:
   - 10
   - 10
@@ -20,8 +25,14 @@ MonoBehaviour:
   - 10
   - 10
   speeds:
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
+  - 9
+  - 9
+  - 9
+  - 9
+  - 9
+  existTimes:
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6

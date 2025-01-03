@@ -26,8 +26,6 @@ namespace _Game
         Vector3 shootDirection;
         Transform trackingTf;
 
-        List<Action> actions;
-        List<float> times;
         STimer activationTimer;
 
         ParticleSystem shootMuzzle;
@@ -88,8 +86,8 @@ namespace _Game
         public override void SkillExecute()
         {
             base.SkillExecute();
-            SkillActivation();
             skillTimer.Start(skillData.CD, SkillActivation, true);
+            SkillActivation();
         }
         public override void SkillActivation()
         {

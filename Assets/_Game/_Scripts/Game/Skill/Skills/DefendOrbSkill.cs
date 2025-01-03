@@ -5,7 +5,7 @@ using DG.Tweening;
 using Utilities;
 using Utilities.Core;
 using Utilities.Timer;
-using static Codice.CM.WorkspaceServer.WorkspaceTreeDataStore;
+using System;
 
 namespace _Game
 {
@@ -19,11 +19,16 @@ namespace _Game
         [SerializeField]
         protected float ballDistance = 2f;
         [SerializeField]
-        protected float beginPhaseTime = 0.6f;
+        protected float phaseTime = 0.6f;
         FakeGravityBody fakeGravitySource;
+        STimer phaseTimer;
         protected override void Awake()
         {
             base.Awake();
+            actions = new List<Action>();
+            times = new List<float>();
+            phaseTimer = TimerManager.Ins.PopSTimer();
+
             for(int i = 0; i < orbs.Count; i++)
             {
                 orbs[i]._OnTriggerEnter += OnOrbTriggerEnter;
@@ -39,7 +44,9 @@ namespace _Game
         public override void OnInit(ICharacter source, PlayerLogicParameter Parameter, PlayerLogicData Data)
         {
             base.OnInit(source, Parameter, Data);
+            skillType = typeof(DefendOrbSkill);
             fakeGravitySource = source.GetVariable<FakeGravityBody>();
+            UpdateLevelSkillPropertys();
         }
         public override int SkillLevel { 
             get => base.SkillLevel;
@@ -70,52 +77,98 @@ namespace _Game
         public override void SkillExecute()
         {
             base.SkillExecute();
-            skillTimer.Start(1f, SkillActivation);
+            skillTimer.Start(skillData.CD, SkillActivation);
+            SkillActivation();
             //SkillActivation();
         }
         public override void SkillActivation()
         {
+            if (!Parameter.WIData.IsGrounded)
+            {
+                skillTimer.Stop();
+                return;
+            }
+
             base.SkillActivation();
             orbsParentTf.gameObject.SetActive(true);
-            BeginPhase();
+            phaseTimer.Start(times, actions, null, STimer.CAL_TYPE.ADD);
         }
+        
         protected void BeginPhase()
         {
             float angle;
             float distanceFromAttractor = (source.Tf.position - fakeGravitySource.Attractor.Tf.position).magnitude;
-            DevLog.Log(DevId.Hung, distanceFromAttractor.ToString());
 
             angle = 360 / numOfBall;
             for (int i = 0; i < numOfBall; i++)
             {
                 orbs[i].Tf.localPosition = Vector3.zero;
                 Vector3 orbFirstPosition = Quaternion.FromToRotation(Vector3.forward, Vector3.up) * ((Vector3)MathHelper.AngleToVector(angle * i)) * ballDistance;
-                Vector3 orbDirection = (orbFirstPosition - source.Tf.InverseTransformPoint(fakeGravitySource.Attractor.Tf.position)).normalized;
-                Vector3 orbPosition = orbDirection * distanceFromAttractor;
+                Vector3 originLocalPos = source.Tf.InverseTransformPoint(fakeGravitySource.Attractor.Tf.position);
+                Vector3 orbDirection = (orbFirstPosition - originLocalPos).normalized;
+                Vector3 orbPosition = orbDirection * distanceFromAttractor + originLocalPos;
 
-                orbs[i].Tf.localPosition = orbFirstPosition;
-                //orbs[i].Tf.DOLocalMove(orbFirstPosition, beginPhaseTime);
+                orbs[i].Tf.DOLocalMove(orbPosition, phaseTime);
                 orbs[i].gameObject.SetActive(true);
             }
         }
+        protected void EndPhase()
+        {
+            for(int i = 0; i < numOfBall; i++)
+            {
+                orbs[i].Tf.DOLocalMove(Vector3.zero, phaseTime);
+            }
+        }
+     
+        public override void StopActivation()
+        {
+            base.StopActivation();
+            for (int i = 0; i < numOfBall; i++)
+            {
+                orbs[i].gameObject.SetActive(false);
+            }
+        }
+        public override void StopExecute()
+        {
+            base.StopExecute();
+            skillTimer.Stop();
+            phaseTimer.Stop();
+        }
         private void FixedUpdate()
         {
+            if(isExecute && !skillTimer.IsStart)
+            {
+                if (Parameter.WIData.IsGrounded)
+                {
+                    SkillExecute();
+                }
+            }
             if (isActivation)
             {
                 orbsParentTf.position = source.Tf.position;
-                orbsParentTf.Rotate(Vector3.up * skillData.Speed * Time.fixedDeltaTime * 60, Space.Self);
+                orbsParentTf.Rotate(Vector3.up * skillData.Speed * Time.fixedDeltaTime * 60 / ballDistance, Space.Self);
 
-                string content = "";
-                for(int i = 0; i < numOfBall; i++)
-                {
-                    content += $"{(orbs[i].Tf.position - fakeGravitySource.Attractor.Tf.position).magnitude} ~ ";
-                }
-                DevLog.Log(DevId.Hung, content);
+                //string content = "";
+                //for(int i = 0; i < numOfBall; i++)
+                //{
+                //    content += $"{(orbs[i].Tf.position - fakeGravitySource.Attractor.Tf.position).magnitude} ~ ";
+                //}
+                //DevLog.Log(DevId.Hung, content);
             }
         }
         protected override void UpdateLevelSkillPropertys()
         {
-            
+            actions.Clear();
+            times.Clear();
+
+            actions.Add(BeginPhase);
+            times.Add(0);
+
+            actions.Add(EndPhase);
+            times.Add(skillData.ExistTime);
+
+            actions.Add(StopActivation);
+            times.Add(phaseTime);
         }
         protected void OnOrbTriggerEnter(ColliderController main, Collider target)
         {

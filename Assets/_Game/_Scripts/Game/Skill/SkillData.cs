@@ -21,5 +21,8 @@ namespace _Game
         [SerializeField]
         List<float> speeds;
         public float Speed => speeds[Level];
+        [SerializeField]
+        List<float> existTimes;
+        public float ExistTime => existTimes[Level];
     }
 }

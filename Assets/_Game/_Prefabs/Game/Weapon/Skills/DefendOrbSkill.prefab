@@ -55,8 +55,8 @@ MonoBehaviour:
   - {fileID: 1476898573935379922}
   - {fileID: 5323501930425342591}
   orbsParentTf: {fileID: 4789206808870423289}
-  ballDistance: 5
-  beginPhaseTime: 0.6
+  ballDistance: 2
+  phaseTime: 0.6
 --- !u!1 &2827689577474847837
 GameObject:
   m_ObjectHideFlags: 0

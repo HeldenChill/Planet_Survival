@@ -1,5 +1,7 @@
 using _Game.Character;
+using Codice.CM.Common;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Utilities.Core;
 using Utilities.Timer;
@@ -21,6 +23,8 @@ namespace _Game
         protected int skillLevel;
         protected Type skillType;
 
+        protected List<Action> actions;
+        protected List<float> times;
         public virtual int SkillLevel
         {
             get => skillLevel;
@@ -52,6 +56,17 @@ namespace _Game
         {
             isActivation = true;
         }
+
+        public virtual void StopExecute()
+        {
+            isExecute = false;
+        }
+
+        public virtual void StopActivation()
+        {
+            isActivation = false;
+        }
+
         protected abstract void UpdateLevelSkillPropertys();
     }
 }
