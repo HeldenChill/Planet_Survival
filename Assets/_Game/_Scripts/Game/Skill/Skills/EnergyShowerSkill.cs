@@ -151,7 +151,7 @@ namespace _Game
         {
             for (int i = 0; i < randomPos.Length; i++)
             {
-                randomPos[i].Set(UnityEngine.Random.Range(-DAMAGE_AREA.x, DAMAGE_AREA.x), UnityEngine.Random.Range(0, DAMAGE_AREA.y));
+                randomPos[i].Set(Random.Range(-DAMAGE_AREA.x, DAMAGE_AREA.x), Random.Range(0, DAMAGE_AREA.y));
             }
         }
         protected override void UpdateLevelSkillPropertys()
