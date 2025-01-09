@@ -9868,7 +9868,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 1
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -13706,37 +13706,12 @@ ParticleSystem:
       properties: -25
       emitProbability: 1
     - serializedVersion: 3
-      emitter: {fileID: 0}
-      type: 2
-      properties: -25
-      emitProbability: 1
-    - serializedVersion: 3
       emitter: {fileID: 5087697715302863794}
       type: 2
       properties: -25
       emitProbability: 1
     - serializedVersion: 3
-      emitter: {fileID: 0}
-      type: 2
-      properties: -25
-      emitProbability: 1
-    - serializedVersion: 3
       emitter: {fileID: 6528966015600814541}
-      type: 2
-      properties: -25
-      emitProbability: 1
-    - serializedVersion: 3
-      emitter: {fileID: 0}
-      type: 2
-      properties: -25
-      emitProbability: 1
-    - serializedVersion: 3
-      emitter: {fileID: 0}
-      type: 2
-      properties: -25
-      emitProbability: 1
-    - serializedVersion: 3
-      emitter: {fileID: 0}
       type: 2
       properties: -25
       emitProbability: 1
@@ -19991,7 +19966,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.8
       minScalar: 0.55
       maxCurve:
         serializedVersion: 2

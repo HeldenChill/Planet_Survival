@@ -17,8 +17,8 @@ namespace _Game
         }
         private readonly Vector2 DAMAGE_AREA = new Vector2(2.5f, 4.2f);
 
-        private const float CAST_TIME = 1.2f;
-        private const int METEOR_COUNT_MAX = 60;
+        private const float CAST_TIME = 0.9f;
+        private const int METEOR_COUNT_MAX = 20;
         private const float CHARGE_TIME = 0.5f;
         private const float SKILL_RANGE = 8;
 
@@ -49,24 +49,24 @@ namespace _Game
                 {
                     case 0:
                     case 1:
-                        numOfMeteors = 24;
-                        betweenMeteorTime = 1f;
+                        numOfMeteors = 5;
+                        betweenMeteorTime = 0.3f;
                         break;
                     case 2:
-                        numOfMeteors = 30;
-                        betweenMeteorTime = 0.9f;
+                        numOfMeteors = 8;
+                        betweenMeteorTime = 0.025f;
                         break;
                     case 3:
-                        numOfMeteors = 36;
-                        betweenMeteorTime = 0.8f;
+                        numOfMeteors = 11;
+                        betweenMeteorTime = 0.2f;
                         break;
                     case 4:
-                        numOfMeteors = 48;
-                        betweenMeteorTime = 0.7f;
+                        numOfMeteors = 14;
+                        betweenMeteorTime = 0.15f;
                         break;
                     case 5:
-                        numOfMeteors = 60;
-                        betweenMeteorTime = 0.6f;
+                        numOfMeteors = 20;
+                        betweenMeteorTime = 0.1f;
                         break;
                 }
                 if(skillType == typeof(EnergyShowerSkill))
@@ -176,7 +176,7 @@ namespace _Game
             for (int i = 0; i < numOfMeteors; i++)
             {
                 int index = i;
-                STData(i * 2, sTimerDataPools).SetData(CHARGE_TIME + i * betweenMeteorTime, () => ActiveVFX(index, POOL_ID.CAST, betweenMeteorTime + 2f));
+                STData(i * 2, sTimerDataPools).SetData(CHARGE_TIME + i * betweenMeteorTime, () => ActiveVFX(index, POOL_ID.CAST, betweenMeteorTime + 3f));
                 STData(i * 2 + 1, sTimerDataPools).SetData(CHARGE_TIME + i * betweenMeteorTime + CAST_TIME, () => ActiveVFX(index, POOL_ID.EXPLOSION, 3f));
                 sTimerDataNum += 2;
             }
