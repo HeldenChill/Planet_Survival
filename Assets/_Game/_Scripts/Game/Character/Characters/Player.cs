@@ -22,7 +22,7 @@ namespace _Game.Character
         [SerializeField]
         protected Transform weaponPosTf;
         [SerializeField]
-        protected DefendOrbSkill testSkill;
+        protected BaseSkill testSkill;
         public NoviceGun Weapon => weapon;
         protected override void Awake()
         {

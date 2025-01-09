@@ -2,6 +2,7 @@ using _Game.Character;
 using DesignPattern;
 using System.Collections.Generic;
 using UnityEngine;
+using Utilities;
 using Utilities.Core;
 using Utilities.Timer;
 
@@ -16,9 +17,10 @@ namespace _Game
         }
         private readonly Vector2 DAMAGE_AREA = new Vector2(2.5f, 4.2f);
 
-        private const float CAST_TIME = 0.55f;
+        private const float CAST_TIME = 1.2f;
         private const int METEOR_COUNT_MAX = 60;
         private const float CHARGE_TIME = 0.5f;
+        private const float SKILL_RANGE = 8;
 
         [SerializeField]
         ParticleSystem Charge;
@@ -26,10 +28,12 @@ namespace _Game
         Transform characterTF;
 
         protected int numOfMeteors;
-        protected float betweenMeteorTime = 0.1f;
-        Vector2[] randomPos = new Vector2[METEOR_COUNT_MAX];
+        protected float betweenMeteorTime = 0.6f;
+        Vector3[] randomPos = new Vector3[METEOR_COUNT_MAX];
+        Vector3[] randomDirections = new Vector3[METEOR_COUNT_MAX];
         List<STimerData> sTimerDataPools = new List<STimerData>();
         List<STimerData> sTimerDatas = new List<STimerData>();
+        FakeGravityBody fakeGravitySource;
 
         float initExploVFXScale;
         protected STimer shootTimer;
@@ -46,30 +50,35 @@ namespace _Game
                     case 0:
                     case 1:
                         numOfMeteors = 24;
-                        betweenMeteorTime = 0.3f;
+                        betweenMeteorTime = 1f;
                         break;
                     case 2:
                         numOfMeteors = 30;
-                        betweenMeteorTime = 0.25f;
+                        betweenMeteorTime = 0.9f;
                         break;
                     case 3:
                         numOfMeteors = 36;
-                        betweenMeteorTime = 0.2f;
+                        betweenMeteorTime = 0.8f;
                         break;
                     case 4:
                         numOfMeteors = 48;
-                        betweenMeteorTime = 0.15f;
+                        betweenMeteorTime = 0.7f;
                         break;
                     case 5:
                         numOfMeteors = 60;
-                        betweenMeteorTime = 0.12f;
+                        betweenMeteorTime = 0.6f;
                         break;
+                }
+                if(skillType == typeof(EnergyShowerSkill))
+                {
+                    UpdateLevelSkillPropertys();
                 }
             }
         }
 
         protected override void Awake()
         {
+            base.Awake();
             phaseTimer = TimerManager.Ins.PopSTimer();
         }
         public override void OnInit(ICharacter source, PlayerLogicParameter Parameter, PlayerLogicData Data)
@@ -77,8 +86,10 @@ namespace _Game
             base.OnInit(source, Parameter, Data);
             this.characterTF = source.Tf;
             objCon.OnInit();
+            fakeGravitySource = source.GetVariable<FakeGravityBody>();
+            skillType = typeof(EnergyShowerSkill);
 
-            initExploVFXScale = objCon.Data[(int)POOL_ID.EXPLOSION][0].Tf.localScale.x;
+            //initExploVFXScale = objCon.Data[(int)POOL_ID.EXPLOSION][0].Tf.localScale.x;
             //UpdateProperty = () =>
             //{
             //    foreach (SkillObjContainer explosion in objCon.Data[(int)POOL_ID.EXPLOSION])
@@ -91,29 +102,26 @@ namespace _Game
             //        explosion.Tf.localScale = Vector3.one * GetAOEIncreasingRate(initExploVFXScale);
             //    }
             //};
-
-            for (int i = 0; i < METEOR_COUNT_MAX; i++)
-            {
-                randomPos[i] = new Vector2();
-            }
             SkillLevel = 0;
         }
 
         private void FixedUpdate()
         {
-            if (Charge.isPlaying)
-            {
-                Charge.transform.position = characterTF.position;
-            }
+            //if (Charge.isPlaying)
+            //{
+            //    Charge.transform.position = characterTF.position;
+            //}
         }
         public override void SkillExecute()
         {
+            base.SkillExecute();
             skillTimer.Start(skillData.CD, SkillActivation, true);
+            SkillActivation();
         }
 
         protected void BeginPhase()
         {
-            Charge.Play();
+            //Charge?.Play();
         }
         public override void SkillActivation()
         {
@@ -138,6 +146,7 @@ namespace _Game
         {
             SkillObjContainer explosion = objCon.Pop((int)id);
             explosion.Tf.position = randomPos[posID];
+            explosion.Tf.rotation = Quaternion.FromToRotation(Vector3.up, randomDirections[posID]);
             explosion.Tf.gameObject.SetActive(true);
             TimerManager.Ins.WaitForTime(timeRelease, () => ReleaseVFX(id, explosion));
         }
@@ -149,9 +158,16 @@ namespace _Game
         }
         private void RandomPos()
         {
-            for (int i = 0; i < randomPos.Length; i++)
+            float size = fakeGravitySource.Attractor.WorldSize;
+            Vector3 worldPosition = fakeGravitySource.Attractor.Tf.position;
+            Vector3 playerPosition = source.Tf.position;
+
+            for (int i = 0; i < numOfMeteors; i++)
             {
-                randomPos[i].Set(Random.Range(-DAMAGE_AREA.x, DAMAGE_AREA.x), Random.Range(0, DAMAGE_AREA.y));
+                Vector3 rangePos = Random.onUnitSphere.normalized * SKILL_RANGE + playerPosition;
+                randomDirections[i] = (rangePos - worldPosition).normalized;
+                randomPos[i] = randomDirections[i] * size + worldPosition;
+                //DevLog.Log(DevId.Hung, $"POS - {randomPos[i]}");
             }
         }
         protected override void UpdateLevelSkillPropertys()
@@ -160,8 +176,8 @@ namespace _Game
             for (int i = 0; i < numOfMeteors; i++)
             {
                 int index = i;
-                STData(i * 2, sTimerDataPools).SetData(CHARGE_TIME + i * betweenMeteorTime, () => ActiveVFX(index, POOL_ID.CAST, betweenMeteorTime + 0.4f));
-                STData(i * 2 + 1, sTimerDataPools).SetData(CHARGE_TIME + i * betweenMeteorTime + CAST_TIME, () => ActiveVFX(index, POOL_ID.EXPLOSION, 1.5f));
+                STData(i * 2, sTimerDataPools).SetData(CHARGE_TIME + i * betweenMeteorTime, () => ActiveVFX(index, POOL_ID.CAST, betweenMeteorTime + 2f));
+                STData(i * 2 + 1, sTimerDataPools).SetData(CHARGE_TIME + i * betweenMeteorTime + CAST_TIME, () => ActiveVFX(index, POOL_ID.EXPLOSION, 3f));
                 sTimerDataNum += 2;
             }
             sTimerDataPools.Sort(0, sTimerDataNum, STimerData.Comparer);

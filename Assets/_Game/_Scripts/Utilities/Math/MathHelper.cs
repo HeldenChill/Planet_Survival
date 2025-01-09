@@ -184,6 +184,7 @@ namespace Utilities
             // Create a new Vector2 with the random components
             return new Vector2(randomX, randomY);
         }
+
         public static void InitArrayWithValue(Collider2D[] array, Collider2D value)
         {
             for (int i = 0; i < array.Length; i++)
