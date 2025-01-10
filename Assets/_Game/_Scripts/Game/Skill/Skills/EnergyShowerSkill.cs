@@ -20,10 +20,11 @@ namespace _Game
         private const float CAST_TIME = 0.9f;
         private const int METEOR_COUNT_MAX = 20;
         private const float CHARGE_TIME = 0.5f;
-        private const float SKILL_RANGE = 8;
 
         [SerializeField]
         ParticleSystem Charge;
+        [SerializeField]
+        float SKILL_RANGE = 6;
 
         Transform characterTF;
 
@@ -50,23 +51,23 @@ namespace _Game
                     case 0:
                     case 1:
                         numOfMeteors = 5;
-                        betweenMeteorTime = 0.3f;
+                        betweenMeteorTime = 0.4f;
                         break;
                     case 2:
                         numOfMeteors = 8;
-                        betweenMeteorTime = 0.025f;
+                        betweenMeteorTime = 0.35f;
                         break;
                     case 3:
                         numOfMeteors = 11;
-                        betweenMeteorTime = 0.2f;
+                        betweenMeteorTime = 0.3f;
                         break;
                     case 4:
                         numOfMeteors = 14;
-                        betweenMeteorTime = 0.15f;
+                        betweenMeteorTime = 0.25f;
                         break;
                     case 5:
                         numOfMeteors = 20;
-                        betweenMeteorTime = 0.1f;
+                        betweenMeteorTime = 0.25f;
                         break;
                 }
                 if(skillType == typeof(EnergyShowerSkill))

@@ -146,6 +146,7 @@ MonoBehaviour:
   tf: {fileID: 1230766545305311250}
   skillData: {fileID: 11400000, guid: 08748c6b5d8fe3345811e37550454fe4, type: 2}
   Charge: {fileID: 0}
+  SKILL_RANGE: 6
   objCon: {fileID: 5311902999373253643}
 --- !u!114 &5311902999373253643
 MonoBehaviour:
@@ -293,7 +294,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4069991965596552349, guid: b89ffcde5c721d941b8eeb890a71b018, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7168686791714166181}
   m_SourcePrefab: {fileID: 100100000, guid: b89ffcde5c721d941b8eeb890a71b018, type: 3}
 --- !u!4 &5193137196330284656 stripped
 Transform:
@@ -305,3 +309,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4069991965596552349, guid: b89ffcde5c721d941b8eeb890a71b018, type: 3}
   m_PrefabInstance: {fileID: 7638015831716898242}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7168686791714166181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5873866883926075743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b451a92b55bb7b7408391672149f3942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  space: 1
+  Damage: 5
+  AOERange: 1.5
+  existTime: 1.5
+  numOfExplode: 5
+  timeExplode: 0.1
+  explodeTF: {fileID: 5193137196330284656}
+  particleSystems: []
+  autoTrigger: 1
+  autoPushToPool: 0
+  ENEMY_LAYER: EnemyCollider
+  effects: []
+  EffectHit: 1

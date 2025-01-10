@@ -35,10 +35,13 @@ namespace _Game.Character
         }
         private void Start()
         {
-            AddSkill(weapon);
-            weapon.Equip(this, weaponPosTf);
-            weapon.SkillExecute();
-
+            if (weapon)
+            {
+                AddSkill(weapon);
+                weapon.Equip(this, weaponPosTf);
+                weapon.SkillExecute();
+            }
+            
             AddSkill(testSkill);
             testSkill.SkillExecute();
         }

@@ -40,10 +40,9 @@ namespace _Game
             }
         }
         [SerializeField]
-        protected string ENEMY_LAYER = "Enemy";
+        protected string ENEMY_LAYER = "EnemyCollider";
 
         #region Property
-
         [SerializeField]
         List<EffectData> effects;
         public List<float> EffectTimes
@@ -92,7 +91,15 @@ namespace _Game
         protected override void Awake()
         {
             base.Awake();
-            targetDetection = new Target2DDetection<IDamageable>(new string[] { ENEMY_LAYER }, null, 40);
+            switch (space)
+            {
+                case SPACE.D2:
+                    targetDetection = new Target2DDetection<IDamageable>(new string[] { ENEMY_LAYER }, null, 30);
+                    break;
+                case SPACE.D3:
+                    targetDetection = new Target3DDetection<IDamageable>(new string[] { ENEMY_LAYER }, null, 30);
+                    break;
+            }
         }
         protected virtual void OnEnable()
         {
@@ -124,7 +131,7 @@ namespace _Game
             for (int i = 0; i < targets.Count; i++)
             {
                 if (damage > 0)
-                    targets[i].TakeDamage(damage, this);
+                    targets[i].TakeDamage(-damage, this);
                 for (int j = 0; j < effects.Count; j++)
                 {
                     InflictEffect(effects[j], targets[i]);

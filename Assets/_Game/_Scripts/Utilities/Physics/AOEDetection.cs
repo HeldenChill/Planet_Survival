@@ -15,8 +15,15 @@ namespace Utilities.Physics
             INCREASE_MULTIPLE_EXPLODE = 2,
             INCREASE_SINGLE_EXPLODE = 3,
         }
+        public enum SPACE
+        {
+            D2 = 0,
+            D3 = 1,
+        }
         [SerializeField]
         protected TYPE type;
+        [SerializeField] 
+        protected SPACE space;
         [Tooltip("Total damage is caused by all explosions")]
         public float Damage;
         public float AOERange = 1.5f;
@@ -46,7 +53,7 @@ namespace Utilities.Physics
         [HideInInspector]
         public Action ReleaseAction;
 
-        protected Target2DDetection<T> targetDetection;
+        protected BaseTargetDetection<T> targetDetection;
         protected List<T> targets = new List<T>();
         public IReadOnlyList<T> Targets => targets.AsReadOnly();
         protected List<T> oldTargets;
