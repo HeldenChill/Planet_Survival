@@ -179,6 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 292605365}
   - component: {fileID: 292605364}
+  - component: {fileID: 292605366}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -266,63 +267,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &475791874
-PrefabInstance:
+--- !u!114 &292605366
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1803562080811879450, guid: 2d9b9199f19d6be4e80eba35a44874e1, type: 3}
-      propertyPath: m_Name
-      value: Pyro_Beam
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007293124836873979, guid: 2d9b9199f19d6be4e80eba35a44874e1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.5369782
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007293124836873979, guid: 2d9b9199f19d6be4e80eba35a44874e1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.335
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007293124836873979, guid: 2d9b9199f19d6be4e80eba35a44874e1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.3203364
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007293124836873979, guid: 2d9b9199f19d6be4e80eba35a44874e1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007293124836873979, guid: 2d9b9199f19d6be4e80eba35a44874e1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007293124836873979, guid: 2d9b9199f19d6be4e80eba35a44874e1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007293124836873979, guid: 2d9b9199f19d6be4e80eba35a44874e1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007293124836873979, guid: 2d9b9199f19d6be4e80eba35a44874e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007293124836873979, guid: 2d9b9199f19d6be4e80eba35a44874e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007293124836873979, guid: 2d9b9199f19d6be4e80eba35a44874e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2d9b9199f19d6be4e80eba35a44874e1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292605363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1027267933
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,6 +606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1356897125}
   - component: {fileID: 1356897124}
+  - component: {fileID: 1356897126}
   m_Layer: 0
   m_Name: Directional Light (1)
   m_TagString: Untagged
@@ -726,6 +694,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 220, y: -30, z: 0}
+--- !u!114 &1356897126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356897123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1720309168
 GameObject:
   m_ObjectHideFlags: 0
@@ -25455,4 +25446,3 @@ SceneRoots:
   - {fileID: 4844511776279334}
   - {fileID: 4466971323589775731}
   - {fileID: 1150777435}
-  - {fileID: 475791874}
