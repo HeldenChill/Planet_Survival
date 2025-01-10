@@ -146,6 +146,7 @@ namespace _Game
             if (isActivation)
             {
                 orbsParentTf.position = source.Tf.position;
+                tf.rotation = source.Tf.rotation;
                 orbsParentTf.Rotate(Vector3.up * skillData.Speed * Time.fixedDeltaTime * 60 / ballDistance, Space.Self);
 
                 //string content = "";
