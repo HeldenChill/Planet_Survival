@@ -3,7 +3,8 @@
     "rootNamespace": "",
     "references": [
         "Hung.Utilities.STimer",
-        "Hung.DesignPattern"
+        "Hung.DesignPattern",
+        "Hung.Utilities"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
