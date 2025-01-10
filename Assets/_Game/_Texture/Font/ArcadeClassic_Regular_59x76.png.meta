@@ -1,0 +1,2305 @@
+fileFormatVersion: 2
+guid: 4f9e0a66b49468542bb3782381f67b5a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 50
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 948
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd438da7c58a22447a7dc016b26dbd74
+      internalID: 1656441472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 948
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8808c05b20cbc3a419e90494cb0c6dbe
+      internalID: 514259179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_2
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 948
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29b06d60a33b964ca2946d4af99cef2
+      internalID: -22734406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_3
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 948
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4627bedf293dff45ac6023df7f7e2b1
+      internalID: 1990036154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_4
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 948
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d6038b662c6444a98e396b90baac75
+      internalID: -816546638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_5
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 948
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3a018eb23748a4a9d9bac41d2fab00
+      internalID: -556195043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_6
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 948
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9647f421f6cb0248954c29101d43299
+      internalID: 150350311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_7
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 948
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76282ff3885d7f044a29d2ed693cafd8
+      internalID: 842225921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 872
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc901564701b974783ac21a31da4ea4
+      internalID: 2025750168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_9
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 872
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c7e86ef7e418f4898600ddddf4fff7
+      internalID: -1636542505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_10
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 872
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0c80b93187489449860cf3a11b6990
+      internalID: -287104907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_11
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 872
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cffa93a4e6dc0543b1e6312ee707365
+      internalID: -2100638465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_12
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 872
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e502096bf93534cad8a6209633945c
+      internalID: 1734891511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_13
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 872
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0777ba9cb0d42714fb3a9283ccef6819
+      internalID: 444571276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_14
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 872
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1460fb267008cf4aabe01666c7ec8cb
+      internalID: -623786221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_15
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 872
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a1ff895ce98664d8fcd3baa8a54a68
+      internalID: -2109661712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 796
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96da542a1868705489dad3fd2cc43557
+      internalID: 1057558510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_17
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 796
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb596436ce56474fb963431ea457640
+      internalID: 1547153917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_18
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 796
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893ae68d8173f254dbe0b88e006603a3
+      internalID: 248928377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_19
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 796
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6820434b1e8fa4744b5d98a7256b43fd
+      internalID: -756776775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_20
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 796
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a415b6ed3fcead74d873b6e64f72457c
+      internalID: -628528828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_21
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 796
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a6da4e173260f4e943e4e3b0e610e6
+      internalID: -1185105746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_22
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 796
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a91461bd62008e46b176c6f385013cf
+      internalID: -92495839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_23
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 796
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c0108b76b1eb246b4556cae012bef7
+      internalID: -330723695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cafcfc7c0e0e649a3ec78a19255632
+      internalID: -523182957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_25
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 720
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f24a7fb513e3d4683addc6771597db
+      internalID: -349781904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_26
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 720
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a66acb82256f97439f75ab581d9ff71
+      internalID: 2074153596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_27
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 720
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3e4b40922c4194381767cf441192c6
+      internalID: -975518573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_28
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 720
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ab2494827d24542bc52a9e9d74c38e
+      internalID: -159937501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_29
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 720
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1737104f34f3a41aa70a2822fbfe35
+      internalID: 963595710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_30
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 720
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0863be6c404e06643a67af2af606e80b
+      internalID: -2125572668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_31
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 720
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9009c147905a34fb8109a974bff5dd
+      internalID: 1825522365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 644
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3440f5208f312da42b05244e49fa87ba
+      internalID: -1771565511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_33
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 644
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66bfe303d77a3f94a8e094fff84bfeec
+      internalID: -1451205098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_34
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 644
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16819e1621ce16c45a33d26c02c33437
+      internalID: 966775422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_35
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 644
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d58192784df99e439a35abd7b42cef0
+      internalID: 91078882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_36
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 644
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c7a959e91997545858bb5ef701c001
+      internalID: 625646272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_37
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 644
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7362193b726cb4299ea5308b3e436b
+      internalID: -31643187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_38
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 644
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4fd78bf116b3940a01ea8f0a4080df
+      internalID: -480671740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_39
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 644
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeeac13c902ac5e42b3bc10cbccc884f
+      internalID: 414302054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 568
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9476168d20af32946a0acf75d658390b
+      internalID: -1355226140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_41
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 568
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ccf24425f7147c44a9e16e6cde757ed
+      internalID: -1956665430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_42
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 568
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08414b66995b47142bbaf79e6c0aa55c
+      internalID: -244489651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_43
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 568
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f57a65b1f36a2e4e801cd3b7dc3f428
+      internalID: -623774742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_44
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 568
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e095ffe6d6bfc41888f45daca8a9c0
+      internalID: 1259323988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_45
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 568
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 185032fab22ffef438a5dace5ed66133
+      internalID: -1774051860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_46
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 568
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d69ca6d6fde1140b3189c6c5e4c9c2
+      internalID: 341609611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_47
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 568
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226c3fdefa654184598353d1a5066a00
+      internalID: -1076030866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 492
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d713acf11313c74fb6a3947adabbca5
+      internalID: -797987498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_49
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 492
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6ed24b01796c241b172c0dd71d433f
+      internalID: 776648139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_50
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 492
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6565b7f552af7f046875a766f6968355
+      internalID: 1661302026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_51
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 492
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f47447b1a89b74b8fce1c05c3a94d9
+      internalID: 1823355423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_52
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 492
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69204c2fda78ee47bf0eb476ebab041
+      internalID: 2003558013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_53
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 492
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c20724f665e41498ee2bea1743a96c
+      internalID: -1607765828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_54
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 492
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa05f30a0d54f44795da86de290c1e0
+      internalID: 1446257671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_55
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 492
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22c7a15a64c0bf4485a95f7468880d0
+      internalID: -583465597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f33e97efc77c7d41a47907c5fb577e3
+      internalID: 78667546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_57
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 416
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da437c0c3c636349a5b9d12c767f213
+      internalID: 460457120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_58
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 416
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece16958e5d947947a20b48b3d2d72fb
+      internalID: -400432720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_59
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 416
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab47b18b515f6784bb4f8af8a7fc96bb
+      internalID: 1679116154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_60
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 416
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3bd0b4479238246958d6e250b321b3
+      internalID: 1456618114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_61
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 416
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca0f5337b917b446882588f26fcdf11
+      internalID: 1185636595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_62
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 416
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7681e05ca74f8834c937a4dc729d34b5
+      internalID: 823461946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_63
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 416
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b330d176a5ac8459ee991ff8ad67b4
+      internalID: -1492328685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88398ff67942bf499b8e174cf419af9
+      internalID: -1436273040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_65
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 340
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18792e6d705e8914f9d697d10d792511
+      internalID: -52626647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_66
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 340
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fceb2e97cca05947a7dc89428669c94
+      internalID: -825239336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_67
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 340
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5be3358dc740db44b1c6626c71a3885
+      internalID: -1976166164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_68
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 340
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fae0e689c6a484f862ae60cf08279c
+      internalID: -1895072532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_69
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 340
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73628dbb4974f94e8efe12972e05b60
+      internalID: 567343094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_70
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 340
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b838415a82e548047852cf7011123c7c
+      internalID: -420693411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_71
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 340
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee2572594772b14aab8255fb4ccf266
+      internalID: -912444245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3821dfc01ba35840a65ef234ce66ee0
+      internalID: -1929128043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_73
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 264
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ba79d5bc538f54d93fa14406d5db5c
+      internalID: 473610866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_74
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 264
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fd1b5c9916f7146985101ac2c3b6d3
+      internalID: -733046805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_75
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 264
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d05ed5c97479044d9d661e25077c7f0
+      internalID: -654440818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_76
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 264
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8480ce5b3d2a594380ca9257c1b2cb8
+      internalID: 1865191314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_77
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 264
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4abaea3db4f1fed488c2a45f03c2e76b
+      internalID: -494558609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_78
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 264
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b498f21f6a7470f4baf6f5c664084750
+      internalID: 535370144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_79
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 264
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719e181e7f916c847b6e3188b0049baf
+      internalID: 545743572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9a0c4d185e7694eb01c90b38eac413
+      internalID: 1284808570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_81
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 188
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e46c30ff8b7b243b6a2ad82817c73d
+      internalID: 1993274794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_82
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 188
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d3030a373e41e47a9423c436dec6e3
+      internalID: 1137897972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_83
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 188
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21bf4e76b7793354ca2f22738cbd7afb
+      internalID: 2064774645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_84
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 188
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe9db6874d536446b82ed3a63c12a97
+      internalID: 977740207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_85
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 188
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750ff6a359b202b489bf3174f754a6a8
+      internalID: -1936170599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_86
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 188
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d1ba74c7c0fe941ae248bb30a9b84d
+      internalID: -394466091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_87
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 188
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0b63e5eb4e0a44b99f4f733470cc03
+      internalID: 619157905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b16971b27495f40b7ee3b83fedf262
+      internalID: -139372053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_89
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 112
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0f95c3af6b20240a9838513437cb27
+      internalID: -458990318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_90
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 112
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e531b15fcbdeb4a826e63089117f06
+      internalID: 462140581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_91
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 112
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3086164ad8e829341bf770cb4d7feb65
+      internalID: -1667301341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_92
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 112
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f416d97d1209f714bb2671bb8b76a08b
+      internalID: 1069693877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcadeClassic_Regular_59x76_93
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 112
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76aaa742c0f6e8f4db4f90b449c9faf4
+      internalID: -1279235222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 549e0311007a1ac4c8936f0acbd8f749
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ArcadeClassic_Regular_59x76_0: 1656441472
+      ArcadeClassic_Regular_59x76_1: 514259179
+      ArcadeClassic_Regular_59x76_10: -287104907
+      ArcadeClassic_Regular_59x76_11: -2100638465
+      ArcadeClassic_Regular_59x76_12: 1734891511
+      ArcadeClassic_Regular_59x76_13: 444571276
+      ArcadeClassic_Regular_59x76_14: -623786221
+      ArcadeClassic_Regular_59x76_15: -2109661712
+      ArcadeClassic_Regular_59x76_16: 1057558510
+      ArcadeClassic_Regular_59x76_17: 1547153917
+      ArcadeClassic_Regular_59x76_18: 248928377
+      ArcadeClassic_Regular_59x76_19: -756776775
+      ArcadeClassic_Regular_59x76_2: -22734406
+      ArcadeClassic_Regular_59x76_20: -628528828
+      ArcadeClassic_Regular_59x76_21: -1185105746
+      ArcadeClassic_Regular_59x76_22: -92495839
+      ArcadeClassic_Regular_59x76_23: -330723695
+      ArcadeClassic_Regular_59x76_24: -523182957
+      ArcadeClassic_Regular_59x76_25: -349781904
+      ArcadeClassic_Regular_59x76_26: 2074153596
+      ArcadeClassic_Regular_59x76_27: -975518573
+      ArcadeClassic_Regular_59x76_28: -159937501
+      ArcadeClassic_Regular_59x76_29: 963595710
+      ArcadeClassic_Regular_59x76_3: 1990036154
+      ArcadeClassic_Regular_59x76_30: -2125572668
+      ArcadeClassic_Regular_59x76_31: 1825522365
+      ArcadeClassic_Regular_59x76_32: -1771565511
+      ArcadeClassic_Regular_59x76_33: -1451205098
+      ArcadeClassic_Regular_59x76_34: 966775422
+      ArcadeClassic_Regular_59x76_35: 91078882
+      ArcadeClassic_Regular_59x76_36: 625646272
+      ArcadeClassic_Regular_59x76_37: -31643187
+      ArcadeClassic_Regular_59x76_38: -480671740
+      ArcadeClassic_Regular_59x76_39: 414302054
+      ArcadeClassic_Regular_59x76_4: -816546638
+      ArcadeClassic_Regular_59x76_40: -1355226140
+      ArcadeClassic_Regular_59x76_41: -1956665430
+      ArcadeClassic_Regular_59x76_42: -244489651
+      ArcadeClassic_Regular_59x76_43: -623774742
+      ArcadeClassic_Regular_59x76_44: 1259323988
+      ArcadeClassic_Regular_59x76_45: -1774051860
+      ArcadeClassic_Regular_59x76_46: 341609611
+      ArcadeClassic_Regular_59x76_47: -1076030866
+      ArcadeClassic_Regular_59x76_48: -797987498
+      ArcadeClassic_Regular_59x76_49: 776648139
+      ArcadeClassic_Regular_59x76_5: -556195043
+      ArcadeClassic_Regular_59x76_50: 1661302026
+      ArcadeClassic_Regular_59x76_51: 1823355423
+      ArcadeClassic_Regular_59x76_52: 2003558013
+      ArcadeClassic_Regular_59x76_53: -1607765828
+      ArcadeClassic_Regular_59x76_54: 1446257671
+      ArcadeClassic_Regular_59x76_55: -583465597
+      ArcadeClassic_Regular_59x76_56: 78667546
+      ArcadeClassic_Regular_59x76_57: 460457120
+      ArcadeClassic_Regular_59x76_58: -400432720
+      ArcadeClassic_Regular_59x76_59: 1679116154
+      ArcadeClassic_Regular_59x76_6: 150350311
+      ArcadeClassic_Regular_59x76_60: 1456618114
+      ArcadeClassic_Regular_59x76_61: 1185636595
+      ArcadeClassic_Regular_59x76_62: 823461946
+      ArcadeClassic_Regular_59x76_63: -1492328685
+      ArcadeClassic_Regular_59x76_64: -1436273040
+      ArcadeClassic_Regular_59x76_65: -52626647
+      ArcadeClassic_Regular_59x76_66: -825239336
+      ArcadeClassic_Regular_59x76_67: -1976166164
+      ArcadeClassic_Regular_59x76_68: -1895072532
+      ArcadeClassic_Regular_59x76_69: 567343094
+      ArcadeClassic_Regular_59x76_7: 842225921
+      ArcadeClassic_Regular_59x76_70: -420693411
+      ArcadeClassic_Regular_59x76_71: -912444245
+      ArcadeClassic_Regular_59x76_72: -1929128043
+      ArcadeClassic_Regular_59x76_73: 473610866
+      ArcadeClassic_Regular_59x76_74: -733046805
+      ArcadeClassic_Regular_59x76_75: -654440818
+      ArcadeClassic_Regular_59x76_76: 1865191314
+      ArcadeClassic_Regular_59x76_77: -494558609
+      ArcadeClassic_Regular_59x76_78: 535370144
+      ArcadeClassic_Regular_59x76_79: 545743572
+      ArcadeClassic_Regular_59x76_8: 2025750168
+      ArcadeClassic_Regular_59x76_80: 1284808570
+      ArcadeClassic_Regular_59x76_81: 1993274794
+      ArcadeClassic_Regular_59x76_82: 1137897972
+      ArcadeClassic_Regular_59x76_83: 2064774645
+      ArcadeClassic_Regular_59x76_84: 977740207
+      ArcadeClassic_Regular_59x76_85: -1936170599
+      ArcadeClassic_Regular_59x76_86: -394466091
+      ArcadeClassic_Regular_59x76_87: 619157905
+      ArcadeClassic_Regular_59x76_88: -139372053
+      ArcadeClassic_Regular_59x76_89: -458990318
+      ArcadeClassic_Regular_59x76_9: -1636542505
+      ArcadeClassic_Regular_59x76_90: 462140581
+      ArcadeClassic_Regular_59x76_91: -1667301341
+      ArcadeClassic_Regular_59x76_92: 1069693877
+      ArcadeClassic_Regular_59x76_93: -1279235222
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

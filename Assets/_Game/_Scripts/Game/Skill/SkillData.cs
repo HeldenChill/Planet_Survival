@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace _Game
 {
-    [CreateAssetMenu(fileName = "SkillData", menuName = "ScriptableObjects/SkillData/SkillData", order = 1)]
+    [CreateAssetMenu(fileName = "SkillData", menuName = "ScriptableObjects/Skill/SkillData", order = 1)]
     public class SkillData : ScriptableObject
     {
         protected int level;
