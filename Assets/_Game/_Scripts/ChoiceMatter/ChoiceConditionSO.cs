@@ -2,19 +2,19 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-namespace Dialog
+namespace ChoiceMatter
 {
     [Serializable]
-    public abstract class DialogStats
+    public abstract class ChoiceStats
     {
-
+        
     }
 
-    [CreateAssetMenu(fileName = "DialogCondition", menuName = "ScriptableObjects/Dialog/DialogCondition", order = 1)]
-    public class DialogConditionSO : ScriptableObject
+    [CreateAssetMenu(fileName = "ChoiceCondition", menuName = "ScriptableObjects/ChoiceMatter/ChoiceCondition", order = 1)]
+    public class ChoiceConditionSO : ScriptableObject
     {
-        public List<DialogConditionSO> conditions;
-        public virtual bool Check<T>(T stats) where T : DialogStats
+        public List<ChoiceConditionSO> conditions;
+        public virtual bool Check<T>(T stats) where T : ChoiceStats
         {
             bool result = true;
             if (conditions != null)
