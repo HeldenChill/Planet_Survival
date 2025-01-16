@@ -10,7 +10,8 @@
         "Hung.Utilities",
         "Unity.Behavior",
         "Unity.InputSystem",
-        "DOTween.Modules"
+        "DOTween.Modules",
+        "_Game.Skill"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
