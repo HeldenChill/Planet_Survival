@@ -352,7 +352,7 @@ namespace DesignPattern
         PLAYER = 0,
         ENEMY_ZOMBIE1 = 1,
         TYPE1_BULLET = 100,
-
+        AOE_DAMAGE = 101,
     }
 
     public enum VFX

@@ -5,27 +5,10 @@ using System;
 
 namespace _Game
 {
+    using Base;
     using Utilities.Physics;
     public class AOEDamage : AOEDetection<IDamageable>
     {
-        public enum EFFECT
-        {
-            FREEZE = 0,
-            WIND = 1,
-            BURN = 2,
-            ZAP = 3,
-            WOUND = 4,
-            WEAKEN = 5,
-            POISON = 6,
-            CHANGE_TEMP = 7,
-        }
-        public enum COMBINE_EFFECT
-        {
-            BLOOD_LOSS = 0, //WOUND + BURN
-            OVERLOAD = 1, //BURN + ZAP
-            ICE_BREAKING = 2, //ZAP + FREEZE
-            ICE_MELTING = 3, //FREEZE + BURN
-        }
         [Serializable]
         protected class EffectData
         {

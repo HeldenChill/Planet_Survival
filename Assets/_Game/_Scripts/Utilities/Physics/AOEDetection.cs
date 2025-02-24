@@ -5,8 +5,9 @@ using UnityEngine;
 
 namespace Utilities.Physics
 {
+    using DesignPattern;
     using Timer; 
-    public abstract class AOEDetection<T> : MonoBehaviour
+    public abstract class AOEDetection<T> : GameUnit
     {
         public enum TYPE
         {

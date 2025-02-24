@@ -71,6 +71,26 @@ namespace Base
         QUESTION = 1,
         ON_MOVING_BELT = 2,
     }
+    public enum EFFECT
+    {
+        FREEZE = 0,
+        WIND = 1,
+        BURN = 2,
+        ZAP = 3,
+        WOUND = 4,
+        WEAKEN = 5,
+        POISON = 6,
+        CHANGE_TEMP = 7,
+
+        BLOOD_LOSS = 100, //WOUND + BURN
+        OVERLOAD = 101, //BURN + ZAP
+        ICE_BREAKING = 102, //ZAP + FREEZE
+        ICE_MELTING = 103, //FREEZE + BURN
+    }
+    public enum HIT_IMPACT_TYPE
+    {
+        NONE = -1,
+    }
     public enum ITEM
     {
         REFRESH_BOOSTER = 0,
