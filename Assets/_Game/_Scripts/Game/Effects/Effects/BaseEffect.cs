@@ -21,11 +21,11 @@ namespace _Game
         public float BaseDamage = 100;
         public float BaseTime;
 
-        protected int index = -1;
         protected float PROPERTY_MUL_DAMAGE = 1f;
         protected float PROPERTY_MUL_TIME = 1f;
         protected float mulDamage = 1f;
         protected float mulTime = 1f;
+        protected EFFECT id;
 
         public float LastDamage => BaseDamage * mulDamage * PROPERTY_MUL_DAMAGE;
         public float LastTime => BaseTime * mulTime * PROPERTY_MUL_TIME;
@@ -45,9 +45,9 @@ namespace _Game
                 mulTime = Mathf.Clamp(value, 0f, MAX_MUL_TIME);
             }
         }
-        public int Index => index;
+        public int Index => (int)id;
         #endregion
-        public abstract EFFECT Id { get; }
+        public virtual EFFECT Id => id;
         public bool IsCombining => isCombining;
         protected IDamageable character;
 

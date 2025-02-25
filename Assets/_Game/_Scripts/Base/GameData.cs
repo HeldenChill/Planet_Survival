@@ -72,13 +72,13 @@ namespace Base
         ON_MOVING_BELT = 2,
     }
     public enum EFFECT
-    {
-        FREEZE = 0,
+    {        
+        NONE = -1,
         WIND = 1,
         BURN = 2,
         ZAP = 3,
-        WOUND = 4,
-        WEAKEN = 5,
+        FREEZE = 4,
+        WOUND = 5,
         POISON = 6,
         CHANGE_TEMP = 7,
 

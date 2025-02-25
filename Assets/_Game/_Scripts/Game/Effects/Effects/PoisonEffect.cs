@@ -11,14 +11,11 @@ namespace _Game
     {
         private float currentTime;
         STimer timer;
-
-        public override EFFECT Id => EFFECT.POISON;
-
         public override void Initialize()
         {
             PROPERTY_MUL_DAMAGE = 0.75f;
-            index = 6;
             timer = TimerManager.Ins.PopSTimer();
+            id = EFFECT.POISON;
         }
 
         public override bool IsCanCombine(BaseEffect effect)
@@ -59,24 +56,6 @@ namespace _Game
                         }
                         currentTime += INTERVAL_TIME;
                     }, true);
-                    break;
-                case BurnEffect burningEffect:
-                    Stop();
-                    AOEDamage poisonExplode = SimplePool.Spawn<AOEDamage>(PoolType.AOE_DAMAGE, character.Tf.position, Quaternion.identity); //DEV: Dependency
-                    poisonExplode.Damage = LastDamage;
-                    poisonExplode.EffectTime = LastTime;
-                    poisonExplode.EffectDamage = BaseDamage;
-                    poisonExplode.Trigger();
-                    break;
-                case WindEffect windEffect:
-                    MulTime *= WindEffect.EFFECT_TIME_AMPLIFY_RATE;
-                    MulDamage *= WindEffect.EFFECT_DAME_AMPLIFY_RATE;
-                    windEffect.Stop();
-                    EffectManager.Inst.PushEffect(windEffect);
-                    combineEffect = null;
-                    isCombining = false;
-                    //timer.Start(LastTime, Stop);
-                    Trigger(character);
                     break;
             }
             return null;

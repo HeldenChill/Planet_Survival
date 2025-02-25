@@ -10,14 +10,11 @@ namespace _Game
     {
         private float currentTime;
         STimer timer;
-
-        public override EFFECT Id => EFFECT.WOUND;
-
         public override void Initialize()
         {
             PROPERTY_MUL_DAMAGE = 2f;
             timer = TimerManager.Ins.PopSTimer();
-            index = 5;
+            id = EFFECT.WOUND;
         }
 
         public override BaseEffect Trigger(IDamageable character)
@@ -42,34 +39,7 @@ namespace _Game
                         }
                         currentTime += INTERVAL_TIME;
                     }, true);
-                    break;
-                case BurnEffect burningEffect:
-                    //Run VFX Bloodloss
-                    float damage = LastTime * LastDamage + burningEffect.LastTime * burningEffect.LastDamage;
-                    if (character.TakeDamage((int)damage) <= 0) return null;
-                    //character.RunTakeDamageAnim();
-                    Stop();
-                    character.AttachVFXEffect(EFFECT.BLOOD_LOSS, 1f);
-                    break;
-                case ZapEffect electricEffect:
-
-                    //Indicator
-                    timer.Stop();
-                    currentTime = 0;
-                    electricEffect.Trigger(character);
-                    electricEffect.Stop();
-                    EffectManager.Inst.PushEffect(electricEffect);
-
-                    combineEffect = null;
-                    isCombining = false;
-
-                    Trigger(character);
-                    break;
-                case FreezeEffect freezeEffect:
-                    combineEffect = null;
-                    isCombining = false;
-                    Stop();
-                    return freezeEffect;
+                    break;               
             }
             return null;
         }

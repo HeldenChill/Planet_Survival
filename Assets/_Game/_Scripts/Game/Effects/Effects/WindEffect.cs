@@ -12,13 +12,10 @@ namespace _Game
         public const float EFFECT_TIME_AMPLIFY_RATE = 1.2f;
         public const float EFFECT_DAME_AMPLIFY_RATE = 1.12f;
         STimer timer;
-
-        public override EFFECT Id => EFFECT.WIND;
-
         public override void Initialize()
         {
             timer = TimerManager.Ins.PopSTimer();
-            index = 1;
+            id = EFFECT.WIND;
         }
 
         public override BaseEffect Trigger(IDamageable character)
@@ -32,29 +29,7 @@ namespace _Game
                     //SimplePool.Spawn<UIEffectIndicator>(EFFECT_INDICATOR_NAME, character.Tf.position, default).Play(EFFECT.WIND, character.Tf);
                     timer.Start(LastTime, Stop);
                     break;
-                case FreezeEffect freezeEffect:
-                    freezeEffect.MulTime *= EFFECT_TIME_AMPLIFY_RATE;
-                    freezeEffect.MulDamage *= EFFECT_DAME_AMPLIFY_RATE;
-                    combineEffect = null;
-                    isCombining = false;
-                    Stop();
-                    return freezeEffect;
-                case BurnEffect burnEffect:
-                    burnEffect.MulTime *= EFFECT_TIME_AMPLIFY_RATE;
-                    burnEffect.MulDamage *= EFFECT_DAME_AMPLIFY_RATE;
-                    combineEffect = null;
-                    isCombining = false;
-                    Stop();
-                    return burnEffect;
-                case PoisonEffect poisonEffect:
-                    poisonEffect.MulTime *= EFFECT_TIME_AMPLIFY_RATE;
-                    poisonEffect.MulDamage *= EFFECT_DAME_AMPLIFY_RATE;
-                    combineEffect = null;
-                    isCombining = false;
-                    Stop();
-                    return poisonEffect;
             }
-
             return null;
         }
 

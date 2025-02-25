@@ -8,12 +8,10 @@ namespace _Game
 
     public class ZapEffect : BaseEffect
     {
-        public override EFFECT Id => EFFECT.ZAP;
-
         public override void Initialize()
         {
             PROPERTY_MUL_DAMAGE = 1.5f;
-            index = 3;
+            id = EFFECT.ZAP;
         }
 
         public override bool IsCanCombine(BaseEffect effect)
@@ -55,27 +53,6 @@ namespace _Game
                     character.SpawnHitImpact(HIT_IMPACT_TYPE.NONE);
                     Stop();
                     break;
-                case BurnEffect burningEffect:
-                    //Cause Explore
-                    float overloadDamage = burningEffect.LastDamage * burningEffect.LastTime + LastDamage;
-                    AOEDamage overloadExplosion = SimplePool.Spawn<AOEDamage>(PoolType.AOE_DAMAGE, character.Tf.position, Quaternion.identity); //DEV:Dependency
-                    overloadExplosion.Damage = overloadDamage;
-                    overloadExplosion.Trigger();
-                    break;
-                case FreezeEffect freezeEffect:
-                    //Breaking Ice And Do Damage                  
-                    freezeEffect.Trigger(character);
-
-                    if (character.TakeDamage((int)((LastDamage + freezeEffect.LastDamage) * AMP_FREEZE_ELECTRIC)) <= 0) return null;
-                    //character.RunTakeDamageAnim();
-
-                    freezeEffect.Stop();
-                    EffectManager.Inst.PushEffect(freezeEffect);
-                    Stop();
-                    break;
-                case WoundEffect bleedingEffect:
-                    Stop();
-                    return bleedingEffect;
             }
             return null;
         }
