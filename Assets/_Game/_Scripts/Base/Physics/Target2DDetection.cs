@@ -1,38 +1,49 @@
+using System.Collections;
 using System.Collections.Generic;
-using System;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-namespace Utilities.Physics
+namespace Base
 {
-    public class Target3DDetection<T> : BaseTargetDetection<T>
+    using System;
+    public class Target2DDetection<T> : BaseTargetDetection<T>
     {
         protected string[] DETECTED_LAYERS;
         //[SerializeField]
-        protected Collider detectCollider;
-        protected Collider[] targetsDetected;
+        protected Collider2D detectCollider;
+        protected Collider2D[] targetsDetected;
+        protected ContactFilter2D contactFilter2D;
 
+        public bool IsTrigger
+        {
+            get => contactFilter2D.useTriggers;
+            set
+            {
+                contactFilter2D.useTriggers = value;
+            }
+        }
         public T IgnoreDamageable;
         public int Condition = 0; //NOTE: The number of collider ignore(collider that alway collide with this detect collider)
-        public int targetMask;
 
-        public Target3DDetection(string[] layerNames, T IgnoreDamageable = default, int maxDetectedCollider = 10, Collider detectCollider = null)
+        public Target2DDetection(string[] layerNames,T IgnoreDamageable = default, int maxDetectedCollider = 10, Collider2D detectCollider = null)
         {
             DETECTED_LAYERS = layerNames;
             this.detectCollider = detectCollider;
             this.IgnoreDamageable = IgnoreDamageable;
 
-            targetsDetected = new Collider[maxDetectedCollider];
+            targetsDetected = new Collider2D[maxDetectedCollider];
+            contactFilter2D = new ContactFilter2D();
 
-            targetMask = LayerMask.GetMask(DETECTED_LAYERS);
+            contactFilter2D.layerMask = LayerMask.GetMask(DETECTED_LAYERS);
+            contactFilter2D.useLayerMask = true;
+            contactFilter2D.useTriggers = true;
         }
 
-        public override void CheckTargets(Vector3 position, float radius, ref List<T> targets)
+        public override void CheckTargets(Vector3 position,float radius,ref List<T> targets)
         {
             targets.Clear();
             Array.Clear(targetsDetected, 0, targetsDetected.Length);
             //int t = Physics2D.OverlapCollider(detectCollider, contactFilter2D, targetsDetected);
-            int t = UnityEngine.Physics.OverlapSphereNonAlloc(position, radius, targetsDetected, targetMask);
+            int t = Physics2D.OverlapCircleNonAlloc(position, radius, targetsDetected, contactFilter2D.layerMask);
             //NOTE: Detect collide position 
             if (t > Condition)
             {
@@ -44,7 +55,7 @@ namespace Utilities.Physics
                     if (target != null)
                     {
                         if (target.GetHashCode() != IgnoreDamageable?.GetHashCode())//NOTE: Ignore self takedamage
-                        {
+                        {                         
                             targets.Add(target);
                         }
                     }
@@ -57,7 +68,7 @@ namespace Utilities.Physics
             targets.Clear();
             Array.Clear(targetsDetected, 0, targetsDetected.Length);
             //int t = Physics2D.OverlapCollider(detectCollider, contactFilter2D, targetsDetected);
-            int t = UnityEngine.Physics.OverlapBoxNonAlloc(position, size, targetsDetected, angle, targetMask);
+            int t = Physics2D.OverlapBoxNonAlloc(position, size, angle.eulerAngles.z, targetsDetected, contactFilter2D.layerMask);
             //NOTE: Detect collide position 
             if (t > Condition)
             {
@@ -78,7 +89,7 @@ namespace Utilities.Physics
         }
         public override void CheckTargets(ref List<T> targets)
         {
-            if (detectCollider == null)
+            if(detectCollider == null)
             {
                 Debug.LogError("Target Detection Collider NULL");
                 return;
@@ -87,17 +98,7 @@ namespace Utilities.Physics
             targets.Clear();
             Array.Clear(targetsDetected, 0, targetsDetected.Length);
             detectCollider.enabled = true;
-            int t = 0;
-
-            switch (detectCollider.GetType())
-            {
-                case Type type when type == typeof(BoxCollider):
-                    t = UnityEngine.Physics.OverlapBoxNonAlloc(detectCollider.transform.position + detectCollider.bounds.center, detectCollider.bounds.size / 2, targetsDetected, detectCollider.transform.rotation, targetMask);
-                    break;
-                case Type type when type == typeof(SphereCollider):
-                    t = UnityEngine.Physics.OverlapSphereNonAlloc(detectCollider.transform.position + detectCollider.bounds.center, ((SphereCollider)detectCollider).radius, targetsDetected, targetMask);
-                    break;
-            }
+            int t = Physics2D.OverlapCollider(detectCollider, contactFilter2D, targetsDetected);
             //NOTE: Detect collide position 
             if (t > Condition)
             {

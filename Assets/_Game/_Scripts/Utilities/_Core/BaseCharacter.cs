@@ -46,12 +46,12 @@ namespace Utilities.Core
         protected Character3DPhysicSystem PhysicSystem;
 
         [HideInInspector]
-        public CharacterParameterData CharacterData;
+        public PerceptionData CharacterData;
         
 
         protected virtual void Awake()
         {
-            CharacterData = new CharacterParameterData();
+            CharacterData = new PerceptionData();
             T newStats = ScriptableObject.CreateInstance<T>();
             newStats.OnInit(Stats);
             Stats = newStats;

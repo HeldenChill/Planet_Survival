@@ -5,7 +5,7 @@ using UnityEditor;
 using System;
 namespace Utilities.Core.Character
 {
-    public class CharacterParameterData 
+    public class PerceptionData 
     {
         private Transform characterTransform;
         private Transform characterSkinTransform;

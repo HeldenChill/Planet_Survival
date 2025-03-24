@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Utilities.Physics
+namespace Base
 {
     using DesignPattern;
-    using Timer; 
+    using Utilities.Timer; 
     public abstract class AOEDetection<T> : GameUnit
     {
         public enum TYPE

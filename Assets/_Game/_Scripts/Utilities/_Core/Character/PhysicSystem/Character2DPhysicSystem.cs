@@ -8,7 +8,7 @@ namespace Utilities.Core.Character.PhysicSystem
         #region Attributes
         public Abstract2DPhysicModule MovementModule { get => module; set => module = value; }
         #endregion
-        public Character2DPhysicSystem(Abstract2DPhysicModule module, CharacterParameterData characterData)
+        public Character2DPhysicSystem(Abstract2DPhysicModule module, PerceptionData characterData)
         {
             data = new PhysicData();
             Parameter = new PhysicParameter();

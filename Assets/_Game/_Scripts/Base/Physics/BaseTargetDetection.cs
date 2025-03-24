@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-namespace Utilities.Physics
+namespace Base
 {
     public abstract class BaseTargetDetection<T>
     {

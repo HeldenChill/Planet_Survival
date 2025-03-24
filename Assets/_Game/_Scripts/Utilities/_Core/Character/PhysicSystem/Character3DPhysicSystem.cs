@@ -9,7 +9,7 @@ namespace Utilities.Core.Character.PhysicSystem
         #region Attributes
         public Abstract3DPhysicModule MovementModule { get => module; set => module = value; }
         #endregion
-        public Character3DPhysicSystem(Abstract3DPhysicModule module, CharacterParameterData characterData)
+        public Character3DPhysicSystem(Abstract3DPhysicModule module, PerceptionData characterData)
         {
             data = new PhysicData();
             Parameter = new PhysicParameter();

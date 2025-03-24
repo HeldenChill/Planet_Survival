@@ -11,7 +11,7 @@ namespace Utilities.Core.Character.WorldInterfaceSystem
     {
         #region Essential Functions
         protected CharacterWorldInterfaceSystem() { }
-        public CharacterWorldInterfaceSystem(WorldInterfaceModule module, CharacterParameterData characterData)
+        public CharacterWorldInterfaceSystem(WorldInterfaceModule module, PerceptionData characterData)
         {
             this.module = module;
             data = new WorldInterfaceData();

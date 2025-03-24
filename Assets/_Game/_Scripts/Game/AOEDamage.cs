@@ -6,7 +6,6 @@ using System;
 namespace _Game
 {
     using Base;
-    using Utilities.Physics;
     public class AOEDamage : AOEDetection<IDamageable>
     {
         [Serializable]
