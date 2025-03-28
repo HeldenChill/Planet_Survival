@@ -57,4 +57,19 @@ namespace _Game
             return null;
         }
     }
+
+    public class Stack
+    {
+        public int MinOperation(string[] targetStack, string[] currentStack)
+        {
+            int minIndexPop = 0;
+            for(int i = 0; i <  targetStack.Length; i++)
+            {
+                if (targetStack[i] != currentStack[i]) break;
+                minIndexPop++;
+            }
+
+            return currentStack.Length - minIndexPop + targetStack.Length - minIndexPop;
+        }
+    }
 }
