@@ -20,7 +20,7 @@ namespace Utilities.Core.Character.LogicSystem
     {
         //Initialize
         public E Event;
-        public CharacterLogicSystem(AbstractLogicModule<D, P, E> module, CharacterParameterData characterData)
+        public CharacterLogicSystem(AbstractLogicModule<D, P, E> module, PerceptionData characterData)
         {
             data = new D();
             Parameter = new P();

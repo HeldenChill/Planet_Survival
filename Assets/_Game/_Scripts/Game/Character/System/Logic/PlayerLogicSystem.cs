@@ -8,7 +8,7 @@ namespace _Game.Character
     public class PlayerLogicSystem : CharacterLogicSystem<PlayerLogicData, PlayerLogicParameter, LogicEvent>
     {
         protected ProcessSkillModule SkillModule;
-        public PlayerLogicSystem(AbstractLogicModule<PlayerLogicData, PlayerLogicParameter, LogicEvent> module, CharacterParameterData characterData) : base(module, characterData)
+        public PlayerLogicSystem(AbstractLogicModule<PlayerLogicData, PlayerLogicParameter, LogicEvent> module, PerceptionData characterData) : base(module, characterData)
         {
             SkillModule = new ProcessSkillModule(this);
         }

@@ -23,7 +23,7 @@ namespace Utilities.Core.Character.NavigationSystem
         #region Essential Functions
         protected CharacterNavigationSystem() { }
         //Initialize
-        public CharacterNavigationSystem(AbstractNavigationModule<D, P> module, CharacterParameterData characterData)
+        public CharacterNavigationSystem(AbstractNavigationModule<D, P> module, PerceptionData characterData)
         {
             data = new D();
             Parameter = new P();

@@ -6,6 +6,6 @@ namespace Utilities.Core.Character
 {
     public abstract class AbstractDataSystem
     {
-        public CharacterParameterData CharacterParameterData;
+        public PerceptionData CharacterParameterData;
     }
 }

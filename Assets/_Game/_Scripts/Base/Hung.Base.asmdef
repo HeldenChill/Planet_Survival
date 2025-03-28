@@ -4,7 +4,8 @@
     "references": [
         "Hung.DesignPattern",
         "Unity.TextMeshPro",
-        "Hung.Common"
+        "Hung.Common",
+        "Hung.Utilities.STimer"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
